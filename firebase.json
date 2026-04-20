@@ -12,22 +12,6 @@
         "function": "ogMeta"
       },
       {
-        "source": "!/manifest.webmanifest",
-        "destination": "/index.html"
-      },
-      {
-        "source": "!/registerSW.js",
-        "destination": "/index.html"
-      },
-      {
-        "source": "!/sw.js",
-        "destination": "/index.html"
-      },
-      {
-        "source": "!/workbox-*.js",
-        "destination": "/index.html"
-      },
-      {
         "source": "**",
         "destination": "/index.html"
       }
