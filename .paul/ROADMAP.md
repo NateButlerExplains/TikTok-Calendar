@@ -14,8 +14,8 @@ Phases: 0 of 3 complete
 
 | Phase | Name | Plans | Status | Completed |
 |-------|------|-------|--------|-----------|
-| 1.1 | Core Components | 1 | Planning | - |
-| 1.2 | Navigation & Integration | 1 | Not started | - |
+| 1.1 | Core Components | 1 | Complete | 2026-04-20 |
+| 1.2 | Navigation & Integration | 1 | Planning | - |
 | 1.3 | Footer & Polish | 1 | Not started | - |
 
 ## Phase Details

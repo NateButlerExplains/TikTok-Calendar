@@ -3,6 +3,7 @@ import { useSwipeable } from 'react-swipeable'
 import { useCalendarData } from '../hooks/useCalendarData'
 import { getTodayString, addDays, formatDateHeader } from '../utils/timeUtils'
 import { downloadIcs } from '../utils/icsGenerator'
+import { logCustomEvent } from '../firebase'
 import { GuestCard } from './GuestCard'
 import { SoloTalkCard } from './SoloTalkCard'
 import { OpenFloorCard } from './OpenFloorCard'
@@ -28,6 +29,7 @@ export function DayView({ initialDate = null, onDateChange = null, onViewChange 
     const url = `${window.location.origin}/?date=${currentDate}`
     try {
       await navigator.clipboard.writeText(url)
+      logCustomEvent('share_link', { date: currentDate })
       alert('Link copied to clipboard!')
     } catch (err) {
       console.error('Failed to copy:', err)
@@ -36,6 +38,8 @@ export function DayView({ initialDate = null, onDateChange = null, onViewChange 
 
   const handleDownloadIcs = () => {
     downloadIcs(currentDate, dayData)
+    const guestName = dayData.guests?.[0]?.name || 'Unknown'
+    logCustomEvent('download_ics', { date: currentDate, guest_name: guestName })
   }
 
   const swipeHandlers = useSwipeable({

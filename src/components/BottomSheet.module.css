@@ -1,0 +1,111 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 15, 0.7);
+  z-index: 999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1a1a2e;
+  border-top: 2px solid #00f5ff;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 16px 16px 0 0;
+  animation: slideUp 0.3s ease-out;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #00f5ff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 245, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .sheet {
+    max-height: 90vh;
+  }
+
+  .content {
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .sheet {
+    max-height: 50vh;
+    left: 50%;
+    right: auto;
+    width: 90%;
+    transform: translateX(-50%);
+    border-radius: 16px;
+    bottom: auto;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: popIn 0.3s ease-out;
+  }
+
+  @keyframes popIn {
+    from {
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+}

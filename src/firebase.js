@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import { getAnalytics } from 'firebase/analytics'
+import { getAnalytics, logEvent } from 'firebase/analytics'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD7IN50xZl7eO0KQvvlnaXjMeKT4Ec16jc',
@@ -15,5 +15,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 export const db = getFirestore(app)
 export const analytics = getAnalytics(app)
+
+export const logCustomEvent = (eventName, eventData = {}) => {
+  try {
+    logEvent(analytics, eventName, eventData)
+  } catch (error) {
+    console.error(`Failed to log event "${eventName}":`, error)
+  }
+}
 
 export default app
