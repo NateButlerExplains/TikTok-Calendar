@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "echo \"No build needed (Phase 2)\"",
+    "lint": "echo \"No lint configured yet (Phase 2)\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
