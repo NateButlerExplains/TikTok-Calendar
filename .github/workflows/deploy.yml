@@ -26,17 +26,11 @@ jobs:
       - name: Build app
         run: npm run build
 
-      - name: Decode Firebase Service Account
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        env:
-          FIREBASE_KEY_BASE64: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERTALKS_GUEST }}
-        run: echo "$FIREBASE_KEY_BASE64" | base64 -d > /tmp/firebase-key.json && cat /tmp/firebase-key.json
-
       - name: Deploy to Firebase Hosting
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: /tmp/firebase-key.json
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERTALKS_GUEST }}
           channelId: live
           projectId: cybertalks-guest
