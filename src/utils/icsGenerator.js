@@ -1,4 +1,4 @@
-import ics from 'ics'
+import { createEvent } from 'ics'
 import { getStreamStart, resolveTime } from './timeUtils'
 
 /**
@@ -53,7 +53,7 @@ export function generateIcs(dateString, event) {
   ]
 
   // Generate ics file
-  const { value, error } = ics({
+  const { value, error } = createEvent({
     title,
     description,
     startInputType: 'local',
