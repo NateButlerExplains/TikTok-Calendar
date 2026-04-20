@@ -1,4 +1,4 @@
-import { ics } from 'ics'
+import ics from 'ics'
 import { getStreamStart, resolveTime } from './timeUtils'
 
 /**
