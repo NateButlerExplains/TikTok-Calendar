@@ -3,7 +3,7 @@ import styles from './OpenFloorCard.module.css'
 
 export function OpenFloorCard({ time, isPastDate }) {
   const handleImageError = (e) => {
-    e.target.src = '/headshots/mystery.jpg'
+    e.target.src = '/Speakers/Nate Default.png'
   }
 
   const displayTime = time ? formatTime(new Date(), time) : ''
@@ -11,7 +11,7 @@ export function OpenFloorCard({ time, isPastDate }) {
   return (
     <div className={`card ${isPastDate ? 'past-event' : ''} ${styles.card}`}>
       <img
-        src="/headshots/nate.jpg"
+        src="/Speakers/Nate Default.png"
         alt="Nate Butler"
         className={styles.headshot}
         onError={handleImageError}

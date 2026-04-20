@@ -28,9 +28,9 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: 'Alex Chen',
-        headshot: '/headshots/alex-chen.jpg',
-        tiktokUrl: 'https://www.tiktok.com/@alexchen',
+        name: 'Chris The Tech Ninja',
+        headshot: '/Speakers/Chris The Tech Ninja.jpg',
+        tiktokUrl: 'https://www.tiktok.com/@christechninja',
         topic: 'Zero Trust Architecture in 2026'
       }
     ]
