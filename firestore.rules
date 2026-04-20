@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Events collection — read-only from client, read/write from Functions
+    match /events/{document=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // Global subscribers — write-only from client, read/update only from Functions
+    match /globalSubscribers/{document=**} {
+      allow create: if request.resource.data.keys().hasAll(['email', 'subscribedAt', 'active']);
+      allow read, update, delete: if false;
+    }
+
+    // Date-specific subscribers — write-only from client, read/update only from Functions
+    match /dateSubscribers/{document=**} {
+      allow create: if request.resource.data.keys().hasAll(['email', 'date', 'subscribedAt', 'active']);
+      allow read, update, delete: if false;
+    }
+
+    // Reminder log — read/write only from Functions
+    match /reminderLog/{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
