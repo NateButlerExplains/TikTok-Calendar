@@ -28,7 +28,9 @@ jobs:
 
       - name: Decode Firebase Service Account
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERTALKS_GUEST }}" | base64 -d > /tmp/firebase-key.json
+        env:
+          FIREBASE_KEY_BASE64: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERTALKS_GUEST }}
+        run: echo "$FIREBASE_KEY_BASE64" | base64 -d > /tmp/firebase-key.json && cat /tmp/firebase-key.json
 
       - name: Deploy to Firebase Hosting
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
