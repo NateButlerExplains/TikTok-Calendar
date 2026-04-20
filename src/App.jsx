@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CalendarHeader } from './components/CalendarHeader'
+import { Footer } from './components/Footer'
 import { DayView } from './components/DayView'
 import { ThreeDayView } from './components/ThreeDayView'
+import { PrivacyPolicy } from './pages/PrivacyPolicy'
+import { TermsOfService } from './pages/TermsOfService'
+import { About } from './pages/About'
+import { Contact } from './pages/Contact'
 import { getTodayString } from './utils/timeUtils'
 import { logCustomEvent } from './firebase'
 
@@ -45,7 +51,6 @@ function App() {
     params.set('view', view)
     window.history.replaceState(null, '', `?${params.toString()}`)
 
-    // Log analytics event
     try {
       logCustomEvent('switch_view', {
         from: currentView,
@@ -57,30 +62,48 @@ function App() {
   }
 
   return (
-    <div>
-      <CalendarHeader
-        currentView={currentView}
-        currentDate={currentDate}
-        onViewChange={handleViewChange}
-        onDateChange={handleDateChange}
-      />
+    <BrowserRouter>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <CalendarHeader
+                  currentView={currentView}
+                  currentDate={currentDate}
+                  onViewChange={handleViewChange}
+                  onDateChange={handleDateChange}
+                />
+                <main style={{ flex: 1 }}>
+                  {currentView === 'day' && (
+                    <DayView
+                      key={currentDate}
+                      initialDate={currentDate}
+                      onDateChange={handleDateChange}
+                    />
+                  )}
 
-      {currentView === 'day' && (
-        <DayView
-          key={currentDate}
-          initialDate={currentDate}
-          onDateChange={handleDateChange}
-        />
-      )}
+                  {currentView === 'three-day' && (
+                    <ThreeDayView
+                      key={currentDate}
+                      initialDate={currentDate}
+                      onDateChange={handleDateChange}
+                    />
+                  )}
+                </main>
+              </>
+            }
+          />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
 
-      {currentView === 'three-day' && (
-        <ThreeDayView
-          key={currentDate}
-          initialDate={currentDate}
-          onDateChange={handleDateChange}
-        />
-      )}
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 

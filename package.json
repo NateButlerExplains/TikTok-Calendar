@@ -17,6 +17,7 @@
     "ics": "^3.11.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-router-dom": "^6.21.0",
     "react-swipeable": "^7.0.2",
     "uuid": "^14.0.0",
     "vite-plugin-pwa": "^0.20.5"
