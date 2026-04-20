@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+}
+
+.name {
+  margin-top: 0.5rem;
+}
+
+.topic {
+  color: var(--muted);
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.time {
+  margin-top: 0.5rem;
+}
+
+.tiktokLink {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.tiktokLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+  .headshot {
+    width: 150px;
+    height: 150px;
+  }
+}

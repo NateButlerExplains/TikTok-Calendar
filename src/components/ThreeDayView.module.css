@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.header {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--bg-primary) 100%);
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+.subtitle {
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dayGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dayColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.dayColumn.center {
+  opacity: 1;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgba(0, 245, 255, 0.05);
+}
+
+.dayLabel {
+  text-align: center;
+  color: var(--text);
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navButton {
+  padding: 0.75rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navButton:hover {
+  background: rgba(0, 245, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .dayGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dayGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dayColumn {
+    opacity: 1;
+  }
+
+  .dayColumn.center {
+    border: 2px solid var(--accent);
+  }
+
+  .header {
+    padding: 1.5rem 1rem;
+  }
+
+  .main {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .navButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
