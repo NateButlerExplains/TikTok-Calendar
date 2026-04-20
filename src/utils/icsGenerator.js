@@ -80,17 +80,23 @@ export function generateIcs(dateString, event) {
 
 /**
  * Trigger browser download of .ics file.
+ * Uses Blob + ObjectURL for better iOS Safari compatibility.
  */
 export function downloadIcs(dateString, event) {
   const icsData = generateIcs(dateString, event)
   if (!icsData) return
 
+  const blob = new Blob([icsData.value], { type: 'text/calendar' })
+  const url = URL.createObjectURL(blob)
+
   const element = document.createElement('a')
-  element.setAttribute('href', 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsData.value))
+  element.setAttribute('href', url)
   element.setAttribute('download', icsData.filename)
   element.style.display = 'none'
 
   document.body.appendChild(element)
   element.click()
   document.body.removeChild(element)
+
+  URL.revokeObjectURL(url)
 }
