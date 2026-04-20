@@ -79,13 +79,31 @@ export function generateIcs(dateString, event) {
 }
 
 /**
+ * Detect iOS device.
+ */
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent)
+}
+
+/**
  * Trigger browser download of .ics file.
- * Uses Blob + ObjectURL for better iOS Safari compatibility.
+ * Uses device-specific approaches for compatibility.
  */
 export function downloadIcs(dateString, event) {
   const icsData = generateIcs(dateString, event)
   if (!icsData) return
 
+  if (isIOS()) {
+    downloadIcsIOS(icsData)
+  } else {
+    downloadIcsDesktop(icsData)
+  }
+}
+
+/**
+ * Desktop download using Blob + ObjectURL.
+ */
+function downloadIcsDesktop(icsData) {
   const blob = new Blob([icsData.value], { type: 'text/calendar' })
   const url = URL.createObjectURL(blob)
 
@@ -99,4 +117,21 @@ export function downloadIcs(dateString, event) {
   document.body.removeChild(element)
 
   URL.revokeObjectURL(url)
+}
+
+/**
+ * iOS download: Opens file in new tab (user can save from there).
+ * iOS Safari doesn't support blob: downloads, so we use data: URI instead.
+ */
+function downloadIcsIOS(icsData) {
+  const dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsData.value)
+  const element = document.createElement('a')
+  element.setAttribute('href', dataUri)
+  element.setAttribute('download', icsData.filename)
+  element.setAttribute('target', '_blank')
+  element.style.display = 'none'
+
+  document.body.appendChild(element)
+  element.click()
+  document.body.removeChild(element)
 }
