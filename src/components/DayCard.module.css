@@ -1,3 +1,11 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--muted);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -20,6 +28,11 @@
   margin: 1rem 1rem 0.5rem 1rem;
 }
 
+.title {
+  margin: 1rem 1rem 0.5rem 1rem;
+  color: var(--accent);
+}
+
 .topic {
   color: var(--muted);
   max-width: 100%;
@@ -30,6 +43,11 @@
 .time {
   margin: 0.5rem 1rem;
   padding: 0;
+}
+
+.subtitle {
+  font-style: italic;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .tiktokLink {
