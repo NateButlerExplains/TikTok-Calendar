@@ -64,31 +64,52 @@ export function formatTime(date, timeObj) {
 
 /**
  * Format time in both EST and GMT+5 (e.g., "12:00 PM EST / 5:00 PM GMT+5")
+ * Uses fixed UTC-5 offset for EST (no DST, consistent display)
  */
-export function formatTimeWithGMT(date, timeObj) {
-  if (!date && !timeObj) {
+export function formatTimeWithGMT(dateStringOrObj, timeObj) {
+  let dateString = null
+  let timeToUse = null
+
+  // If first arg is a string, it's a date string
+  if (typeof dateStringOrObj === 'string') {
+    dateString = dateStringOrObj
+    timeToUse = timeObj
+  }
+  // If first arg is a Date object with time already set
+  else if (dateStringOrObj instanceof Date) {
+    // Format in local time
+    const estTime = format(dateStringOrObj, 'h:mm a')
+    // For GMT+5: add 10 hours (EST UTC-5 to GMT+5 is 10 hours)
+    const gmtDateTime = new Date(dateStringOrObj.getTime() + (10 * 60 * 60 * 1000))
+    const gmtTime = format(gmtDateTime, 'h:mm a')
+    return `${estTime} EST / ${gmtTime} GMT+5`
+  }
+
+  if (!dateString || !timeToUse) {
     return ''
   }
 
-  // If only timeObj provided, create a date with those values
-  let dateToFormat = date
-  if (!date && timeObj) {
-    dateToFormat = new Date()
-    dateToFormat.setHours(timeObj.hour || 0, timeObj.minute || 0, 0, 0)
+  // Manually format time (simpler approach)
+  const hour = timeToUse.hour
+  const minute = timeToUse.minute
+
+  // Convert 24-hour format to 12-hour with AM/PM
+  const ampm = hour >= 12 ? 'PM' : 'AM'
+  const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour)
+  const minuteStr = String(minute).padStart(2, '0')
+  const estTime = `${displayHour}:${minuteStr} ${ampm}`
+
+  // Calculate GMT+5 time (EST UTC-5 + 10 hours = UTC+5)
+  let gmtHour = hour + 10
+  let gmtDay = 0
+  if (gmtHour >= 24) {
+    gmtHour -= 24
+    gmtDay = 1
   }
 
-  // Get EST time
-  const estZoned = toZonedTime(dateToFormat, TIMEZONE)
-  const estTime = format(estZoned, 'h:mm a')
-
-  // Calculate GMT+5 time (EST is UTC-5 or UTC-4 depending on DST)
-  // GMT+5 is 10 or 9 hours ahead of EST
-  const estOffset = estZoned.getTimezoneOffset() // In minutes
-  const gmtDate = new Date(dateToFormat.getTime() + (estOffset * 60 * 1000)) // Convert to UTC
-  const gmtPlusFiveDate = new Date(gmtDate.getTime() + (5 * 60 * 60 * 1000)) // Add 5 hours
-
-  // Format GMT+5 time
-  const gmtTime = format(gmtPlusFiveDate, 'h:mm a')
+  const gmtAmpm = gmtHour >= 12 ? 'PM' : 'AM'
+  const gmtDisplayHour = gmtHour > 12 ? gmtHour - 12 : (gmtHour === 0 ? 12 : gmtHour)
+  const gmtTime = `${gmtDisplayHour}:${minuteStr} ${gmtAmpm}`
 
   return `${estTime} EST / ${gmtTime} GMT+5`
 }

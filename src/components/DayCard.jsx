@@ -19,7 +19,7 @@ export function DayCard({ date }) {
     return match ? match[1] : tiktokUrl.split('/').pop()
   }
 
-  const displayTime = dayData.time ? formatTimeWithGMT(new Date(), dayData.time) : ''
+  const displayTime = dayData.time ? formatTimeWithGMT(date, dayData.time) : ''
 
   // Guest card
   if (dayData.dayType === 'guest' && dayData.guests && dayData.guests.length > 0) {
