@@ -8,7 +8,6 @@ import { getStreamStart, resolveTime } from './timeUtils'
 export function generateIcs(dateString, event) {
   // Resolve event details
   const time = resolveTime(dateString, event)
-  const startDate = getStreamStart(dateString, event)
 
   // Build title based on event type
   let title = 'Cyber Talks'
@@ -31,32 +30,45 @@ export function generateIcs(dateString, event) {
 
   description += `\n\nDate: ${dateString}`
 
-  // Calculate end time (add duration minutes to start)
-  const endDate = new Date(startDate)
-  endDate.setMinutes(endDate.getMinutes() + (time.durationMinutes || 60))
+  // Create EST time as UTC by accounting for EST offset (UTC-5)
+  // Example: 12 PM EST = 5 PM UTC (12 + 5 hours)
+  const estToUtcHours = 5
+  const startUtcHours = time.hour + estToUtcHours
+  const startUtcDate = new Date(
+    parseInt(dateString.split('-')[0]),
+    parseInt(dateString.split('-')[1]) - 1,
+    parseInt(dateString.split('-')[2]),
+    startUtcHours,
+    time.minute,
+    0
+  )
 
-  // Format dates for ics library: [YYYY, MM, DD, HH, mm]
+  // Calculate end time
+  const endUtcDate = new Date(startUtcDate)
+  endUtcDate.setMinutes(endUtcDate.getMinutes() + (time.durationMinutes || 60))
+
+  // Format dates for ics library in UTC: [YYYY, MM, DD, HH, mm]
   const startArray = [
-    startDate.getFullYear(),
-    startDate.getMonth() + 1,
-    startDate.getDate(),
-    startDate.getHours(),
-    startDate.getMinutes()
+    startUtcDate.getUTCFullYear(),
+    startUtcDate.getUTCMonth() + 1,
+    startUtcDate.getUTCDate(),
+    startUtcDate.getUTCHours(),
+    startUtcDate.getUTCMinutes()
   ]
 
   const endArray = [
-    endDate.getFullYear(),
-    endDate.getMonth() + 1,
-    endDate.getDate(),
-    endDate.getHours(),
-    endDate.getMinutes()
+    endUtcDate.getUTCFullYear(),
+    endUtcDate.getUTCMonth() + 1,
+    endUtcDate.getUTCDate(),
+    endUtcDate.getUTCHours(),
+    endUtcDate.getUTCMinutes()
   ]
 
-  // Generate ics file
+  // Generate ics file with UTC times
   const { value, error } = createEvent({
     title,
     description,
-    startInputType: 'local',
+    startInputType: 'utc',
     start: startArray,
     end: endArray,
     location: 'TikTok Live - @natebutlerexplains',

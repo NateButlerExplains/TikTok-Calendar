@@ -27,43 +27,20 @@ export function resolveTime(dateString, event) {
 }
 
 /**
- * Get stream start time as a Date object representing EST/EDT time.
- * Since icsGenerator uses startInputType: 'local', this returns the time
- * as it should appear in the calendar (12 PM EST = 12 noon in EST timezone).
+ * Get stream start time as a Date object in the America/New_York timezone.
+ * Used for display purposes in the UI.
  */
 export function getStreamStart(dateString, event) {
   const time = resolveTime(dateString, event)
-  const parts = dateString.split('-')
 
-  // Create a Date representing the desired time in EST
-  // We create it in UTC, then adjust for the difference between EST and browser timezone
-  const estDate = new Date(
-    parseInt(parts[0]),           // year
-    parseInt(parts[1]) - 1,       // month (0-indexed)
-    parseInt(parts[2]),           // day
-    time.hour,                    // hour in EST
-    time.minute,                  // minute
-    0,                            // seconds
-    0                             // milliseconds
-  )
+  // Create a date string with the time
+  const dateTimeString = `${dateString} ${String(time.hour).padStart(2, '0')}:${String(time.minute).padStart(2, '0')}`
 
-  // The Date object stores time in UTC internally, but we need to account for
-  // the fact that when we pass it to ICS with startInputType: 'local',
-  // it will use the browser's timezone. We need to return a Date that represents
-  // "12 PM EST" such that when ICS converts it with the browser's timezone offset,
-  // it shows up correctly in the calendar app.
+  // Parse as local browser time
+  const localDate = parse(dateTimeString, 'yyyy-MM-dd HH:mm', new Date())
 
-  // Get browser timezone offset in minutes (e.g., -300 for EST/CDT)
-  const browserOffsetMinutes = estDate.getTimezoneOffset()
-
-  // EST is UTC-5 (300 minutes)
-  const estOffsetMinutes = 300
-
-  // Adjust: if browser is in CST (UTC-6 = 360 min), we need to add 60 minutes
-  // to compensate so that when ICS applies the browser offset, we get EST
-  const adjustment = (browserOffsetMinutes - estOffsetMinutes) * 60 * 1000
-
-  return new Date(estDate.getTime() + adjustment)
+  // Convert to zoned time for display
+  return toZonedTime(localDate, TIMEZONE)
 }
 
 /**
