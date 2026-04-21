@@ -11,6 +11,7 @@ import {
   addMonths,
   subMonths
 } from 'date-fns'
+import { getTodayString } from '../utils/timeUtils'
 import { events } from '../data/events'
 import styles from './MonthlyCalendar.module.css'
 
@@ -71,7 +72,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
   }
 
   const handleTodayClick = () => {
-    const todayString = format(today, 'yyyy-MM-dd')
+    const todayString = getTodayString()
     onDayClick(todayString)
   }
 
