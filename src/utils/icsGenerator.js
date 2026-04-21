@@ -30,43 +30,34 @@ export function generateIcs(dateString, event) {
 
   description += `\n\nDate: ${dateString}`
 
-  // Parse date string
+  // Use local time (no UTC conversion) with TZID so calendar apps interpret as EST
+  // and convert to user's local timezone with proper label
   const parts = dateString.split('-')
   const year = parseInt(parts[0])
   const month = parseInt(parts[1])
   const day = parseInt(parts[2])
 
-  // Convert EST time (fixed UTC-5 offset) to UTC
-  // 12 PM EST = 17:00 UTC, 9 PM EST = 02:00 UTC (next day)
-  // Use Date.UTC to handle month/year boundaries correctly
-  const estOffsetMs = 5 * 60 * 60 * 1000
-  const naiveDate = new Date(Date.UTC(year, month - 1, day, time.hour, time.minute, 0))
-  const startUTC = new Date(naiveDate.getTime() + estOffsetMs)
+  const startArray = [year, month, day, time.hour, time.minute]
 
-  const startArray = [
-    startUTC.getUTCFullYear(),
-    startUTC.getUTCMonth() + 1,
-    startUTC.getUTCDate(),
-    startUTC.getUTCHours(),
-    startUTC.getUTCMinutes()
-  ]
+  // Calculate end time
+  const endMinute = time.minute + (time.durationMinutes || 60)
+  let endHour = time.hour + Math.floor(endMinute / 60)
+  let endDay = day
+  let endMonth = month
+  let endYear = year
 
-  // Calculate end time in UTC
-  const endUTC = new Date(startUTC.getTime() + (time.durationMinutes || 60) * 60 * 1000)
+  if (endHour >= 24) {
+    endHour -= 24
+    endDay += 1
+  }
 
-  const endArray = [
-    endUTC.getUTCFullYear(),
-    endUTC.getUTCMonth() + 1,
-    endUTC.getUTCDate(),
-    endUTC.getUTCHours(),
-    endUTC.getUTCMinutes()
-  ]
+  const endArray = [endYear, endMonth, endDay, endHour, endMinute % 60]
 
-  // Generate ics file with UTC times
+  // Generate ics file with local time (will add TZID after)
   const { value, error } = createEvent({
     title,
     description,
-    startInputType: 'utc',
+    startInputType: 'local',
     start: startArray,
     end: endArray,
     location: 'TikTok Live - @natebutlerexplains',
@@ -81,10 +72,16 @@ export function generateIcs(dateString, event) {
     return null
   }
 
-  // UTC times in ICS will automatically convert to user's timezone
-  // The calendar app will show: 12 PM EST (UTC-5) and convert to 11 AM CST (UTC-6)
+  // Add TZID parameter to DTSTART/DTEND so calendar apps know these are EST times
+  // and will convert to user's local timezone (CST, CDT, EDT, etc) with proper label
+  const icsWithTzid = value
+    .replace(/DTSTART:/g, 'DTSTART;TZID=America/New_York:')
+    .replace(/DTEND:/g, 'DTEND;TZID=America/New_York:')
+
+  console.log('[ICS Debug] Generated ICS with TZID:\n', icsWithTzid)
+
   return {
-    value,
+    value: icsWithTzid,
     filename: `cyber-talks-${dateString}.ics`
   }
 }
