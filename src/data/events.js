@@ -26,4 +26,16 @@
 export const events = [
   // May 2026 starts here - all open floor with Nate
   // Schedule starts May 1st
+  {
+    date: "2026-05-04",
+    dayType: "guest",
+    guests: [
+      {
+        name: "IAM Techbro",
+        headshot: "/Speakers/May4 - IAM TechBro.png",
+        tiktokUrl: "@victorasanmi",
+        topic: "Identity Access & Management"
+      }
+    ]
+  }
 ]
