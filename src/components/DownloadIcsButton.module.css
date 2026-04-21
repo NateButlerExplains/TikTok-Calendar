@@ -30,6 +30,20 @@
   opacity: 0.9;
 }
 
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--muted);
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+.button:disabled:hover {
+  background: var(--muted);
+  border-color: var(--muted);
+  opacity: 0.5;
+}
+
 @media (max-width: 640px) {
   .button {
     padding: 8px 24px;

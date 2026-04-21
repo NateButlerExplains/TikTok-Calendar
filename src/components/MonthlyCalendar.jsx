@@ -24,18 +24,12 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
   // Determine initial month to display (use correctly parsed date in local timezone)
   const [displayMonth, setDisplayMonth] = useState(selectedDateObj)
 
-  // Check if a date is within bounds: April 21, 2026 or later, and ±2 months from today
-  const earliestDate = new Date(2026, 3, 21) // April 21, 2026
+  // Allow navigation to all months (no arbitrary bounds)
   const isWithinBounds = (date) => {
-    // Prevent navigation before April 21, 2026
-    const startOfCheckMonth = startOfMonth(date)
-    if (startOfCheckMonth < earliestDate) {
-      return false
-    }
-
-    // Also enforce ±2 months from today for forward limit
+    // Enforce ±2 months from today for forward limit
     const monthDiff = (date.getFullYear() - today.getFullYear()) * 12 +
                       (date.getMonth() - today.getMonth())
+    // Allow any past month and up to 2 months in the future
     return monthDiff <= 2
   }
 

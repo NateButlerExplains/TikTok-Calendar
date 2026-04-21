@@ -12,12 +12,16 @@ export function DownloadIcsButton({ date }) {
     logCustomEvent('download_ics', { date, event_name: guestName })
   }
 
+  const isDisabled = !dayData || !dayData.hasEvent
+  const tooltipText = isDisabled ? 'No scheduled event for this date' : 'Download as .ics calendar file'
+
   return (
     <button
       className={styles.button}
       onClick={handleDownloadIcs}
+      disabled={isDisabled}
       aria-label="Download calendar event"
-      title="Download as .ics calendar file"
+      title={tooltipText}
     >
       📥 Download .ics
     </button>
