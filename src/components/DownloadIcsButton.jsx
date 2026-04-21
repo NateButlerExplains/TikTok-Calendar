@@ -12,8 +12,11 @@ export function DownloadIcsButton({ date }) {
     logCustomEvent('download_ics', { date, event_name: guestName })
   }
 
-  const isDisabled = !dayData || !dayData.hasEvent
-  const tooltipText = isDisabled ? 'No scheduled event for this date' : 'Download as .ics calendar file'
+  // Disable for: no data, open floor events, or events without actual content
+  const isDisabled = !dayData || dayData.dayType === 'open-floor'
+  const tooltipText = isDisabled
+    ? 'Download not available for open floor events'
+    : 'Download as .ics calendar file'
 
   return (
     <button
