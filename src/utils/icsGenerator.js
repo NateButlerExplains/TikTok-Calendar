@@ -59,7 +59,6 @@ export function generateIcs(dateString, event) {
     startInputType: 'local',
     start: startArray,
     end: endArray,
-    duration: { hours: 0, minutes: time.durationMinutes || 60 },
     location: 'TikTok Live - @natebutlerexplains',
     url: `https://cybertalks-guest.web.app/?date=${dateString}`,
     status: 'CONFIRMED',
