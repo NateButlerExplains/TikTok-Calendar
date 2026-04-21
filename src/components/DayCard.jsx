@@ -6,7 +6,14 @@ export function DayCard({ date }) {
   const dayData = useCalendarData(date)
 
   if (!dayData) {
-    return <div className={styles.container}>Loading...</div>
+    return (
+      <div className={styles.container}>
+        <div className={styles.noEvent}>
+          <p className={styles.noEventTitle}>No Scheduled Event</p>
+          <p className={styles.noEventText}>Pop-up events coming soon!</p>
+        </div>
+      </div>
+    )
   }
 
   const handleImageError = (e) => {

@@ -8,6 +8,32 @@
   font-family: var(--font-primary);
 }
 
+/* ===== NO EVENT STATE ===== */
+.noEvent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.noEventTitle {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  font-family: var(--font-primary);
+}
+
+.noEventText {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--muted);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
 /* ===== EVENT CARD (Supabase: No shadows, borders define depth) ===== */
 .card {
   display: flex;
