@@ -36,21 +36,31 @@ export function generateIcs(dateString, event) {
   const month = parseInt(parts[1])
   const day = parseInt(parts[2])
 
-  // Convert EST time (UTC-5) to UTC
-  // Example: 12 PM EST = 5 PM UTC
-  const estToUtcHours = 5
-  const startUtcHour = (time.hour + estToUtcHours) % 24
-  const startUtcDay = day + Math.floor((time.hour + estToUtcHours) / 24)
+  // Convert EST time (fixed UTC-5 offset) to UTC
+  // 12 PM EST = 17:00 UTC, 9 PM EST = 02:00 UTC (next day)
+  // Use Date.UTC to handle month/year boundaries correctly
+  const estOffsetMs = 5 * 60 * 60 * 1000
+  const naiveDate = new Date(Date.UTC(year, month - 1, day, time.hour, time.minute, 0))
+  const startUTC = new Date(naiveDate.getTime() + estOffsetMs)
 
-  const startArray = [year, month, startUtcDay, startUtcHour, time.minute]
+  const startArray = [
+    startUTC.getUTCFullYear(),
+    startUTC.getUTCMonth() + 1,
+    startUTC.getUTCDate(),
+    startUTC.getUTCHours(),
+    startUTC.getUTCMinutes()
+  ]
 
   // Calculate end time in UTC
-  const endMinute = time.minute + (time.durationMinutes || 60)
-  const endTotalHours = startUtcHour + Math.floor(endMinute / 60)
-  const endUtcHour = endTotalHours % 24
-  const endUtcDay = startUtcDay + Math.floor(endTotalHours / 24)
+  const endUTC = new Date(startUTC.getTime() + (time.durationMinutes || 60) * 60 * 1000)
 
-  const endArray = [year, month, endUtcDay, endUtcHour, endMinute % 60]
+  const endArray = [
+    endUTC.getUTCFullYear(),
+    endUTC.getUTCMonth() + 1,
+    endUTC.getUTCDate(),
+    endUTC.getUTCHours(),
+    endUTC.getUTCMinutes()
+  ]
 
   // Generate ics file with UTC times
   const { value, error } = createEvent({
