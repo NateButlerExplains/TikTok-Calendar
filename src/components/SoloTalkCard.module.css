@@ -1,36 +1,39 @@
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
-  gap: 1rem;
+  gap: 0;
+  overflow: hidden;
 }
 
 .headshot {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 100%;
+  height: 250px;
+  border-radius: 0;
   object-fit: cover;
-  border: 3px solid var(--accent);
+  border: none;
+  border-bottom: 2px solid var(--accent);
 }
 
 .title {
-  margin-top: 0.5rem;
+  margin: 1rem 1rem 0.5rem 1rem;
   max-width: 100%;
   word-break: break-word;
 }
 
 .time {
-  margin-top: 0.5rem;
+  margin: 0.5rem 1rem;
 }
 
 .subtitle {
   font-style: italic;
+  padding: 0 1rem 1rem 1rem;
 }
 
 @media (max-width: 640px) {
   .headshot {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 200px;
   }
 }
