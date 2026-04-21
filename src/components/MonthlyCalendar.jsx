@@ -70,6 +70,11 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     onDayClick(dateString)
   }
 
+  const handleTodayClick = () => {
+    const todayString = format(today, 'yyyy-MM-dd')
+    onDayClick(todayString)
+  }
+
   const isNextMonthDisabled = !isWithinBounds(addMonths(displayMonth, 1))
   const isPrevMonthDisabled = !isWithinBounds(subMonths(displayMonth, 1))
 
@@ -78,22 +83,31 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
+        <div className={styles.navGroup}>
+          <button
+            className={styles.navButton}
+            onClick={handlePrevMonth}
+            disabled={isPrevMonthDisabled}
+            aria-label="Previous month"
+          >
+            ← Prev
+          </button>
+          <h2 className={styles.monthYear}>{monthYear}</h2>
+          <button
+            className={styles.navButton}
+            onClick={handleNextMonth}
+            disabled={isNextMonthDisabled}
+            aria-label="Next month"
+          >
+            Next →
+          </button>
+        </div>
         <button
-          className={styles.navButton}
-          onClick={handlePrevMonth}
-          disabled={isPrevMonthDisabled}
-          aria-label="Previous month"
+          className={styles.todayButton}
+          onClick={handleTodayClick}
+          aria-label="Go to today"
         >
-          ← Prev
-        </button>
-        <h2 className={styles.monthYear}>{monthYear}</h2>
-        <button
-          className={styles.navButton}
-          onClick={handleNextMonth}
-          disabled={isNextMonthDisabled}
-          aria-label="Next month"
-        >
-          Next →
+          Today
         </button>
       </div>
 
