@@ -93,7 +93,12 @@ export function DayView({ initialDate = null, onDateChange = null, onViewChange 
           <button className={styles.actionButton} onClick={handleShare}>
             📋 Copy Link
           </button>
-          <button className={styles.actionButton} onClick={handleDownloadIcs}>
+          <button
+            className={styles.actionButton}
+            onClick={handleDownloadIcs}
+            disabled={!dayData.hasEvent}
+            title={!dayData.hasEvent ? 'No events scheduled for this date' : ''}
+          >
             📥 Download .ics
           </button>
         </div>

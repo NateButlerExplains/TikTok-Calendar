@@ -85,10 +85,16 @@
   transition: all 0.2s ease;
 }
 
-.actionButton:hover {
+.actionButton:hover:not(:disabled) {
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(0, 245, 255, 0.05);
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--muted);
 }
 
 @media (max-width: 640px) {

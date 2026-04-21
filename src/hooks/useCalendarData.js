@@ -23,7 +23,8 @@ export function useCalendarData(dateString) {
         time: event.time || resolveTime(dateString, event),
         guests: event.guests || [],
         topic: event.topic,
-        isPastDate: isPastDate(dateString)
+        isPastDate: isPastDate(dateString),
+        hasEvent: true
       }
     }
 
@@ -34,7 +35,8 @@ export function useCalendarData(dateString) {
       time: resolveTime(dateString, null),
       guests: [],
       topic: undefined,
-      isPastDate: isPastDate(dateString)
+      isPastDate: isPastDate(dateString),
+      hasEvent: false
     }
   }, [dateString])
 }
