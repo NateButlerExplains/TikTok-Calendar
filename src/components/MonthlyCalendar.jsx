@@ -24,19 +24,28 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
   // Determine initial month to display (use correctly parsed date in local timezone)
   const [displayMonth, setDisplayMonth] = useState(selectedDateObj)
 
-  // Check if a date is within ±2 months from today
+  // Check if a date is within bounds: April 21, 2026 or later, and ±2 months from today
+  const earliestDate = new Date(2026, 3, 21) // April 21, 2026
   const isWithinBounds = (date) => {
+    // Prevent navigation before April 21, 2026
+    const startOfCheckMonth = startOfMonth(date)
+    if (startOfCheckMonth < earliestDate) {
+      return false
+    }
+
+    // Also enforce ±2 months from today for forward limit
     const monthDiff = (date.getFullYear() - today.getFullYear()) * 12 +
                       (date.getMonth() - today.getMonth())
-    return monthDiff >= -2 && monthDiff <= 2
+    return monthDiff <= 2
   }
 
   // Get all dates to display (including days from prev/next month)
+  // Week starts on Sunday (weekStartsOn: 0)
   const calendarDays = useMemo(() => {
     const monthStart = startOfMonth(displayMonth)
     const monthEnd = endOfMonth(displayMonth)
-    const calendarStart = startOfWeek(monthStart)
-    const calendarEnd = endOfWeek(monthEnd)
+    const calendarStart = startOfWeek(monthStart, { weekStartsOn: 0 })
+    const calendarEnd = endOfWeek(monthEnd, { weekStartsOn: 0 })
 
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [displayMonth])
@@ -95,13 +104,13 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
       </div>
 
       <div className={styles.weekDays}>
+        <div className={styles.weekDay}>Su</div>
         <div className={styles.weekDay}>Mo</div>
         <div className={styles.weekDay}>Tu</div>
         <div className={styles.weekDay}>We</div>
         <div className={styles.weekDay}>Th</div>
         <div className={styles.weekDay}>Fr</div>
         <div className={styles.weekDay}>Sa</div>
-        <div className={styles.weekDay}>Su</div>
       </div>
 
       <div className={styles.grid}>
