@@ -10,7 +10,7 @@ export function DayCard({ date }) {
   }
 
   const handleImageError = (e) => {
-    e.target.src = '/Speakers/Nate Default.png'
+    e.target.src = '/Speakers/Nate Default.jpg'
   }
 
   const extractHandle = (tiktokUrl) => {
@@ -56,7 +56,7 @@ export function DayCard({ date }) {
     return (
       <div className={`card ${dayData.isPastDate ? 'past-event' : ''} ${styles.card}`}>
         <img
-          src="/Speakers/Nate Default.png"
+          src="/Speakers/Nate Default.jpg"
           alt="Nate Butler"
           className={styles.headshot}
           onError={handleImageError}
@@ -72,7 +72,7 @@ export function DayCard({ date }) {
   return (
     <div className={`card ${dayData.isPastDate ? 'past-event' : ''} ${styles.card}`}>
       <img
-        src="/Speakers/Nate Default.png"
+        src="/Speakers/Nate Default.jpg"
         alt="Nate Butler"
         className={styles.headshot}
         onError={handleImageError}
