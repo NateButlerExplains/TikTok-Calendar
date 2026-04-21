@@ -63,6 +63,37 @@ export function formatTime(date, timeObj) {
 }
 
 /**
+ * Format time in both EST and GMT+5 (e.g., "12:00 PM EST / 5:00 PM GMT+5")
+ */
+export function formatTimeWithGMT(date, timeObj) {
+  if (!date && !timeObj) {
+    return ''
+  }
+
+  // If only timeObj provided, create a date with those values
+  let dateToFormat = date
+  if (!date && timeObj) {
+    dateToFormat = new Date()
+    dateToFormat.setHours(timeObj.hour || 0, timeObj.minute || 0, 0, 0)
+  }
+
+  // Get EST time
+  const estZoned = toZonedTime(dateToFormat, TIMEZONE)
+  const estTime = format(estZoned, 'h:mm a')
+
+  // Calculate GMT+5 time (EST is UTC-5 or UTC-4 depending on DST)
+  // GMT+5 is 10 or 9 hours ahead of EST
+  const estOffset = estZoned.getTimezoneOffset() // In minutes
+  const gmtDate = new Date(dateToFormat.getTime() + (estOffset * 60 * 1000)) // Convert to UTC
+  const gmtPlusFiveDate = new Date(gmtDate.getTime() + (5 * 60 * 60 * 1000)) // Add 5 hours
+
+  // Format GMT+5 time
+  const gmtTime = format(gmtPlusFiveDate, 'h:mm a')
+
+  return `${estTime} EST / ${gmtTime} GMT+5`
+}
+
+/**
  * Check if a date is in the past.
  */
 export function isPastDate(dateString) {

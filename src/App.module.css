@@ -81,6 +81,15 @@
 }
 
 @media (max-width: 600px) {
+  .appHeader {
+    padding: 1rem 0.75rem;
+  }
+
+  .appHeader h1 {
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
   .mainContent {
     padding: 1rem 0.75rem;
     gap: 1rem;

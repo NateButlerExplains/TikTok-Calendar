@@ -38,9 +38,10 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [displayMonth])
 
-  // Check if a date has an event
-  const hasEvent = (dateString) => {
-    return events.some(e => e.date === dateString)
+  // Check if a date has a GUEST event (show green dot only for guests)
+  const hasGuestEvent = (dateString) => {
+    const event = events.find(e => e.date === dateString)
+    return event && event.dayType === 'guest' && event.guests && event.guests.length > 0
   }
 
   const handlePrevMonth = () => {
@@ -106,7 +107,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const isSelected = isSameDay(date, selectedDateObj)
           const isToday = isSameDay(date, today)
           const isCurrentMonth = isSameMonth(date, displayMonth)
-          const hasEventOnDate = hasEvent(dateString)
+          const hasGuestOnDate = hasGuestEvent(dateString)
 
           return (
             <button
@@ -115,11 +116,11 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
                 isSelected ? styles.selected : ''
               } ${isToday ? styles.today : ''}`}
               onClick={() => handleDayClick(date)}
-              aria-label={`${format(date, 'MMMM d, yyyy')}${hasEventOnDate ? ' - has event' : ''}${isToday ? ' - today' : ''}`}
+              aria-label={`${format(date, 'MMMM d, yyyy')}${hasGuestOnDate ? ' - has guest' : ''}${isToday ? ' - today' : ''}`}
               aria-pressed={isSelected}
             >
               <span className={styles.dayNumber}>{format(date, 'd')}</span>
-              {hasEventOnDate && <span className={styles.eventIndicator}>•</span>}
+              {hasGuestOnDate && <span className={styles.eventIndicator}>•</span>}
             </button>
           )
         })}

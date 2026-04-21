@@ -1,5 +1,5 @@
 import { useCalendarData } from '../hooks/useCalendarData'
-import { formatTime } from '../utils/timeUtils'
+import { formatTimeWithGMT } from '../utils/timeUtils'
 import styles from './DayCard.module.css'
 
 export function DayCard({ date }) {
@@ -19,7 +19,7 @@ export function DayCard({ date }) {
     return match ? match[1] : tiktokUrl.split('/').pop()
   }
 
-  const displayTime = dayData.time ? formatTime(new Date(), dayData.time) : ''
+  const displayTime = dayData.time ? formatTimeWithGMT(new Date(), dayData.time) : ''
 
   // Guest card
   if (dayData.dayType === 'guest' && dayData.guests && dayData.guests.length > 0) {

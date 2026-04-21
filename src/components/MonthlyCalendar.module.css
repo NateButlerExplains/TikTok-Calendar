@@ -124,26 +124,28 @@
   border-color: var(--border-subtle);
 }
 
-/* Selected Day (Current/Focused) */
+/* Selected Day (Current/Focused) - Outline only, no fill */
 .day.selected {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--button-deep);
-  font-weight: 500;
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--text);
+  font-weight: 400;
 }
 
 .day.selected:hover {
-  background: var(--accent-link);
+  background: rgba(62, 207, 142, 0.05);
   border-color: var(--accent-link);
 }
 
-/* Today's Date Indicator */
+/* Today's Date Indicator - Outline only */
 .day.today {
   border: 2px solid var(--accent);
+  background: transparent;
 }
 
 .day.selected.today {
   border-width: 2px;
+  background: transparent;
 }
 
 /* Day Number Text */
