@@ -29,7 +29,7 @@ export const events = [
     guests: [
       {
         name: 'Chris The Tech Ninja',
-        headshot: '/headshots/chris-the-tech-ninja.jpg',
+        headshot: '/Speakers/Chris The Tech Ninja.jpg',
         tiktokUrl: 'https://www.tiktok.com/@christechninja',
         topic: 'Zero Trust Architecture in 2026'
       }
