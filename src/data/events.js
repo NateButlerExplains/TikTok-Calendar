@@ -37,5 +37,16 @@ export const events = [
         topic: "Identity Access & Management"
       }
     ]
+  },
+  {
+    date: "2026-05-06",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Peezy",
+        headshot: "/Speakers/May6 - Peezy.jpg",
+        topic: "Cybersecurity Engineer Life"
+      }
+    ]
   }
 ]
