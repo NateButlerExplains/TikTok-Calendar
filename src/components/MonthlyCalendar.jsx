@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import {
   startOfMonth,
   endOfMonth,
@@ -24,6 +24,11 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
 
   // Determine initial month to display (use correctly parsed date in local timezone)
   const [displayMonth, setDisplayMonth] = useState(selectedDateObj)
+
+  // Update displayed month when selected date changes
+  useEffect(() => {
+    setDisplayMonth(selectedDateObj)
+  }, [selectedDate])
 
   // Allow navigation to all months (no arbitrary bounds)
   const isWithinBounds = (date) => {
