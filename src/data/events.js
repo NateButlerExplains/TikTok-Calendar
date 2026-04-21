@@ -21,11 +21,11 @@
  */
 
 export const events = [
-  // April 2026 — Sample guest day
+  // April 2026 — Monday, 12 PM EST standard time
   {
     date: '2026-04-21',
     dayType: 'guest',
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    time: { hour: 12, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: 'Chris The Tech Ninja',
@@ -36,20 +36,22 @@ export const events = [
     ]
   },
 
-  // Sample solo-talk day
+  // Tuesday, 8 PM EST standard time
   {
     date: '2026-04-22',
     dayType: 'solo-talk',
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
     topic: 'How AI is Changing Cybersecurity Threats'
   },
 
-  // Sample open-floor day (can be omitted — defaults to open-floor)
+  // Wednesday, 12 PM EST standard time
   {
     date: '2026-04-23',
-    dayType: 'open-floor'
+    dayType: 'open-floor',
+    time: { hour: 12, minute: 0, durationMinutes: 60 }
   },
 
-  // Additional sample events for testing
+  // Thursday, 8 PM EST standard time
   {
     date: '2026-04-24',
     dayType: 'guest',
@@ -64,13 +66,15 @@ export const events = [
     ]
   },
 
+  // Friday, 8 PM EST standard time
   {
     date: '2026-04-25',
     dayType: 'solo-talk',
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
     topic: 'Incident Response 101'
   },
 
-  // May 2026 sample
+  // May 2026 — Thursday, 8 PM EST standard time
   {
     date: '2026-05-01',
     dayType: 'guest',
@@ -85,16 +89,18 @@ export const events = [
     ]
   },
 
+  // Friday, 8 PM EST standard time
   {
     date: '2026-05-02',
-    dayType: 'open-floor'
+    dayType: 'open-floor',
+    time: { hour: 20, minute: 0, durationMinutes: 60 }
   },
 
-  // June 2026 — EDT test (daylight saving)
+  // June 2026 — Wednesday, 12 PM EDT (UTC-4, daylight saving)
   {
     date: '2026-06-17',
     dayType: 'guest',
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    time: { hour: 12, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: 'Morgan Davis',
@@ -105,10 +111,11 @@ export const events = [
     ]
   },
 
-  // November 2026 — EST test (standard time)
+  // November 2026 — Wednesday, 12 PM EST (UTC-5, standard time)
   {
     date: '2026-11-18',
     dayType: 'solo-talk',
+    time: { hour: 12, minute: 0, durationMinutes: 60 },
     topic: 'Year in Review: Cybersecurity 2026'
   }
 ]
