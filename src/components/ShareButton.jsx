@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useCalendarData } from '../hooks/useCalendarData'
 import { logCustomEvent } from '../firebase'
 import styles from './ShareButton.module.css'
 
 export function ShareButton({ date }) {
   const [shareStatus, setShareStatus] = useState('')
+  const dayData = useCalendarData(date)
 
   const handleShare = async () => {
     const url = `${window.location.origin}/?date=${date}`
@@ -22,13 +24,21 @@ export function ShareButton({ date }) {
           text,
           url
         })
-        logCustomEvent('share_link', { date, method: 'native' })
+        logCustomEvent('share_link', {
+          date,
+          method: 'native',
+          event_type: dayData?.dayType || 'open-floor'
+        })
       } else {
         // Fallback to clipboard
         await navigator.clipboard.writeText(url)
         setShareStatus('Copied to clipboard!')
         setTimeout(() => setShareStatus(''), 2000)
-        logCustomEvent('share_link', { date, method: 'clipboard' })
+        logCustomEvent('share_link', {
+          date,
+          method: 'clipboard',
+          event_type: dayData?.dayType || 'open-floor'
+        })
       }
     } catch (error) {
       if (error.name === 'AbortError') {
@@ -41,6 +51,11 @@ export function ShareButton({ date }) {
         await navigator.clipboard.writeText(url)
         setShareStatus('Copied to clipboard!')
         setTimeout(() => setShareStatus(''), 2000)
+        logCustomEvent('share_link', {
+          date,
+          method: 'fallback',
+          event_type: dayData?.dayType || 'open-floor'
+        })
       } catch (clipboardError) {
         setShareStatus('Share failed')
         setTimeout(() => setShareStatus(''), 2000)

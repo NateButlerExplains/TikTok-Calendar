@@ -1,5 +1,6 @@
 import { useCalendarData } from '../hooks/useCalendarData'
 import { formatTimeWithGMT } from '../utils/timeUtils'
+import { logCustomEvent } from '../firebase'
 import styles from './DayCard.module.css'
 
 export function DayCard({ date }) {
@@ -32,6 +33,14 @@ export function DayCard({ date }) {
     return match ? match[1] : tiktokUrl.split('/').pop()
   }
 
+  const handleTiktokClick = (guestName, handle) => {
+    logCustomEvent('tiktok_link_clicked', {
+      date,
+      guest_name: guestName,
+      handle
+    })
+  }
+
   const displayTime = dayData.time ? formatTimeWithGMT(date, dayData.time) : ''
 
   // Guest card
@@ -56,6 +65,7 @@ export function DayCard({ date }) {
             target="_blank"
             rel="noopener noreferrer"
             className={`accent ${styles.tiktokLink}`}
+            onClick={() => handleTiktokClick(guest.name, handle)}
           >
             → @{handle}
           </a>

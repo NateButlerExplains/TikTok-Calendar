@@ -11,6 +11,7 @@ import { TermsOfService } from './pages/TermsOfService'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
 import { getTodayString } from './utils/timeUtils'
+import { logCustomEvent } from './firebase'
 import styles from './App.module.css'
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
     const params = new URLSearchParams(window.location.search)
     params.set('date', date)
     window.history.replaceState(null, '', `?${params.toString()}`)
+
+    logCustomEvent('date_selected', { date })
   }
 
   return (

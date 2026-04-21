@@ -12,6 +12,7 @@ import {
   subMonths
 } from 'date-fns'
 import { getTodayString } from '../utils/timeUtils'
+import { logCustomEvent } from '../firebase'
 import { events } from '../data/events'
 import styles from './MonthlyCalendar.module.css'
 
@@ -60,6 +61,10 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     const newMonth = subMonths(displayMonth, 1)
     if (isWithinBounds(newMonth)) {
       setDisplayMonth(newMonth)
+      logCustomEvent('month_changed', {
+        direction: 'prev',
+        month_year: format(newMonth, 'MMMM yyyy')
+      })
     }
   }
 
@@ -67,6 +72,10 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     const newMonth = addMonths(displayMonth, 1)
     if (isWithinBounds(newMonth)) {
       setDisplayMonth(newMonth)
+      logCustomEvent('month_changed', {
+        direction: 'next',
+        month_year: format(newMonth, 'MMMM yyyy')
+      })
     }
   }
 
@@ -79,6 +88,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
   const handleTodayClick = () => {
     const todayString = getTodayString()
     onDayClick(todayString)
+    logCustomEvent('today_clicked', { date: todayString })
   }
 
   const isNextMonthDisabled = !isWithinBounds(addMonths(displayMonth, 1))

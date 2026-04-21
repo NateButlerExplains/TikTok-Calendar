@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { logCustomEvent } from '../firebase';
 import '../styles/legal.css';
 
 export function About() {
+  useEffect(() => {
+    logCustomEvent('page_visited', { page: 'about' })
+  }, [])
+
   return (
     <div className="legal-page">
       <header className="legal-header">

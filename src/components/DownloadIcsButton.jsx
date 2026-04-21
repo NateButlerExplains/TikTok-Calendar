@@ -9,7 +9,11 @@ export function DownloadIcsButton({ date }) {
   const handleDownloadIcs = () => {
     downloadIcs(date, dayData)
     const guestName = dayData.guests?.[0]?.name || dayData.topic || 'Event'
-    logCustomEvent('download_ics', { date, event_name: guestName })
+    logCustomEvent('download_ics', {
+      date,
+      event_name: guestName,
+      event_type: dayData?.dayType || 'open-floor'
+    })
   }
 
   // Disable for: no data, open floor events, or events without actual content

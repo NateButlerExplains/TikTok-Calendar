@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { logCustomEvent } from '../firebase';
 import '../styles/legal.css';
 
 export function PrivacyPolicy() {
+  useEffect(() => {
+    logCustomEvent('page_visited', { page: 'privacy' })
+  }, [])
+
   return (
     <div className="legal-page">
       <header className="legal-header">
