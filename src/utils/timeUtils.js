@@ -22,8 +22,8 @@ export function resolveTime(dateString, event) {
     return { hour: 12, minute: 0, durationMinutes: 60 }
   }
 
-  // All other days: 8 PM
-  return { hour: 20, minute: 0, durationMinutes: 60 }
+  // All other days: 9 PM
+  return { hour: 21, minute: 0, durationMinutes: 60 }
 }
 
 /**
