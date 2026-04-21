@@ -80,8 +80,8 @@ export function formatTimeWithGMT(dateStringOrObj, timeObj) {
   else if (dateStringOrObj instanceof Date) {
     // Format in local time
     const estTime = format(dateStringOrObj, 'h:mm a')
-    // For GMT: add 10 hours (EST UTC-5 to GMT is 10 hours)
-    const gmtDateTime = new Date(dateStringOrObj.getTime() + (10 * 60 * 60 * 1000))
+    // For GMT: add 5 hours (EST UTC-5 to GMT UTC+0 is 5 hours)
+    const gmtDateTime = new Date(dateStringOrObj.getTime() + (5 * 60 * 60 * 1000))
     const gmtTime = format(gmtDateTime, 'h:mm a')
     return `${estTime} EST / ${gmtTime} GMT`
   }
@@ -100,8 +100,8 @@ export function formatTimeWithGMT(dateStringOrObj, timeObj) {
   const minuteStr = String(minute).padStart(2, '0')
   const estTime = `${displayHour}:${minuteStr} ${ampm}`
 
-  // Calculate GMT time (EST UTC-5 + 10 hours = UTC+5)
-  let gmtHour = hour + 10
+  // Calculate GMT time (EST UTC-5 + 5 hours = UTC+0 = GMT)
+  let gmtHour = hour + 5
   let gmtDay = 0
   if (gmtHour >= 24) {
     gmtHour -= 24
