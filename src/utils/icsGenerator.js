@@ -131,18 +131,13 @@ function downloadIcsDesktop(icsData) {
 }
 
 /**
- * iOS download: Opens file in new tab (user can save from there).
- * iOS Safari doesn't support blob: downloads, so we use data: URI instead.
+ * iOS download: Open blob in new tab so Safari hands it off to Calendar.app.
+ * data: URIs on iOS can corrupt timezone info; blob: URLs preserve it correctly.
  */
 function downloadIcsIOS(icsData) {
-  const dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsData.value)
-  const element = document.createElement('a')
-  element.setAttribute('href', dataUri)
-  element.setAttribute('download', icsData.filename)
-  element.setAttribute('target', '_blank')
-  element.style.display = 'none'
-
-  document.body.appendChild(element)
-  element.click()
-  document.body.removeChild(element)
+  const blob = new Blob([icsData.value], { type: 'text/calendar;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  window.open(url, '_blank')
+  // Delay revoke so Safari has time to read it before it's freed
+  setTimeout(() => URL.revokeObjectURL(url), 5000)
 }
