@@ -73,13 +73,10 @@ export function generateIcs(dateString, event) {
     return null
   }
 
-  // Add TZID parameter to DTSTART and DTEND so calendar apps treat times as EST
-  const icsWithTz = value
-    .replace(/DTSTART:/g, 'DTSTART;TZID=America/New_York:')
-    .replace(/DTEND:/g, 'DTEND;TZID=America/New_York:')
-
+  // Return ICS without timezone info - this makes it a "floating" time
+  // that appears at 12 PM in whatever timezone the user's calendar is set to
   return {
-    value: icsWithTz,
+    value,
     filename: `cyber-talks-${dateString}.ics`
   }
 }
