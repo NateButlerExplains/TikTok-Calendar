@@ -1,17 +1,17 @@
-import { format, addDays, subDays } from 'date-fns';
+import { format } from 'date-fns';
 import { formatInTimeZone } from 'date-fns-tz';
+import { addDays, formatDateHeader } from '../utils/timeUtils';
 import styles from './CalendarHeader.module.css';
 
 export function CalendarHeader({ currentView, currentDate, onViewChange, onDateChange }) {
-  const dateObj = new Date(currentDate);
-  const formattedDate = formatInTimeZone(dateObj, 'America/New_York', 'EEEE, MMMM d');
+  const formattedDate = formatDateHeader(currentDate);
 
   const handlePrevDay = () => {
-    onDateChange(subDays(dateObj, 1).toISOString().split('T')[0]);
+    onDateChange(addDays(currentDate, -1));
   };
 
   const handleNextDay = () => {
-    onDateChange(addDays(dateObj, 1).toISOString().split('T')[0]);
+    onDateChange(addDays(currentDate, 1));
   };
 
   const handleToggleView = () => {
