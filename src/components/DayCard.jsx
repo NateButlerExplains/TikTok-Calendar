@@ -5,12 +5,18 @@ import styles from './DayCard.module.css'
 export function DayCard({ date }) {
   const dayData = useCalendarData(date)
 
-  if (!dayData) {
+  // Check if date is before May 1, 2026 (no scheduled events, only pop-ups)
+  const [year, month, day] = date.split('-').map(Number)
+  const dateObj = new Date(year, month - 1, day)
+  const scheduleStart = new Date(2026, 4, 1) // May 1, 2026
+  const isBeforeSchedule = dateObj < scheduleStart
+
+  if (!dayData || isBeforeSchedule) {
     return (
       <div className={styles.container}>
         <div className={styles.noEvent}>
-          <p className={styles.noEventTitle}>No Scheduled Event</p>
-          <p className={styles.noEventText}>Pop-up events coming soon!</p>
+          <p className={styles.noEventTitle}>No Event</p>
+          <p className={styles.noEventText}>Check for pop-ups!</p>
         </div>
       </div>
     )
