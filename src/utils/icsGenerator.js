@@ -36,29 +36,27 @@ export function generateIcs(dateString, event) {
   const month = parseInt(parts[1])
   const day = parseInt(parts[2])
 
-  // Build start and end arrays
-  const startArray = [year, month, day, time.hour, time.minute]
+  // Convert EST time (UTC-5) to UTC
+  // Example: 12 PM EST = 5 PM UTC
+  const estToUtcHours = 5
+  const startUtcHour = (time.hour + estToUtcHours) % 24
+  const startUtcDay = day + Math.floor((time.hour + estToUtcHours) / 24)
 
-  // Calculate end time
+  const startArray = [year, month, startUtcDay, startUtcHour, time.minute]
+
+  // Calculate end time in UTC
   const endMinute = time.minute + (time.durationMinutes || 60)
-  let endHour = time.hour + Math.floor(endMinute / 60)
-  let endDay = day
-  let endMonth = month
-  let endYear = year
+  const endTotalHours = startUtcHour + Math.floor(endMinute / 60)
+  const endUtcHour = endTotalHours % 24
+  const endUtcDay = startUtcDay + Math.floor(endTotalHours / 24)
 
-  if (endHour >= 24) {
-    endHour -= 24
-    endDay += 1
-    // Simple handling - doesn't account for month/year boundary, but 1-hour events won't cross
-  }
+  const endArray = [year, month, endUtcDay, endUtcHour, endMinute % 60]
 
-  const endArray = [endYear, endMonth, endDay, endHour, endMinute % 60]
-
-  // Generate ics file with America/New_York timezone
+  // Generate ics file with UTC times
   const { value, error } = createEvent({
     title,
     description,
-    startInputType: 'local',
+    startInputType: 'utc',
     start: startArray,
     end: endArray,
     location: 'TikTok Live - @natebutlerexplains',
@@ -73,8 +71,8 @@ export function generateIcs(dateString, event) {
     return null
   }
 
-  // Return ICS without timezone info - this makes it a "floating" time
-  // that appears at 12 PM in whatever timezone the user's calendar is set to
+  // UTC times in ICS will automatically convert to user's timezone
+  // The calendar app will show: 12 PM EST (UTC-5) and convert to 11 AM CST (UTC-6)
   return {
     value,
     filename: `cyber-talks-${dateString}.ics`
