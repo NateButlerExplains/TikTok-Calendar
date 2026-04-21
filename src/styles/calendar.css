@@ -1,20 +1,22 @@
+/* ===== CARD STYLING (Supabase: Borders define depth, not shadows) ===== */
 .card {
   background: var(--card);
+  border: 1px solid var(--border-standard);
   border-radius: 8px;
-  padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 245, 255, 0.1);
+  border-color: var(--border-prominent);
 }
 
 .past-event {
   opacity: 0.45;
 }
 
+/* ===== LAYOUT UTILITIES ===== */
 .center {
   max-width: 800px;
   margin: 0 auto;
@@ -48,39 +50,135 @@
   border: 2px solid var(--accent);
 }
 
+/* ===== TYPOGRAPHY HIERARCHY (Supabase Design System) ===== */
+
+/* HERO / DISPLAY TEXT
+   - Dense (line-height 1.00)
+   - Weight 400 (not bold)
+   - Large size (72px)
+   - Green accent color
+   - Creates "terminal command" feel
+*/
 .heading-1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1.00;
+  letter-spacing: normal;
   color: var(--accent);
+  font-family: var(--font-primary);
 }
 
+/* SECTION HEADING
+   - 36px Circular 400
+   - Line-height 1.25 (slightly tight)
+   - For major section dividers
+*/
+.heading-section {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text);
+  font-family: var(--font-primary);
+}
+
+/* CARD TITLE
+   - 24px Circular 400
+   - Negative letter-spacing (-0.16px) for subtle tightening
+   - Line-height 1.33
+   - Primary text color
+*/
 .heading-2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: -0.16px;
   color: var(--text);
+  font-family: var(--font-primary);
 }
 
+/* SUB-HEADING
+   - 18px Circular 400
+   - Line-height 1.56
+   - Primary text color
+*/
 .heading-3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
   color: var(--text);
+  font-family: var(--font-primary);
 }
 
+/* BODY TEXT
+   - 16px Circular 400
+   - Line-height 1.50
+   - Primary text color
+*/
 .body {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.50;
   color: var(--text);
+  font-family: var(--font-primary);
 }
 
+/* SMALL BODY TEXT
+   - 14px Circular 400
+   - Line-height 1.43
+   - Primary text color
+*/
 .body-sm {
-  font-size: 0.875rem;
-  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
   color: var(--text);
+  font-family: var(--font-primary);
 }
 
+/* CAPTION TEXT
+   - 14px Circular 400
+   - Line-height 1.43
+   - Can be muted color
+*/
+.caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
+  color: var(--muted);
+  font-family: var(--font-primary);
+}
+
+/* SMALL TEXT (Footer, fine print)
+   - 12px Circular 400
+   - Line-height 1.33
+   - Muted color
+*/
+.small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: var(--muted);
+  font-family: var(--font-primary);
+}
+
+/* CODE LABEL (Technical markers)
+   - 12px Source Code Pro 400
+   - Letter-spacing 1.2px (wide)
+   - text-transform: uppercase
+   - Muted gray color
+   - Creates "developer console" voice
+*/
+.code-label {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* TEXT COLOR UTILITIES */
 .muted {
   color: var(--muted);
 }
@@ -89,6 +187,25 @@
   color: var(--accent);
 }
 
+.accent-link {
+  color: var(--accent-link);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* NAV & BUTTON TEXT
+   - Weight 500 (heavier than body)
+   - Used for interactive elements only
+*/
+.nav-link,
+.button-text {
+  font-weight: 500;
+  font-family: var(--font-primary);
+}
+
+/* ===== SPACING UTILITIES (8px base unit) ===== */
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
@@ -96,13 +213,19 @@
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   .heading-1 {
-    font-size: 1.75rem;
+    font-size: 48px;
+    line-height: 1.08;
+  }
+
+  .heading-section {
+    font-size: 24px;
   }
 
   .heading-2 {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   .center {

@@ -1,10 +1,38 @@
+/* Supabase Design System - Cyber Talks Calendar */
+
 :root {
-  --bg-primary: #0a0a0f;
-  --surface: #12121a;
-  --card: #1a1a2e;
-  --accent: #00f5ff;
-  --text: #e0e0e0;
-  --muted: #555577;
+  /* ===== BACKGROUND COLORS ===== */
+  --bg-primary: #171717;        /* Page background */
+  --button-deep: #0f0f0f;       /* Primary button bg (deepest) */
+  --surface: #171717;           /* Card/section bg (same as page) */
+  --card: #171717;
+
+  /* ===== ACCENT COLORS (Supabase Green) ===== */
+  --accent: #3ecf8e;            /* Brand accent (emerald green) */
+  --accent-link: #00c573;       /* Link color (saturated green) */
+  --accent-border: rgba(62, 207, 142, 0.3);  /* Green border 30% opacity */
+
+  /* ===== TEXT COLORS ===== */
+  --text: #fafafa;              /* Primary text (off-white) */
+  --text-secondary: #b4b4b4;    /* Secondary text (light gray) */
+  --muted: #898989;             /* Tertiary/muted text (mid-gray) */
+
+  /* ===== BORDER COLORS (Supabase Border Hierarchy) ===== */
+  --border-subtle: #242424;     /* Barely visible dividers */
+  --border-standard: #2e2e2e;   /* Default borders */
+  --border-prominent: #363636;  /* Interactive elements, hover state */
+  --border-light: #393939;      /* Alternative prominent borders */
+
+  /* ===== TYPOGRAPHY ===== */
+  /* Primary font: Circular (geometric sans-serif with rounded terminals)
+     Fallbacks: Trebuchet MS, Lucida Grande, system fonts
+     For now using system-ui as fallback, but should upgrade to Circular
+  */
+  --font-primary: Circular, Trebuchet MS, Lucida Grande, system-ui, -apple-system, sans-serif;
+  --font-monospace: 'Source Code Pro', Menlo, Monaco, ui-monospace, monospace;
+
+  /* ===== SHADOWS - REMOVED (Supabase uses zero shadows) ===== */
+  --shadow: none;
 }
 
 * {
@@ -22,8 +50,9 @@ body {
   height: 100%;
   background-color: var(--bg-primary);
   color: var(--text);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-primary);
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,38 +65,49 @@ body {
   width: 100%;
 }
 
+/* ===== LINKS ===== */
 a {
-  color: var(--accent);
+  color: var(--accent-link);
   text-decoration: none;
   transition: opacity 0.2s ease;
+  font-weight: 400;
 }
 
 a:hover {
   opacity: 0.8;
 }
 
+a:focus {
+  outline: 2px solid var(--accent-link);
+  outline-offset: 2px;
+}
+
+/* ===== BUTTONS ===== */
 button {
   background: none;
   border: none;
   color: inherit;
-  font-family: inherit;
+  font-family: var(--font-primary);
   font-size: inherit;
+  font-weight: inherit;
   cursor: pointer;
   padding: 0;
   outline: none;
 }
 
-button:focus {
+button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
+/* ===== IMAGES ===== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   body {
     font-size: 14px;

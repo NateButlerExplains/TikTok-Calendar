@@ -1,11 +1,14 @@
+/* ===== DAY CARD CONTAINER ===== */
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 400px;
   color: var(--muted);
+  font-family: var(--font-primary);
 }
 
+/* ===== EVENT CARD (Supabase: No shadows, borders define depth) ===== */
 .card {
   display: flex;
   flex-direction: column;
@@ -13,8 +16,17 @@
   text-align: center;
   gap: 0;
   overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border-standard);
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
 }
 
+.card:hover {
+  border-color: var(--border-prominent);
+}
+
+/* ===== HEADSHOT IMAGE ===== */
 .headshot {
   width: 100%;
   height: 250px;
@@ -22,47 +34,109 @@
   object-fit: cover;
   border: none;
   border-bottom: 2px solid var(--accent);
+  display: block;
 }
 
+/* ===== CARD CONTENT PADDING ===== */
+.cardHeader {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== GUEST NAME (Card Title) ===== */
 .name {
-  margin: 1rem 1rem 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  letter-spacing: -0.16px;
+  line-height: 1.33;
+  color: var(--text);
 }
 
+/* ===== EVENT TITLE (Solo Talk / Open Floor) ===== */
 .title {
-  margin: 1rem 1rem 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: var(--font-primary);
+  letter-spacing: -0.16px;
+  line-height: 1.33;
   color: var(--accent);
 }
 
+/* ===== TOPIC / DESCRIPTION ===== */
 .topic {
   color: var(--muted);
   max-width: 100%;
   word-break: break-word;
-  padding: 0 1rem;
-}
-
-.time {
-  margin: 0.5rem 1rem;
   padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43;
 }
 
+/* ===== TIME TEXT ===== */
+.time {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.33;
+}
+
+/* ===== SUBTITLE (Presenter, Description) ===== */
 .subtitle {
   font-style: italic;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--muted);
+  line-height: 1.43;
 }
 
+/* ===== TIKTOK LINK ===== */
 .tiktokLink {
-  margin: 0.5rem 1rem 1rem 1rem;
-  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--accent-link);
   transition: opacity 0.2s ease;
+  font-family: var(--font-primary);
+  text-decoration: none;
 }
 
 .tiktokLink:hover {
   opacity: 0.8;
 }
 
+.tiktokLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 640px) {
   .headshot {
     width: 100%;
     height: 200px;
+  }
+
+  .name,
+  .title {
+    font-size: 20px;
+  }
+
+  .cardHeader {
+    padding: 12px;
+    gap: 6px;
   }
 }
