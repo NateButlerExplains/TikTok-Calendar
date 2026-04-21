@@ -90,54 +90,27 @@ export function generateIcs(dateString, event) {
 }
 
 /**
- * Detect iOS device.
- */
-function isIOS() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent)
-}
-
-/**
  * Trigger browser download of .ics file.
- * Uses device-specific approaches for compatibility.
  */
 export function downloadIcs(dateString, event) {
   const icsData = generateIcs(dateString, event)
   if (!icsData) return
 
-  if (isIOS()) {
-    downloadIcsIOS(icsData)
-  } else {
-    downloadIcsDesktop(icsData)
-  }
-}
+  // Log ICS content so we can verify UTC output in browser console
+  console.log('[ICS Debug] Generated ICS:\n', icsData.value)
 
-/**
- * Desktop download using Blob + ObjectURL.
- */
-function downloadIcsDesktop(icsData) {
-  const blob = new Blob([icsData.value], { type: 'text/calendar' })
-  const url = URL.createObjectURL(blob)
-
-  const element = document.createElement('a')
-  element.setAttribute('href', url)
-  element.setAttribute('download', icsData.filename)
-  element.style.display = 'none'
-
-  document.body.appendChild(element)
-  element.click()
-  document.body.removeChild(element)
-
-  URL.revokeObjectURL(url)
-}
-
-/**
- * iOS download: Open blob in new tab so Safari hands it off to Calendar.app.
- * data: URIs on iOS can corrupt timezone info; blob: URLs preserve it correctly.
- */
-function downloadIcsIOS(icsData) {
   const blob = new Blob([icsData.value], { type: 'text/calendar;charset=utf-8' })
   const url = URL.createObjectURL(blob)
-  window.open(url, '_blank')
-  // Delay revoke so Safari has time to read it before it's freed
+
+  // Use window.open for all devices — works on iOS Safari and triggers Calendar.app
+  // A hidden <a download> doesn't work reliably on iOS
+  const a = document.createElement('a')
+  a.href = url
+  a.download = icsData.filename
+  a.style.display = 'none'
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+
   setTimeout(() => URL.revokeObjectURL(url), 5000)
 }
