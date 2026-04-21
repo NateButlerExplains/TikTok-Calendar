@@ -55,7 +55,7 @@ export const events = [
     guests: [
       {
         name: "Peezy",
-        headshot: "/Speakers/May6 - Peezy.jpg",
+        headshot: "/Speakers/May6-peezy2.JPG",
         topic: "Cybersecurity Engineer Life"
       }
     ]
