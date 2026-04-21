@@ -16,10 +16,13 @@ import styles from './MonthlyCalendar.module.css'
 
 export function MonthlyCalendar({ selectedDate, onDayClick }) {
   const today = new Date()
-  const selectedDateObj = new Date(selectedDate)
 
-  // Determine initial month to display
-  const [displayMonth, setDisplayMonth] = useState(new Date(selectedDate))
+  // Parse date string correctly in local timezone (not UTC)
+  const [year, month, day] = selectedDate.split('-').map(Number)
+  const selectedDateObj = new Date(year, month - 1, day)
+
+  // Determine initial month to display (use correctly parsed date in local timezone)
+  const [displayMonth, setDisplayMonth] = useState(selectedDateObj)
 
   // Check if a date is within ±2 months from today
   const isWithinBounds = (date) => {
