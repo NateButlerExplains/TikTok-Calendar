@@ -124,7 +124,19 @@
   border-color: var(--border-subtle);
 }
 
-/* Selected Day (Current/Focused) - Bold 2px outline */
+/* TODAY'S DATE - Faint light green filled background */
+.day.today {
+  background: rgba(62, 207, 142, 0.15);
+  border: 1px solid var(--border-standard);
+  color: var(--text);
+  font-weight: 400;
+}
+
+.day.today:hover {
+  background: rgba(62, 207, 142, 0.2);
+}
+
+/* SELECTED DATE - Bold 2px green outline (no fill) */
 .day.selected {
   background: transparent;
   border: 2px solid var(--accent);
@@ -133,20 +145,15 @@
 }
 
 .day.selected:hover {
-  background: rgba(62, 207, 142, 0.05);
+  background: rgba(62, 207, 142, 0.08);
   border-color: var(--accent-link);
 }
 
-/* Today's Date Indicator - Subtle 1px border only (not selected) */
-.day.today:not(.selected) {
-  border: 1px solid var(--accent);
-  background: transparent;
-}
-
-/* If today is also selected, keep only selected state (2px border) */
+/* SELECTED + TODAY - Show selected state (outline takes priority) */
 .day.selected.today {
-  border: 2px solid var(--accent);
   background: transparent;
+  border: 2px solid var(--accent);
+  font-weight: 500;
 }
 
 /* Day Number Text */
