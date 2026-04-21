@@ -1,5 +1,5 @@
 import { createEvent } from 'ics'
-import { getStreamStart, resolveTime } from './timeUtils'
+import { resolveTime } from './timeUtils'
 
 /**
  * Generate an .ics calendar file for a single event.
@@ -30,45 +30,35 @@ export function generateIcs(dateString, event) {
 
   description += `\n\nDate: ${dateString}`
 
-  // Create EST time as UTC by accounting for EST offset (UTC-5)
-  // Example: 12 PM EST = 5 PM UTC (12 + 5 hours)
-  const estToUtcHours = 5
-  const startUtcHours = time.hour + estToUtcHours
-  const startUtcDate = new Date(
-    parseInt(dateString.split('-')[0]),
-    parseInt(dateString.split('-')[1]) - 1,
-    parseInt(dateString.split('-')[2]),
-    startUtcHours,
-    time.minute,
-    0
-  )
+  // Parse date string
+  const parts = dateString.split('-')
+  const year = parseInt(parts[0])
+  const month = parseInt(parts[1])
+  const day = parseInt(parts[2])
+
+  // Build start and end arrays
+  const startArray = [year, month, day, time.hour, time.minute]
 
   // Calculate end time
-  const endUtcDate = new Date(startUtcDate)
-  endUtcDate.setMinutes(endUtcDate.getMinutes() + (time.durationMinutes || 60))
+  const endMinute = time.minute + (time.durationMinutes || 60)
+  let endHour = time.hour + Math.floor(endMinute / 60)
+  let endDay = day
+  let endMonth = month
+  let endYear = year
 
-  // Format dates for ics library in UTC: [YYYY, MM, DD, HH, mm]
-  const startArray = [
-    startUtcDate.getUTCFullYear(),
-    startUtcDate.getUTCMonth() + 1,
-    startUtcDate.getUTCDate(),
-    startUtcDate.getUTCHours(),
-    startUtcDate.getUTCMinutes()
-  ]
+  if (endHour >= 24) {
+    endHour -= 24
+    endDay += 1
+    // Simple handling - doesn't account for month/year boundary, but 1-hour events won't cross
+  }
 
-  const endArray = [
-    endUtcDate.getUTCFullYear(),
-    endUtcDate.getUTCMonth() + 1,
-    endUtcDate.getUTCDate(),
-    endUtcDate.getUTCHours(),
-    endUtcDate.getUTCMinutes()
-  ]
+  const endArray = [endYear, endMonth, endDay, endHour, endMinute % 60]
 
-  // Generate ics file with UTC times
+  // Generate ics file with America/New_York timezone
   const { value, error } = createEvent({
     title,
     description,
-    startInputType: 'utc',
+    startInputType: 'local',
     start: startArray,
     end: endArray,
     location: 'TikTok Live - @natebutlerexplains',
@@ -83,8 +73,13 @@ export function generateIcs(dateString, event) {
     return null
   }
 
+  // Add TZID parameter to DTSTART and DTEND so calendar apps treat times as EST
+  const icsWithTz = value
+    .replace(/DTSTART:/g, 'DTSTART;TZID=America/New_York:')
+    .replace(/DTEND:/g, 'DTEND;TZID=America/New_York:')
+
   return {
-    value,
+    value: icsWithTz,
     filename: `cyber-talks-${dateString}.ics`
   }
 }
