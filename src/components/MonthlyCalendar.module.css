@@ -124,12 +124,12 @@
   border-color: var(--border-subtle);
 }
 
-/* Selected Day (Current/Focused) - Outline only, no fill */
+/* Selected Day (Current/Focused) - Bold 2px outline */
 .day.selected {
   background: transparent;
   border: 2px solid var(--accent);
   color: var(--text);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .day.selected:hover {
@@ -137,14 +137,15 @@
   border-color: var(--accent-link);
 }
 
-/* Today's Date Indicator - Outline only */
-.day.today {
-  border: 2px solid var(--accent);
+/* Today's Date Indicator - Subtle 1px border only (not selected) */
+.day.today:not(.selected) {
+  border: 1px solid var(--accent);
   background: transparent;
 }
 
+/* If today is also selected, keep only selected state (2px border) */
 .day.selected.today {
-  border-width: 2px;
+  border: 2px solid var(--accent);
   background: transparent;
 }
 
