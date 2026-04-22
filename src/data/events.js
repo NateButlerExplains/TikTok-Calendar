@@ -106,6 +106,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-15",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Marshall",
+        headshot: "/Speakers/May15 - MarshallProf.jpg",
+        topic: "Why Cybersecurity?!?!"
+      }
+    ]
+  },
+  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
