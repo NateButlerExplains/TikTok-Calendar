@@ -150,6 +150,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-20",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Francis",
+        headshot: "/Speakers/MAY20 - FRANCIS.png",
+        topic: "Cloud Security"
+      }
+    ]
+  },
+  {
     date: "2026-05-22",
     dayType: "guest",
     guests: [
