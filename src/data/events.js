@@ -81,5 +81,16 @@ export const events = [
         topic: "Neurodivergents in Cyber"
       }
     ]
+  },
+  {
+    date: "2026-05-19",
+    dayType: "guest",
+    guests: [
+      {
+        name: "David",
+        headshot: "/Speakers/May19 - DavidWest.png",
+        topic: "Surving and Thriving in Cyber"
+      }
+    ]
   }
 ]
