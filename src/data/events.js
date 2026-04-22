@@ -137,5 +137,16 @@ export const events = [
         topic: "RMF Based Roles and Today's Market"
       }
     ]
+  },
+  {
+    date: "2026-06-19",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Chris",
+        headshot: "/Speakers/June19 - Christ Tech.jpg",
+        topic: "Importance of Tech Projects/Portfolio"
+      }
+    ]
   }
 ]
