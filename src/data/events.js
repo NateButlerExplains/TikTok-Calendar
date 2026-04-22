@@ -83,6 +83,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-11",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Samir",
+        headshot: "/Speakers/May11 - Samir.jpg",
+        topic: "Claude Ai in the Cyber Space"
+      }
+    ]
+  },
+  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
