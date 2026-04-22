@@ -37,27 +37,6 @@ export function Contact() {
               @natebutlerexplains
             </a>
           </div>
-
-          <div className="contact-item">
-            <h3>GitHub</h3>
-            <p>Code and project discussions:</p>
-            <a
-              href="https://github.com/NateButlerExplains"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-link"
-            >
-              github.com/NateButlerExplains
-            </a>
-          </div>
-
-          <div className="contact-item">
-            <h3>Email</h3>
-            <p>For direct inquiries, you can reach out via email:</p>
-            <a href="mailto:contact@cybertalks.dev" className="cta-link">
-              contact@cybertalks.dev
-            </a>
-          </div>
         </section>
 
         <section>
