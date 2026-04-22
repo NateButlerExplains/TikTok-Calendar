@@ -117,6 +117,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-18",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Get Pwn3d!",
+        headshot: "/Speakers/May18 - Get Pwn3d!.png",
+        topic: "Cybersecurity Leadership"
+      }
+    ]
+  },
+  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
