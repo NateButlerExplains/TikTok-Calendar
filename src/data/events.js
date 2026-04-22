@@ -133,8 +133,8 @@ export const events = [
     guests: [
       {
         name: "Get Pwn3d!",
-        headshot: "/Speakers/May18 - Get Pwn3d!.png",
-        topic: "Cybersecurity Leadership"
+        headshot: "/Speakers/May18 - GetPawnd.jpg",
+        topic: "GRC/Third Party Risk Management (TPRM)"
       }
     ]
   },
