@@ -27,6 +27,17 @@ export const events = [
   // May 2026 starts here - all open floor with Nate
   // Schedule starts May 1st
   {
+    date: "2026-05-01",
+    dayType: "guest",
+    guests: [
+      {
+        name: "CyberMB",
+        headshot: "/Speakers/May1 - CyberMB.png",
+        topic: "GovTech + Clearance"
+      }
+    ]
+  },
+  {
     date: "2026-05-04",
     dayType: "guest",
     guests: [
