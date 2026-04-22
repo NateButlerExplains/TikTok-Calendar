@@ -94,6 +94,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-14",
+    dayType: "guest",
+    time: { hour: 15, minute: 0, durationMinutes: 60 },
+    guests: [
+      {
+        name: "Alan",
+        headshot: "/Speakers/May14 - AlanAI 3pm.png",
+        topic: "Leveraging Ai within the SDLC Process"
+      }
+    ]
+  },
+  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
