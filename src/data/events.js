@@ -59,5 +59,27 @@ export const events = [
         topic: "Cybersecurity Engineer Life"
       }
     ]
+  },
+  {
+    date: "2026-05-07",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Rodney",
+        headshot: "/Speakers/May7-Rodney.jpg",
+        topic: "Cybersecurity Mentorship"
+      }
+    ]
+  },
+  {
+    date: "2026-05-08",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Shreem",
+        headshot: "/Speakers/May8-Shreem.png",
+        topic: "Neurodivergents in Cyber"
+      }
+    ]
   }
 ]
