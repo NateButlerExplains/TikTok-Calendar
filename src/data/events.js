@@ -115,5 +115,16 @@ export const events = [
         topic: "Surving and Thriving in Cyber"
       }
     ]
+  },
+  {
+    date: "2026-05-22",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Christopher",
+        headshot: "/Speakers/May22nd - Techwoke.png",
+        topic: "RMF Based Roles and Today's Market"
+      }
+    ]
   }
 ]
