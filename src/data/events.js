@@ -194,6 +194,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-23",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Certifications Gamified",
+        headshot: "/Speakers/May23 - CertifiedGames.png",
+        topic: "The Power of Certs and Gamified Learning"
+      }
+    ]
+  },
+  {
     date: "2026-05-30",
     dayType: "guest",
     guests: [
