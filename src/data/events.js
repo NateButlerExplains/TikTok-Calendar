@@ -198,8 +198,9 @@ export const events = [
     dayType: "guest",
     guests: [
       {
-        name: "Certifications Gamified",
+        name: "Carter Perez",
         headshot: "/Speakers/May23 - CertifiedGames.png",
+        tiktokUrl: "@certgames.com",
         topic: "The Power of Certs and Gamified Learning"
       }
     ]
