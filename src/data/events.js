@@ -161,6 +161,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-21",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Dara",
+        headshot: "/Speakers/May21-Dara.png",
+        topic: "Cyber Pivot Playbook"
+      }
+    ]
+  },
+  {
     date: "2026-05-22",
     dayType: "guest",
     guests: [
