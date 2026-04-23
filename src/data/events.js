@@ -156,7 +156,7 @@ export const events = [
       {
         name: "Francis",
         headshot: "/Speakers/MAY20 - FRANCIS.png",
-        topic: "Cloud Security"
+        topic: "What is Cloud Security?"
       }
     ]
   },
