@@ -172,6 +172,17 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-25",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Betapersin",
+        headshot: "/Speakers/May25 - BetaPersin.png",
+        topic: "IAM is the backbone of cybersecurity. Why GRC, Zero Trust, and Cloud Security all collapse without it."
+      }
+    ]
+  },
+  {
     date: "2026-05-22",
     dayType: "guest",
     guests: [
