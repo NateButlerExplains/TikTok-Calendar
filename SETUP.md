@@ -16,13 +16,13 @@ You only do this **once**. After that, the bot handles everything from Telegram.
 
 ## 0. Prereqs
 
-- **Node.js 20+** and **pnpm** (`npm i -g pnpm` if you don't have it)
+- **Node.js 20+** and **npm** (comes with Node)
 - **Firebase Blaze plan** on the `cybertalks-guest` project — Cloud Functions don't run on the free Spark plan. Blaze has a generous free tier that easily covers this traffic; you only pay if you blow past it. Upgrade at [console.firebase.google.com](https://console.firebase.google.com) → project settings → Usage and billing.
 - Install deps once:
 
 ```bash
-pnpm install
-cd functions && pnpm install && cd ..
+npm install
+cd functions && npm install && cd ..
 ```
 
 ---
@@ -46,7 +46,7 @@ From this repo:
 
 ```bash
 # install Firebase CLI once if you don't have it
-pnpm add -g firebase-tools
+npm i -g firebase-tools
 firebase login                 # opens browser, pick the Google account that owns cybertalks-guest
 
 # run the one-shot setup
