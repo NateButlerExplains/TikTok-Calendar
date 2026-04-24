@@ -51,10 +51,13 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [displayMonth])
 
-  // Check if a date has a GUEST event (show green dot only for guests)
-  const hasGuestEvent = (dateString) => {
+  // Check guest event and return guest count
+  const getGuestCount = (dateString) => {
     const event = events.find(e => e.date === dateString)
-    return event && event.dayType === 'guest' && event.guests && event.guests.length > 0
+    if (event && event.dayType === 'guest' && event.guests && event.guests.length > 0) {
+      return event.guests.length
+    }
+    return 0
   }
 
   const handlePrevMonth = () => {
@@ -143,7 +146,8 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const isSelected = isSameDay(date, selectedDateObj)
           const isToday = isSameDay(date, today)
           const isCurrentMonth = isSameMonth(date, displayMonth)
-          const hasGuestOnDate = hasGuestEvent(dateString)
+          const guestCount = getGuestCount(dateString)
+          const hasGuests = guestCount > 0
 
           return (
             <button
@@ -152,11 +156,11 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
                 isSelected ? styles.selected : ''
               } ${isToday ? styles.today : ''}`}
               onClick={() => handleDayClick(date)}
-              aria-label={`${format(date, 'MMMM d, yyyy')}${hasGuestOnDate ? ' - has guest' : ''}${isToday ? ' - today' : ''}`}
+              aria-label={`${format(date, 'MMMM d, yyyy')}${hasGuests ? ` - ${guestCount} guest${guestCount !== 1 ? 's' : ''}` : ''}${isToday ? ' - today' : ''}`}
               aria-pressed={isSelected}
             >
               <span className={styles.dayNumber}>{format(date, 'd')}</span>
-              {hasGuestOnDate && <span className={styles.eventIndicator}>•</span>}
+              {hasGuests && <span className={styles.eventIndicator}>{'•'.repeat(guestCount)}</span>}
             </button>
           )
         })}

@@ -54,7 +54,13 @@ function App() {
             element={
               <>
                 <header className={styles.appHeader}>
-                  <h1 className="heading-1">Cyber Talks Calendar</h1>
+                  <div className={styles.titleBlock}>
+                    <span className={styles.titleKicker}>Live Broadcast &middot; <em>CYBER</em></span>
+                    <h1>
+                      Cyber <span className={styles.titleAccent}>Talks</span>
+                      <span className={styles.titleMark}>LIVE</span>
+                    </h1>
+                  </div>
                 </header>
 
                 <main className={styles.mainContent}>
@@ -68,11 +74,6 @@ function App() {
 
                   <section className={styles.cardSection}>
                     <DayCard date={selectedDate} />
-                  </section>
-
-                  <section className={styles.actionsSection}>
-                    <ShareButton date={selectedDate} />
-                    <DownloadIcsButton date={selectedDate} />
                   </section>
                 </main>
               </>
