@@ -33,6 +33,7 @@ export const events = [
       {
         name: "CyberMB",
         headshot: "/Speakers/May1 - CyberMB.png",
+        tiktokUrl: "@cyberwithmb",
         topic: "GovTech + Clearance"
       }
     ]
@@ -56,6 +57,7 @@ export const events = [
       {
         name: "Faith",
         headshot: "/Speakers/May5 - Faith.png",
+        tiktokUrl: "@faithyywaithyy",
         topic: "Cybersecurity Life"
       }
     ]
@@ -67,6 +69,7 @@ export const events = [
       {
         name: "Peezy",
         headshot: "/Speakers/May6-peezy2.JPG",
+        tiktokUrl: "@whooispeezy_",
         topic: "Cybersecurity Engineer Life"
       }
     ]
@@ -78,6 +81,7 @@ export const events = [
       {
         name: "Rodney",
         headshot: "/Speakers/May7-Rodney.jpg",
+        tiktokUrl: "@rodney_arceneaux",
         topic: "Cybersecurity Mentorship"
       }
     ]
@@ -89,6 +93,7 @@ export const events = [
       {
         name: "Shreem",
         headshot: "/Speakers/May8-Shreem.png",
+        tiktokUrl: "@queenshreemindigo",
         topic: "Neurodivergents in Cyber"
       }
     ]
@@ -100,6 +105,7 @@ export const events = [
       {
         name: "Samir",
         headshot: "/Speakers/May11 - Samir.jpg",
+        tiktokUrl: "@Samir_elabed",
         topic: "Claude Ai in the Cyber Space"
       }
     ]
@@ -112,6 +118,7 @@ export const events = [
       {
         name: "Alan",
         headshot: "/Speakers/May13 - AlanAI 3pm.png",
+        tiktokUrl: "@alanonai",
         topic: "Leveraging Ai within the SDLC Process"
       }
     ]
@@ -123,6 +130,7 @@ export const events = [
       {
         name: "Marshall",
         headshot: "/Speakers/May15 - MarshallProf.jpg",
+        tiktokUrl: "@cybersecprofessor",
         topic: "Why Cybersecurity?!?!"
       }
     ]
@@ -134,6 +142,7 @@ export const events = [
       {
         name: "Get Pwn3d!",
         headshot: "/Speakers/May18 - GetPawnd.jpg",
+        tiktokUrl: "@ie_ty97",
         topic: "GRC/Third Party Risk Management (TPRM)"
       }
     ]
@@ -145,6 +154,7 @@ export const events = [
       {
         name: "David",
         headshot: "/Speakers/May19 - DavidWest.png",
+        tiktokUrl: "@davidwesttech",
         topic: "Surving and Thriving in Cyber"
       }
     ]
@@ -156,6 +166,7 @@ export const events = [
       {
         name: "Francis",
         headshot: "/Speakers/MAY20 - FRANCIS.png",
+        tiktokUrl: "@thesubtletechie",
         topic: "What is Cloud Security?"
       }
     ]
@@ -167,6 +178,7 @@ export const events = [
       {
         name: "Dara",
         headshot: "/Speakers/May21-Dara.png",
+        tiktokUrl: "@dara.stays.curious",
         topic: "Cyber Pivot Playbook"
       }
     ]
@@ -178,6 +190,7 @@ export const events = [
       {
         name: "Betapersin",
         headshot: "/Speakers/May25 - BetaPersin.png",
+        tiktokUrl: "@betapersiniam",
         topic: "IAM is the backbone of cybersecurity. Why GRC, Zero Trust, and Cloud Security all collapse without it."
       }
     ]
@@ -189,6 +202,7 @@ export const events = [
       {
         name: "Christopher",
         headshot: "/Speakers/May22nd - Techwoke.png",
+        tiktokUrl: "@techwoke",
         topic: "RMF Based Roles and Today's Market"
       }
     ]
@@ -212,6 +226,7 @@ export const events = [
       {
         name: "Brandy",
         headshot: "/Speakers/May30th - Brandy.png",
+        tiktokUrl: "@boldlybrandy",
         topic: "Transition to Cyber"
       }
     ]
@@ -223,6 +238,7 @@ export const events = [
       {
         name: "Chris",
         headshot: "/Speakers/June19 - Christ Tech.jpg",
+        tiktokUrl: "@christhetechninja",
         topic: "Importance of Tech Projects/Portfolio"
       }
     ]
