@@ -21,25 +21,23 @@ export function Contact() {
       </div>
 
       <header className="legal-header">
-        <div className="legal-kicker">
-          // INBOUND CHANNEL <em>//</em> CYBER TALKS
-        </div>
-        <h1>Open a <em>Channel.</em></h1>
-        <p>Guest suggestions &middot; Feedback &middot; Questions</p>
+        <h1>Contact</h1>
+        <p>Reach out to Cyber Talks</p>
       </header>
 
       <main className="legal-content">
         <section>
-          <h2>Reach Out</h2>
+          <h2>Get in Touch</h2>
           <p>
-            Want to pitch a guest, suggest a topic, or send feedback? Easiest path is below.
+            Want to reach out, suggest a guest, or have feedback about Cyber Talks? Here&rsquo;s how
+            you can connect:
           </p>
         </section>
 
         <section className="contact-options">
           <div className="contact-item">
-            <h3>TikTok DM</h3>
-            <p>Primary inbound channel &mdash; fastest reply.</p>
+            <h3>TikTok</h3>
+            <p>Follow and message on TikTok:</p>
             <a
               href="https://www.tiktok.com/@natebutlerexplains"
               target="_blank"
@@ -49,13 +47,34 @@ export function Contact() {
               @natebutlerexplains
             </a>
           </div>
+
+          <div className="contact-item">
+            <h3>GitHub</h3>
+            <p>Code and project discussions:</p>
+            <a
+              href="https://github.com/NateButlerExplains"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-link"
+            >
+              github.com/NateButlerExplains
+            </a>
+          </div>
+
+          <div className="contact-item">
+            <h3>Email</h3>
+            <p>For direct inquiries, you can reach out via email:</p>
+            <a href="mailto:contact@cybertalks.dev" className="cta-link">
+              contact@cybertalks.dev
+            </a>
+          </div>
         </section>
 
         <section>
-          <h2>Response Window</h2>
+          <h2>Response Time</h2>
           <p>
-            Most messages get a reply within a day or two. Live-stream days push replies to the
-            next morning &mdash; appreciate the patience.
+            We appreciate all inquiries. Please allow time for a response, as we manage
+            communications alongside live streams and other commitments.
           </p>
         </section>
 
