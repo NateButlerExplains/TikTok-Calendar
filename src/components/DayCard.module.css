@@ -69,8 +69,7 @@
   position: relative;
   width: 100%;
   height: 320px;
-  background:
-    linear-gradient(135deg, #0a0a08 0%, #14140f 100%);
+  background: #000000;
   border-bottom: 1px solid var(--rule);
   overflow: hidden;
   display: flex;
@@ -309,5 +308,6 @@
   }
   .headshotWrap {
     height: 420px;
+    background: #000000;
   }
 }
