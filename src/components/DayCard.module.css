@@ -1,171 +1,441 @@
-/* ===== DAY CARD CONTAINER ===== */
+/* ©AngelaMos | 2026 — DayCard.module.css */
+
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 400px;
+  align-items: stretch;
+  justify-content: stretch;
+  min-height: 260px;
   color: var(--muted);
   font-family: var(--font-primary);
 }
 
-/* ===== NO EVENT STATE ===== */
 .noEvent {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 48px 24px;
-  text-align: center;
+  align-items: flex-start;
+  padding: 28px 20px;
+  text-align: left;
+  border: 1px solid var(--rule);
+  background: var(--bg-elev);
+  position: relative;
+  gap: 12px;
+}
+
+.noEventKicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
 }
 
 .noEventTitle {
-  font-size: 24px;
-  font-weight: 400;
-  color: var(--text);
-  margin: 0 0 12px 0;
-  font-family: var(--font-primary);
+  font-family: var(--font-display);
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--bone);
+  margin: 0;
 }
 
 .noEventText {
-  font-size: 16px;
-  font-weight: 400;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
   margin: 0;
-  font-family: var(--font-primary);
 }
 
-/* ===== EVENT CARD (Supabase: No shadows, borders define depth) ===== */
+/* ===== Manifest card ===== */
 .card {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  text-align: center;
-  gap: 0;
+  background: var(--bg-elev);
+  border: 1px solid var(--rule);
+  border-radius: 0;
   overflow: hidden;
-  background: var(--card);
-  border: 1px solid var(--border-standard);
-  border-radius: 8px;
-  transition: border-color 0.2s ease;
+  position: relative;
+  transition: border-color 0.15s ease;
 }
 
 .card:hover {
-  border-color: var(--border-prominent);
+  border-color: var(--rule-strong);
 }
 
-/* ===== HEADSHOT IMAGE ===== */
-.headshot {
+.metaBar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--bg-inset);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.metaUnit {
+  color: var(--bone);
+}
+
+.metaCenter {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.statusPill::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+}
+
+.statusApproved { color: var(--live); }
+.statusApproved::before { background: var(--live); }
+
+.statusPending { color: var(--pending); }
+.statusPending::before {
+  background: var(--pending);
+  animation: pendingPulse 1.6s ease-in-out infinite;
+}
+
+.statusOpen { color: var(--muted); }
+.statusOpen::before { background: var(--muted); }
+
+.statusPast { color: var(--muted-deep); }
+.statusPast::before { background: var(--muted-deep); }
+
+@keyframes pendingPulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+.headshotWrap {
+  position: relative;
   width: 100%;
-  height: 250px;
-  border-radius: 0;
+  height: 320px;
+  background:
+    linear-gradient(135deg, #0a0a08 0%, #14140f 100%);
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headshot {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  background: #000000;
-  border: none;
-  border-bottom: 2px solid var(--accent);
   display: block;
 }
 
-/* ===== CARD CONTENT PADDING ===== */
-.cardHeader {
-  padding: 16px;
+.headshotCorners::before,
+.headshotCorners::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-color: var(--bone);
+  border-style: solid;
+  border-width: 0;
+  opacity: 0.7;
+}
+
+.headshotCorners::before {
+  top: 8px;
+  left: 8px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+}
+
+.headshotCorners::after {
+  bottom: 8px;
+  right: 8px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+}
+
+.headshotBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 8px;
+  background: rgba(13, 13, 10, 0.85);
+  border: 1px solid var(--rule-strong);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bone);
+  line-height: 1;
+}
+
+.headshotPlaceholder {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(235, 230, 214, 0.04), transparent 60%),
+    var(--bg-inset);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.body {
+  padding: 18px 18px 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
 }
 
-/* ===== GUEST NAME (Card Title) ===== */
+.kickerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.kickerRow b {
+  color: var(--bone);
+  font-weight: 500;
+}
+
 .name {
   margin: 0;
-  padding: 0;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: var(--font-primary);
-  letter-spacing: -0.16px;
-  line-height: 1.33;
-  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(32px, 9vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.9;
+  color: var(--bone);
 }
 
-/* ===== EVENT TITLE (Solo Talk / Open Floor) ===== */
+.name em {
+  font-style: normal;
+  color: var(--live);
+}
+
 .title {
   margin: 0;
-  padding: 0;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: var(--font-primary);
-  letter-spacing: -0.16px;
-  line-height: 1.33;
-  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 8vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+  color: var(--bone);
 }
 
-/* ===== TOPIC / DESCRIPTION ===== */
+.title em {
+  font-style: normal;
+  color: var(--live);
+}
+
 .topic {
-  color: var(--muted);
-  max-width: 100%;
-  word-break: break-word;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.43;
-}
-
-/* ===== TIME TEXT ===== */
-.time {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--muted);
-  line-height: 1.33;
-}
-
-/* ===== SUBTITLE (Presenter, Description) ===== */
-.subtitle {
-  font-style: italic;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--muted);
-  line-height: 1.43;
-}
-
-/* ===== TIKTOK LINK ===== */
-.tiktokLink {
-  margin: 0;
-  padding: 0;
-  font-weight: 400;
-  font-size: 14px;
-  color: var(--accent-link);
-  transition: opacity 0.2s ease;
+  color: var(--text-secondary);
   font-family: var(--font-primary);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--rule);
+}
+
+.time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tiktokLink {
+  color: var(--live);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s ease;
+}
+
+.tiktokLink::before {
+  content: "\2192";
+  font-family: var(--font-mono);
 }
 
 .tiktokLink:hover {
-  opacity: 0.8;
+  color: var(--live-deep);
 }
 
-.tiktokLink:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+.footerMeta {
+  color: var(--muted);
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 640px) {
-  .headshot {
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-    background: #000000;
-  }
+/* ===== Request / CTA ===== */
+.requestBlock {
+  padding: 18px;
+  border-top: 1px solid var(--rule);
+  background: var(--bg-inset);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .name,
-  .title {
-    font-size: 20px;
-  }
+.requestKicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-  .cardHeader {
-    padding: 12px;
-    gap: 6px;
-  }
+.requestKicker::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--live);
+  display: inline-block;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+.requestButton {
+  padding: 14px 18px;
+  background: var(--live);
+  color: var(--bg-inset);
+  border: 1px solid var(--live);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.requestButton:hover {
+  background: var(--live-deep);
+  border-color: var(--live-deep);
+}
+
+.requestButton:active {
+  transform: translateY(1px);
+}
+
+.requestButton::after {
+  content: "\2192";
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.pausedNote {
+  padding: 18px;
+  border-top: 1px solid var(--rule);
+  background: var(--bg-inset);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pending);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pausedNote::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--pending);
+  display: inline-block;
+}
+
+/* ===== Past-event dim ===== */
+.past {
+  opacity: 0.72;
+}
+
+@media (min-width: 640px) {
+  .body { padding: 24px 24px 20px; gap: 16px; }
+  .metaBar { padding: 12px 18px; }
+  .headshotWrap { height: 420px; }
+  .headshotPlaceholder { height: 420px; }
+  .topic { font-size: 16px; }
+  .requestBlock { padding: 20px 24px; }
 }

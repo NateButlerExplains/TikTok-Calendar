@@ -1,7 +1,12 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { logCustomEvent } from '../firebase';
-import '../styles/legal.css';
+// ===================
+// © AngelaMos | 2026
+// About.jsx
+// ===================
+
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { logCustomEvent } from '../firebase'
+import '../styles/legal.css'
 
 export function About() {
   useEffect(() => {
@@ -10,6 +15,11 @@ export function About() {
 
   return (
     <div className="legal-page">
+      <div className="legal-topStrip">
+        <span className="legal-topStrip-left">CYB-DOC / ABOUT</span>
+        <span>FILE 02 / 04</span>
+      </div>
+
       <header className="legal-header">
         <h1>About Cyber Talks</h1>
       </header>
@@ -27,7 +37,7 @@ export function About() {
         <section>
           <h2>Our Mission</h2>
           <p>
-            We aim to make cybersecurity knowledge accessible, engaging, and relevant to everyone—from
+            We aim to make cybersecurity knowledge accessible, engaging, and relevant to everyone&mdash;from
             beginners curious about security basics to professionals seeking deep technical insights.
           </p>
         </section>
@@ -56,15 +66,15 @@ export function About() {
           <h2>This Calendar</h2>
           <p>
             This calendar helps viewers discover when Cyber Talks streams go live, learn about
-            featured guests, and quickly add events to their personal calendars. It's a simple
-            tool designed to make it easier to tune in to episodes you're interested in.
+            featured guests, and quickly add events to their personal calendars. It&rsquo;s a simple
+            tool designed to make it easier to tune in to episodes you&rsquo;re interested in.
           </p>
         </section>
 
         <div className="legal-footer">
-          <Link to="/" className="back-link">← Back to Calendar</Link>
+          <Link to="/" className="back-link">&larr; BACK TO SCHEDULE</Link>
         </div>
       </main>
     </div>
-  );
+  )
 }

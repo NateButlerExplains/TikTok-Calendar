@@ -1,38 +1,50 @@
-/* ===== SHARE BUTTON (Supabase Pill Style) ===== */
+/* ©AngelaMos | 2026 — ShareButton.module.css */
+
 .button {
-  padding: 8px 32px;
-  background: var(--button-deep);
-  border: 1px solid var(--accent);
-  color: var(--text);
-  border-radius: 9999px;
+  width: 100%;
+  padding: 13px 14px;
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--bone);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 500;
-  font-size: 14px;
-  font-family: var(--font-primary);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-  letter-spacing: normal;
-  line-height: 1.14;
+  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  line-height: 1;
+}
+
+.button::before {
+  content: "[\00a0";
+  color: var(--muted);
+}
+
+.button::after {
+  content: "\00a0]";
+  color: var(--muted);
 }
 
 .button:hover {
-  background: rgba(62, 207, 142, 0.1);
-  border-color: var(--accent-link);
-}
-
-.button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-  border-color: var(--accent-link);
+  background: var(--bg-inset);
+  border-color: var(--live);
+  color: var(--live);
 }
 
 .button:active {
-  opacity: 0.9;
+  transform: translateY(1px);
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .button {
-    padding: 8px 24px;
-    font-size: 13px;
+    min-width: 220px;
+    width: auto;
+    font-size: 12px;
   }
 }

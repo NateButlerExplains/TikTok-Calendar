@@ -3,8 +3,8 @@ import { downloadIcs } from '../utils/icsGenerator'
 import { logCustomEvent } from '../firebase'
 import styles from './DownloadIcsButton.module.css'
 
-export function DownloadIcsButton({ date }) {
-  const dayData = useCalendarData(date)
+export function DownloadIcsButton({ date, events }) {
+  const dayData = useCalendarData(date, events)
 
   const handleDownloadIcs = () => {
     downloadIcs(date, dayData)
@@ -30,7 +30,7 @@ export function DownloadIcsButton({ date }) {
       aria-label="Download calendar event"
       title={tooltipText}
     >
-      📥 Download .ics
+      Save .ics
     </button>
   )
 }

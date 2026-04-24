@@ -1,38 +1,51 @@
-/* Supabase Design System - Cyber Talks Calendar */
+/* ©AngelaMos | 2026 — global.css */
 
 :root {
-  /* ===== BACKGROUND COLORS ===== */
-  --bg-primary: #171717;        /* Page background */
-  --button-deep: #0f0f0f;       /* Primary button bg (deepest) */
-  --surface: #171717;           /* Card/section bg (same as page) */
-  --card: #171717;
+  --bg: #13130f;
+  --bg-elev: #1a1a15;
+  --bg-inset: #0d0d0a;
+  --bg-primary: #13130f;
+  --button-deep: #0d0d0a;
+  --surface: #1a1a15;
+  --card: #1a1a15;
 
-  /* ===== ACCENT COLORS (Supabase Green) ===== */
-  --accent: #3ecf8e;            /* Brand accent (emerald green) */
-  --accent-link: #00c573;       /* Link color (saturated green) */
-  --accent-border: rgba(62, 207, 142, 0.3);  /* Green border 30% opacity */
+  --bone: #ebe6d6;
+  --text: #ebe6d6;
+  --text-secondary: #b8b19e;
+  --muted: #7a7566;
+  --muted-deep: #4a4639;
 
-  /* ===== TEXT COLORS ===== */
-  --text: #fafafa;              /* Primary text (off-white) */
-  --text-secondary: #b4b4b4;    /* Secondary text (light gray) */
-  --muted: #898989;             /* Tertiary/muted text (mid-gray) */
+  --rule: #2b2920;
+  --rule-strong: #3d3a2e;
+  --rule-bright: #524e3f;
+  --border-subtle: #2b2920;
+  --border-standard: #3d3a2e;
+  --border-prominent: #524e3f;
+  --border-light: #524e3f;
 
-  /* ===== BORDER COLORS (Supabase Border Hierarchy) ===== */
-  --border-subtle: #242424;     /* Barely visible dividers */
-  --border-standard: #2e2e2e;   /* Default borders */
-  --border-prominent: #363636;  /* Interactive elements, hover state */
-  --border-light: #393939;      /* Alternative prominent borders */
+  --live: #2af57c;
+  --live-deep: #00db63;
+  --live-glow: rgba(42, 245, 124, 0.18);
+  --accent: #2af57c;
+  --accent-link: #00db63;
+  --accent-border: rgba(42, 245, 124, 0.35);
 
-  /* ===== TYPOGRAPHY ===== */
-  /* Primary font: Circular (geometric sans-serif with rounded terminals)
-     Fallbacks: Trebuchet MS, Lucida Grande, system fonts
-     For now using system-ui as fallback, but should upgrade to Circular
-  */
-  --font-primary: Circular, Trebuchet MS, Lucida Grande, system-ui, -apple-system, sans-serif;
-  --font-monospace: 'Source Code Pro', Menlo, Monaco, ui-monospace, monospace;
+  --pending: #f5a524;
+  --pending-deep: #d48a0e;
+  --pending-border: rgba(245, 165, 36, 0.4);
 
-  /* ===== SHADOWS - REMOVED (Supabase uses zero shadows) ===== */
+  --danger: #ff6b4a;
+  --danger-border: rgba(255, 107, 74, 0.35);
+
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Menlo', 'Monaco', 'Cascadia Code', monospace;
+  --font-monospace: 'JetBrains Mono', ui-monospace, 'Menlo', 'Monaco', monospace;
+
   --shadow: none;
+
+  --gridDots:
+    radial-gradient(circle at 1px 1px, rgba(235, 230, 214, 0.05) 1px, transparent 0);
 }
 
 * {
@@ -44,45 +57,46 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  background: var(--bg);
 }
 
 body {
-  height: 100%;
-  background-color: var(--bg-primary);
+  min-height: 100%;
+  background-color: var(--bg);
+  background-image: var(--gridDots);
+  background-size: 24px 24px;
+  background-attachment: fixed;
   color: var(--text);
   font-family: var(--font-primary);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 
-/* ===== LINKS ===== */
 a {
-  color: var(--accent-link);
+  color: var(--live);
   text-decoration: none;
-  transition: opacity 0.2s ease;
-  font-weight: 400;
+  transition: color 0.15s ease;
+  font-weight: 500;
 }
 
-a:hover {
-  opacity: 0.8;
+a:hover { color: var(--live-deep); }
+
+a:focus-visible {
+  outline: 1px solid var(--live);
+  outline-offset: 3px;
 }
 
-a:focus {
-  outline: 2px solid var(--accent-link);
-  outline-offset: 2px;
-}
-
-/* ===== BUTTONS ===== */
 button {
   background: none;
   border: none;
@@ -96,20 +110,74 @@ button {
 }
 
 button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline: 1px solid var(--live);
+  outline-offset: 3px;
 }
 
-/* ===== IMAGES ===== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 640px) {
-  body {
-    font-size: 14px;
-  }
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.kicker-live {
+  color: var(--live);
+}
+
+.kicker-pending {
+  color: var(--pending);
+}
+
+.serial {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.rule {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--rule);
+  border: 0;
+}
+
+.rule-strong {
+  background: var(--rule-strong);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.92;
+  color: var(--bone);
+}
+
+.hairline {
+  border-top: 1px solid var(--rule);
+}
+
+.ticks {
+  display: flex;
+  gap: 3px;
+}
+
+.ticks > span {
+  width: 4px;
+  height: 4px;
+  background: var(--muted-deep);
 }
