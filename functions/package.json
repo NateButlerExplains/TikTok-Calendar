@@ -1,19 +1,22 @@
 {
   "name": "functions",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cyber Talks Calendar — Cloud Functions",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"No build needed (Phase 2)\"",
-    "lint": "echo \"No lint configured yet (Phase 2)\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo \"No build step\"",
+    "lint": "echo \"No lint configured\"",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "deploy": "firebase deploy --only functions"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "20"
+  },
   "type": "commonjs",
   "dependencies": {
     "firebase-admin": "^13.8.0",
     "firebase-functions": "^7.2.5"
-  }
+  },
+  "private": true
 }

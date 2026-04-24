@@ -1,7 +1,12 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { logCustomEvent } from '../firebase';
-import '../styles/legal.css';
+// ===================
+// © AngelaMos | 2026
+// Contact.jsx
+// ===================
+
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { logCustomEvent } from '../firebase'
+import '../styles/legal.css'
 
 export function Contact() {
   useEffect(() => {
@@ -10,24 +15,31 @@ export function Contact() {
 
   return (
     <div className="legal-page">
+      <div className="legal-topStrip">
+        <span className="legal-topStrip-left">CYB-DOC / CONTACT</span>
+        <span>FILE 04 / 04</span>
+      </div>
+
       <header className="legal-header">
-        <h1>Contact</h1>
-        <p>Reach out to Cyber Talks</p>
+        <div className="legal-kicker">
+          // INBOUND CHANNEL <em>//</em> CYBER TALKS
+        </div>
+        <h1>Open a <em>Channel.</em></h1>
+        <p>Guest suggestions &middot; Feedback &middot; Questions</p>
       </header>
 
       <main className="legal-content">
         <section>
-          <h2>Get in Touch</h2>
+          <h2>Reach Out</h2>
           <p>
-            Want to reach out, suggest a guest, or have feedback about Cyber Talks? Here's how
-            you can connect:
+            Want to pitch a guest, suggest a topic, or send feedback? Easiest path is below.
           </p>
         </section>
 
         <section className="contact-options">
           <div className="contact-item">
-            <h3>TikTok</h3>
-            <p>Follow and message on TikTok:</p>
+            <h3>TikTok DM</h3>
+            <p>Primary inbound channel &mdash; fastest reply.</p>
             <a
               href="https://www.tiktok.com/@natebutlerexplains"
               target="_blank"
@@ -40,17 +52,17 @@ export function Contact() {
         </section>
 
         <section>
-          <h2>Response Time</h2>
+          <h2>Response Window</h2>
           <p>
-            We appreciate all inquiries. Please allow time for a response, as we manage
-            communications alongside live streams and other commitments.
+            Most messages get a reply within a day or two. Live-stream days push replies to the
+            next morning &mdash; appreciate the patience.
           </p>
         </section>
 
         <div className="legal-footer">
-          <Link to="/" className="back-link">← Back to Calendar</Link>
+          <Link to="/" className="back-link">&larr; BACK TO SCHEDULE</Link>
         </div>
       </main>
     </div>
-  );
+  )
 }

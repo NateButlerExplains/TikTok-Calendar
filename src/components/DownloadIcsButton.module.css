@@ -1,52 +1,54 @@
-/* ===== DOWNLOAD ICS BUTTON (Supabase Filled Pill) ===== */
+/* ©AngelaMos | 2026 — DownloadIcsButton.module.css */
+
 .button {
-  padding: 8px 32px;
-  background: var(--accent);
-  border: 1px solid var(--accent);
-  color: var(--button-deep);
-  border-radius: 9999px;
-  font-weight: 500;
-  font-size: 14px;
-  font-family: var(--font-primary);
+  width: 100%;
+  padding: 13px 14px;
+  background: var(--live);
+  border: 1px solid var(--live);
+  color: var(--bg-inset);
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  line-height: 1;
   white-space: nowrap;
-  letter-spacing: normal;
-  line-height: 1.14;
 }
 
-.button:hover {
-  background: var(--accent-link);
-  border-color: var(--accent-link);
-  opacity: 0.95;
+.button::after {
+  content: "\2193";
+  font-family: var(--font-mono);
+  font-weight: 500;
 }
 
-.button:focus-visible {
-  outline: 2px solid var(--text);
-  outline-offset: 2px;
+.button:hover:not(:disabled) {
+  background: var(--live-deep);
+  border-color: var(--live-deep);
 }
 
 .button:active {
-  opacity: 0.9;
+  transform: translateY(1px);
 }
 
 .button:disabled {
-  opacity: 0.5;
+  opacity: 0.35;
   cursor: not-allowed;
-  background: var(--muted);
-  border-color: var(--muted);
-  color: var(--text);
+  background: transparent;
+  border-color: var(--rule-strong);
+  color: var(--muted);
 }
 
-.button:disabled:hover {
-  background: var(--muted);
-  border-color: var(--muted);
-  opacity: 0.5;
-}
-
-@media (max-width: 640px) {
+@media (min-width: 640px) {
   .button {
-    padding: 8px 24px;
-    font-size: 13px;
+    min-width: 220px;
+    width: auto;
+    font-size: 12px;
   }
 }

@@ -1,25 +1,27 @@
+// ===================
+// © AngelaMos | 2026
+// useCalendarData.js
+// ===================
+
 import { useMemo } from 'react'
-import { events } from '../data/events'
 import { resolveTime, isPastDate } from '../utils/timeUtils'
 
 /**
- * Hook that resolves calendar data for a given date.
- * Returns event data or synthetic open-floor event if date not in events array.
+ * Resolves calendar data for a given date from the already-fetched events array.
+ * Returns synthetic open-floor event if date not in events.
  */
-export function useCalendarData(dateString) {
+export function useCalendarData(dateString, events) {
   return useMemo(() => {
-    if (!dateString) {
-      return null
-    }
+    if (!dateString) return null
 
-    // Find event for this date
-    const event = events.find(e => e.date === dateString)
+    const event = (events || []).find((e) => e.date === dateString)
 
     if (event) {
-      // Event found in array — return as-is
       return {
+        id: event.id,
         date: event.date,
         dayType: event.dayType,
+        status: event.status || 'published',
         time: event.time || resolveTime(dateString, event),
         guests: event.guests || [],
         topic: event.topic,
@@ -28,15 +30,16 @@ export function useCalendarData(dateString) {
       }
     }
 
-    // No event found — return synthetic open-floor event with hasEvent: false
     return {
+      id: null,
       date: dateString,
       dayType: 'open-floor',
+      status: 'published',
       time: resolveTime(dateString, null),
       guests: [],
       topic: undefined,
       isPastDate: isPastDate(dateString),
       hasEvent: false
     }
-  }, [dateString])
+  }, [dateString, events])
 }

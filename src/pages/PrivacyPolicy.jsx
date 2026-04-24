@@ -1,7 +1,12 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { logCustomEvent } from '../firebase';
-import '../styles/legal.css';
+// ===================
+// © AngelaMos | 2026
+// PrivacyPolicy.jsx
+// ===================
+
+import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { logCustomEvent } from '../firebase'
+import '../styles/legal.css'
 
 export function PrivacyPolicy() {
   useEffect(() => {
@@ -10,56 +15,72 @@ export function PrivacyPolicy() {
 
   return (
     <div className="legal-page">
+      <div className="legal-topStrip">
+        <span className="legal-topStrip-left">CYB-DOC / PRIVACY</span>
+        <span>FILE 01 / 04</span>
+      </div>
+
       <header className="legal-header">
-        <h1>Privacy Policy</h1>
-        <p>Last updated: April 2026</p>
+        <div className="legal-kicker">
+          // DOC REV <em>//</em> 2026.04
+        </div>
+        <h1>Privacy <em>Policy.</em></h1>
+        <p>Last updated &middot; April 2026</p>
       </header>
 
       <main className="legal-content">
         <section>
           <h2>Data Collection</h2>
           <p>
-            This website uses Firebase Analytics to collect anonymous usage data. We collect:
-            information about which pages you visit, how you interact with the calendar, and
-            which views you prefer. This data helps us understand user behavior and improve the
-            calendar experience.
+            This site uses Firebase Analytics to collect anonymous usage data &mdash; which pages
+            you visit, how you interact with the calendar, and which views you prefer. The data
+            helps us understand behavior and improve the experience.
           </p>
           <p>
-            <strong>We do not collect personally identifiable information (PII)</strong> such as
-            names, email addresses, or location data. Analytics are pseudonymous and aggregated.
+            <strong>No personally identifiable information (PII)</strong> is collected.
+            Names, emails, and precise location data are not stored. Analytics are pseudonymous
+            and aggregated.
           </p>
         </section>
 
         <section>
-          <h2>Cookies</h2>
+          <h2>Booking Requests</h2>
           <p>
-            This website uses a service worker (part of Progressive Web App technology) to cache
-            assets and enable offline functionality. The service worker uses browser storage to
-            cache content locally on your device. No tracking cookies are used.
+            If you request a broadcast slot, we store the <strong>TikTok handle you submit</strong>,
+            the requested date, a timestamp, and a hashed IP for rate limiting. That&rsquo;s the
+            entire record &mdash; no email, no phone, no account. Requests are visible to the
+            operator (Nate) via a Telegram bot and are deleted after the event airs or is rejected.
+          </p>
+        </section>
+
+        <section>
+          <h2>Cookies &amp; Storage</h2>
+          <p>
+            The site uses a service worker to cache assets for fast loads and offline access.
+            Browser local storage is used for a signed admin session token (operator only). No
+            third-party tracking cookies are used.
           </p>
         </section>
 
         <section>
           <h2>Third-Party Services</h2>
-          <p>
-            This website uses the following third-party services:
-          </p>
           <ul>
-            <li><strong>Firebase (Google)</strong> — Hosting, Analytics, and Database services</li>
-            <li><strong>Google Fonts</strong> — Web font delivery (Inter font)</li>
+            <li><strong>Firebase (Google)</strong> &mdash; Hosting, Analytics, Firestore</li>
+            <li><strong>Google Fonts</strong> &mdash; Inter + JetBrains Mono delivery</li>
+            <li><strong>Telegram Bot API</strong> &mdash; Operator notifications only</li>
           </ul>
           <p>
-            These services have their own privacy policies. Please review them for more information.
+            Each service has its own privacy policy &mdash; review them for detail on how your
+            data is handled upstream.
           </p>
         </section>
 
         <section>
           <h2>Contact</h2>
           <p>
-            If you have questions about this privacy policy, please contact:
+            Questions about this policy:
           </p>
           <p>
-            Nate Butler<br />
             <a href="https://www.tiktok.com/@natebutlerexplains" target="_blank" rel="noopener noreferrer">
               @natebutlerexplains on TikTok
             </a>
@@ -67,9 +88,9 @@ export function PrivacyPolicy() {
         </section>
 
         <div className="legal-footer">
-          <Link to="/" className="back-link">← Back to Calendar</Link>
+          <Link to="/" className="back-link">&larr; BACK TO SCHEDULE</Link>
         </div>
       </main>
     </div>
-  );
+  )
 }

@@ -1,106 +1,227 @@
-/* ===== APP CONTAINER ===== */
+/* ©AngelaMos | 2026 — App.module.css */
+
 .appContainer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--bg-primary);
+  background: transparent;
+  position: relative;
 }
 
-/* ===== APP HEADER ===== */
 .appHeader {
-  padding: 2rem 1rem;
-  text-align: center;
-  border-bottom: 1px solid var(--border-standard);
+  position: relative;
+  padding: 20px 18px 24px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
 }
 
-.appHeader h1 {
+.topStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+  margin-bottom: 28px;
+}
+
+.topStrip span { white-space: nowrap; }
+
+.topStripLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topStripRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.liveDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--live);
+  border-radius: 0;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 0;
+}
+
+.titleKicker {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.titleKicker em {
+  font-style: normal;
+  color: var(--bone);
+}
+
+.title {
   margin: 0;
-  font-size: 72px;
-  font-weight: 400;
-  line-height: 1.00;
-  color: var(--accent);
-  letter-spacing: normal;
-  font-family: var(--font-primary);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(48px, 14vw, 96px);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--bone);
+  font-feature-settings: 'ss01' on, 'cv11' on;
 }
 
-/* ===== MAIN CONTENT ===== */
+.titleAccent {
+  color: var(--live);
+}
+
+.titleMark {
+  display: inline-block;
+  vertical-align: top;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--live);
+  letter-spacing: 0.1em;
+  transform: translateY(6px);
+  padding-left: 6px;
+}
+
+.subtitleRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  line-height: 1.3;
+  max-width: 260px;
+}
+
+.subtitleMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-end;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1.2;
+  text-align: right;
+}
+
+.subtitleMeta b {
+  color: var(--bone);
+  font-weight: 500;
+}
+
+.lockBanner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 6px 10px;
+  background: rgba(245, 165, 36, 0.08);
+  border: 1px solid var(--pending-border);
+  color: var(--pending);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.lockBanner::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: var(--pending);
+  display: inline-block;
+}
+
 .mainContent {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
-  max-width: 900px;
+  max-width: 760px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  gap: 2rem;
+  padding: 18px 16px 24px;
+  gap: 18px;
 }
 
-/* ===== SECTIONS ===== */
-.calendarSection {
+.calendarSection,
+.cardSection {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.cardSection {
-  width: 100%;
-}
-
-/* ===== ACTIONS (BUTTONS) ===== */
 .actionsSection {
   width: 100%;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0;
 }
 
-/* ===== RESPONSIVE DESIGN (Primary breakpoint: 600px) ===== */
-@media (max-width: 768px) {
+@media (min-width: 640px) {
   .appHeader {
-    padding: 1.5rem 1rem;
+    padding: 28px 32px 32px;
   }
-
-  .appHeader h1 {
-    font-size: 48px;
-    line-height: 1.08;
+  .topStrip {
+    margin-bottom: 32px;
   }
-
   .mainContent {
-    padding: 1.5rem 1rem;
-    gap: 1.5rem;
+    padding: 32px 24px 48px;
+    gap: 28px;
   }
-
   .actionsSection {
-    gap: 0.75rem;
-    padding: 0.75rem 0;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10px;
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 960px) {
   .appHeader {
-    padding: 1rem 0.75rem;
+    padding: 40px 56px 40px;
   }
-
-  .appHeader h1 {
-    font-size: 32px;
-    line-height: 1.05;
+  .title {
+    font-size: 140px;
   }
-
   .mainContent {
-    padding: 1rem 0.75rem;
-    gap: 1rem;
-  }
-
-  .actionsSection {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .actionsSection button {
-    width: 100%;
+    max-width: 900px;
   }
 }

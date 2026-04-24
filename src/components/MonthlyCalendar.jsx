@@ -1,3 +1,8 @@
+// ===================
+// © AngelaMos | 2026
+// MonthlyCalendar.jsx
+// ===================
+
 import { useState, useMemo, useEffect } from 'react'
 import {
   startOfMonth,
@@ -13,58 +18,55 @@ import {
 } from 'date-fns'
 import { getTodayString } from '../utils/timeUtils'
 import { logCustomEvent } from '../firebase'
-import { events } from '../data/events'
 import styles from './MonthlyCalendar.module.css'
 
-export function MonthlyCalendar({ selectedDate, onDayClick }) {
+export function MonthlyCalendar({ selectedDate, onDayClick, events }) {
   const today = new Date()
 
-  // Parse date string correctly in local timezone (not UTC)
   const [year, month, day] = selectedDate.split('-').map(Number)
   const selectedDateObj = new Date(year, month - 1, day)
 
-  // Determine initial month to display (use correctly parsed date in local timezone)
   const [displayMonth, setDisplayMonth] = useState(selectedDateObj)
 
-  // Update displayed month when selected date changes
   useEffect(() => {
     setDisplayMonth(selectedDateObj)
   }, [selectedDate])
 
-  // Allow navigation to all months (no arbitrary bounds)
   const isWithinBounds = (date) => {
-    // Enforce ±2 months from today for forward limit
     const monthDiff = (date.getFullYear() - today.getFullYear()) * 12 +
                       (date.getMonth() - today.getMonth())
-    // Allow any past month and up to 2 months in the future
     return monthDiff <= 2
   }
 
-  // Get all dates to display (including days from prev/next month)
-  // Week starts on Sunday (weekStartsOn: 0)
   const calendarDays = useMemo(() => {
     const monthStart = startOfMonth(displayMonth)
     const monthEnd = endOfMonth(displayMonth)
     const calendarStart = startOfWeek(monthStart, { weekStartsOn: 0 })
     const calendarEnd = endOfWeek(monthEnd, { weekStartsOn: 0 })
-
     return eachDayOfInterval({ start: calendarStart, end: calendarEnd })
   }, [displayMonth])
 
-  // Check if a date has a GUEST event (show green dot only for guests)
-  const hasGuestEvent = (dateString) => {
-    const event = events.find(e => e.date === dateString)
-    return event && event.dayType === 'guest' && event.guests && event.guests.length > 0
+  const eventByDate = useMemo(() => {
+    const m = new Map()
+    for (const e of events || []) {
+      if (e.date && e.dayType === 'guest') m.set(e.date, e)
+    }
+    return m
+  }, [events])
+
+  const getDateStatus = (dateString) => {
+    const e = eventByDate.get(dateString)
+    if (!e) return null
+    if (e.status === 'pending') return 'pending'
+    if (e.status === 'published') return 'booked'
+    return null
   }
 
   const handlePrevMonth = () => {
     const newMonth = subMonths(displayMonth, 1)
     if (isWithinBounds(newMonth)) {
       setDisplayMonth(newMonth)
-      logCustomEvent('month_changed', {
-        direction: 'prev',
-        month_year: format(newMonth, 'MMMM yyyy')
-      })
+      logCustomEvent('month_changed', { direction: 'prev', month_year: format(newMonth, 'MMMM yyyy') })
     }
   }
 
@@ -72,15 +74,11 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     const newMonth = addMonths(displayMonth, 1)
     if (isWithinBounds(newMonth)) {
       setDisplayMonth(newMonth)
-      logCustomEvent('month_changed', {
-        direction: 'next',
-        month_year: format(newMonth, 'MMMM yyyy')
-      })
+      logCustomEvent('month_changed', { direction: 'next', month_year: format(newMonth, 'MMMM yyyy') })
     }
   }
 
   const handleDayClick = (date) => {
-    // Convert date to YYYY-MM-DD format
     const dateString = format(date, 'yyyy-MM-dd')
     onDayClick(dateString)
   }
@@ -93,11 +91,18 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
 
   const isNextMonthDisabled = !isWithinBounds(addMonths(displayMonth, 1))
   const isPrevMonthDisabled = !isWithinBounds(subMonths(displayMonth, 1))
-
   const monthYear = format(displayMonth, 'MMMM yyyy')
+
+  const monthName = format(displayMonth, 'MMMM').toUpperCase()
+  const yearNum = format(displayMonth, 'yyyy')
 
   return (
     <div className={styles.container}>
+      <div className={styles.headerBar}>
+        <span className={styles.headerBarLabel}>ROSTER // {monthName}</span>
+        <span>M-{format(displayMonth, 'MM')} / {yearNum}</span>
+      </div>
+
       <div className={styles.header}>
         <div className={styles.navGroup}>
           <button
@@ -106,24 +111,22 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
             disabled={isPrevMonthDisabled}
             aria-label="Previous month"
           >
-            ← Prev
+            &larr;
           </button>
-          <h2 className={styles.monthYear}>{monthYear}</h2>
+          <h2 className={styles.monthYear}>
+            {monthName} <b>{yearNum}</b>
+          </h2>
           <button
             className={styles.navButton}
             onClick={handleNextMonth}
             disabled={isNextMonthDisabled}
             aria-label="Next month"
           >
-            Next →
+            &rarr;
           </button>
         </div>
-        <button
-          className={styles.todayButton}
-          onClick={handleTodayClick}
-          aria-label="Go to today"
-        >
-          Today
+        <button className={styles.todayButton} onClick={handleTodayClick} aria-label="Go to today">
+          NOW
         </button>
       </div>
 
@@ -143,23 +146,45 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const isSelected = isSameDay(date, selectedDateObj)
           const isToday = isSameDay(date, today)
           const isCurrentMonth = isSameMonth(date, displayMonth)
-          const hasGuestOnDate = hasGuestEvent(dateString)
+          const status = getDateStatus(dateString)
+
+          const dayClasses = [
+            styles.day,
+            !isCurrentMonth && styles.otherMonth,
+            isSelected && styles.selected,
+            isToday && styles.today,
+            status === 'booked' && styles.booked,
+            status === 'pending' && styles.pending
+          ]
+            .filter(Boolean)
+            .join(' ')
+
+          const ariaLabel = [
+            format(date, 'MMMM d, yyyy'),
+            status === 'booked' ? ' - booked' : '',
+            status === 'pending' ? ' - pending' : '',
+            isToday ? ' - today' : ''
+          ].join('')
 
           return (
             <button
               key={dateString}
-              className={`${styles.day} ${isCurrentMonth ? '' : styles.otherMonth} ${
-                isSelected ? styles.selected : ''
-              } ${isToday ? styles.today : ''}`}
+              className={dayClasses}
               onClick={() => handleDayClick(date)}
-              aria-label={`${format(date, 'MMMM d, yyyy')}${hasGuestOnDate ? ' - has guest' : ''}${isToday ? ' - today' : ''}`}
+              aria-label={ariaLabel}
               aria-pressed={isSelected}
             >
               <span className={styles.dayNumber}>{format(date, 'd')}</span>
-              {hasGuestOnDate && <span className={styles.eventIndicator}>•</span>}
+              <span className={styles.statusBar} />
             </button>
           )
         })}
+      </div>
+
+      <div className={styles.legend}>
+        <span className={styles.legendItem}><span className={styles.legendDotBooked} />Booked</span>
+        <span className={styles.legendItem}><span className={styles.legendDotPending} />Pending</span>
+        <span className={styles.legendItem}><span className={styles.legendDotOpen} />Open</span>
       </div>
     </div>
   )

@@ -4,9 +4,9 @@ import { logCustomEvent } from '../firebase'
 import { formatTimeWithGMT } from '../utils/timeUtils'
 import styles from './ShareButton.module.css'
 
-export function ShareButton({ date }) {
+export function ShareButton({ date, events }) {
   const [shareStatus, setShareStatus] = useState('')
-  const dayData = useCalendarData(date)
+  const dayData = useCalendarData(date, events)
 
   const handleShare = async () => {
     const url = `${window.location.origin}/?date=${date}`
@@ -104,7 +104,7 @@ export function ShareButton({ date }) {
       aria-label="Share this event"
       title="Share this event"
     >
-      🔗 {shareStatus || 'Share'}
+      {shareStatus || 'Share Slot'}
     </button>
   )
 }
