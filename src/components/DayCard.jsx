@@ -31,7 +31,11 @@ export function DayCard({ date }) {
   const extractHandle = (tiktokUrl) => {
     if (!tiktokUrl) return ''
     const match = tiktokUrl.match(/@([a-zA-Z0-9._-]+)/)
-    return match ? match[1] : tiktokUrl.split('/').pop()
+    return match ? match[1] : ''
+  }
+
+  const isLinkedInUrl = (url) => {
+    return url && url.includes('linkedin.com')
   }
 
   const handleTiktokClick = (guestName, handle) => {
@@ -47,7 +51,11 @@ export function DayCard({ date }) {
   // Render single guest card
   const renderGuestCard = (guest) => {
     const handle = extractHandle(guest.tiktokUrl)
-    const tiktokUrl = `https://www.tiktok.com/@${handle}`
+    const isLinkedIn = isLinkedInUrl(guest.tiktokUrl)
+    const displayUrl = isLinkedIn ? guest.tiktokUrl : `https://www.tiktok.com/@${handle}`
+    const linkLabel = isLinkedIn ? 'LinkedIn' : `@${handle}`
+    const platform = isLinkedIn ? 'LINKEDIN' : 'TIKTOK'
+
     return (
       <div key={guest.name} className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
         <div className={styles.headshotWrap}>
@@ -62,7 +70,7 @@ export function DayCard({ date }) {
         </div>
         <div className={styles.body}>
           <div className={styles.kickerRow}>
-            <span>GUEST &middot; <b>{handle ? `@${handle}` : 'TIKTOK'}</b></span>
+            <span>GUEST &middot; <b>{isLinkedIn ? 'LINKEDIN' : handle ? `@${handle}` : 'TIKTOK'}</b></span>
             {displayTime && <span>{displayTime}</span>}
           </div>
           <h2 className={styles.name}>{guest.name}</h2>
@@ -70,15 +78,15 @@ export function DayCard({ date }) {
           {guest.tiktokUrl && (
             <div className={styles.footerRow}>
               <a
-                href={tiktokUrl}
+                href={displayUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.tiktokLink}
-                onClick={() => handleTiktokClick(guest.name, handle)}
+                onClick={() => handleTiktokClick(guest.name, isLinkedIn ? 'LinkedIn' : handle)}
               >
-                @{handle}
+                {linkLabel}
               </a>
-              <span className={styles.footerMeta}>LIVE / TIKTOK</span>
+              <span className={styles.footerMeta}>LIVE / {platform}</span>
             </div>
           )}
         </div>
@@ -123,9 +131,13 @@ export function DayCard({ date }) {
         text += `\nTopic: ${guest.topic}`
       }
       if (guest.tiktokUrl) {
-        const handle = guest.tiktokUrl.match(/@([a-zA-Z0-9._-]+)/)
-        if (handle) {
-          text += `\nTikTok: ${handle[0]}`
+        if (isLinkedInUrl(guest.tiktokUrl)) {
+          text += `\nLinkedIn: ${guest.tiktokUrl}`
+        } else {
+          const handle = guest.tiktokUrl.match(/@([a-zA-Z0-9._-]+)/)
+          if (handle) {
+            text += `\nTikTok: ${handle[0]}`
+          }
         }
       }
     }
