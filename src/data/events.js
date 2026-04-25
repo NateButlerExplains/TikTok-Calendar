@@ -113,13 +113,20 @@ export const events = [
   {
     date: "2026-05-12",
     dayType: "guest",
-    time: { hour: 10, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Clayton",
         headshot: "/Speakers/May12 - Clayton.png",
         tiktokUrl: "https://www.linkedin.com/in/clayton-williams-1a7b61349/",
-        topic: "Cybersecurity Major & The Journey"
+        topic: "Cybersecurity Major & The Journey",
+        time: { hour: 10, minute: 0, durationMinutes: 60 }
+      },
+      {
+        name: "Baba",
+        headshot: "/Speakers/May12 - Baba.png",
+        tiktokUrl: "@baba_dano",
+        topic: "Hacker Proof",
+        time: { hour: 21, minute: 0, durationMinutes: 60 }
       }
     ]
   },
