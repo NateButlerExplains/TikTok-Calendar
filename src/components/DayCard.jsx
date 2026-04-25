@@ -55,6 +55,8 @@ export function DayCard({ date }) {
     const displayUrl = isLinkedIn ? guest.tiktokUrl : `https://www.tiktok.com/@${handle}`
     const linkLabel = isLinkedIn ? 'LinkedIn' : `@${handle}`
     const platform = isLinkedIn ? 'LINKEDIN' : 'TIKTOK'
+    const guestTime = guest.time || dayData.time
+    const guestDisplayTime = guestTime ? formatTimeWithGMT(date, guestTime) : ''
 
     return (
       <div key={guest.name} className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
@@ -71,7 +73,7 @@ export function DayCard({ date }) {
         <div className={styles.body}>
           <div className={styles.kickerRow}>
             <span>GUEST &middot; <b>{isLinkedIn ? 'LINKEDIN' : handle ? `@${handle}` : 'TIKTOK'}</b></span>
-            {displayTime && <span>{displayTime}</span>}
+            {guestDisplayTime && <span>{guestDisplayTime}</span>}
           </div>
           <h2 className={styles.name}>{guest.name}</h2>
           {guest.topic && <p className={styles.topic}>{guest.topic}</p>}
