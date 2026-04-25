@@ -40,7 +40,9 @@ function generateUid() {
 
 export function generateIcs(dateString, event) {
   // Resolve event details
-  const time = resolveTime(dateString, event)
+  // If event has a single guest with their own time, use that
+  const guestTime = event?.guests?.[0]?.time
+  const time = guestTime || resolveTime(dateString, event)
 
   // Build title based on event type
   let title = 'Cyber Talks'
