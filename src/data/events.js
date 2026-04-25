@@ -209,6 +209,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-27",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Ash",
+        headshot: "/Speakers/May27 - Ash.png",
+        tiktokUrl: "@ashoncyber",
+        topic: "What is AI Security, and Why is it Important?"
+      }
+    ]
+  },
+  {
     date: "2026-05-22",
     dayType: "guest",
     guests: [
