@@ -12,7 +12,7 @@
  *
  * Default Times:
  * - Monday & Wednesday: 12:00 PM EST
- * - All other days: 8:00 PM EST
+ * - All other days: 9:00 PM EST
  * - Duration: 60 minutes
  *
  * Timezone: America/New_York (handles EST/EDT automatically)
@@ -259,6 +259,7 @@ export const events = [
   {
     date: "2026-06-13",
     dayType: "guest",
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Stan",
