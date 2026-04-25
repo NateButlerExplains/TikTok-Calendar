@@ -257,6 +257,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-13",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Stan",
+        headshot: "/Speakers/June13 Stan.png",
+        tiktokUrl: "@stanntalks",
+        topic: "Navigating the IT space"
+      }
+    ]
+  },
+  {
     date: "2026-06-19",
     dayType: "guest",
     guests: [
