@@ -13,18 +13,7 @@ export function DayCard({ date }) {
   const scheduleStart = new Date(2026, 4, 1) // May 1, 2026
   const isBeforeSchedule = dateObj < scheduleStart
 
-  if (!dayData) {
-    return (
-      <div className={styles.container}>
-        <div className={styles.noEvent}>
-          <p className={styles.noEventTitle}>No Event</p>
-          <p className={styles.noEventText}>Check for pop-ups!</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (isBeforeSchedule && dayData.dayType === 'open-floor') {
+  if (!dayData || isBeforeSchedule) {
     return (
       <div className={styles.container}>
         <div className={styles.noEvent}>
@@ -61,9 +50,6 @@ export function DayCard({ date }) {
 
   // Render single guest card
   const renderGuestCard = (guest) => {
-    if (!guest || !guest.tiktokUrl) {
-      return null
-    }
     const handle = extractHandle(guest.tiktokUrl)
     const isLinkedIn = isLinkedInUrl(guest.tiktokUrl)
     const displayUrl = isLinkedIn ? guest.tiktokUrl : `https://www.tiktok.com/@${handle}`

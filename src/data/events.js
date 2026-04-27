@@ -24,30 +24,58 @@
  */
 
 export const events = [
-  // Workshop events
+  // Workshop events — Nate as guest speaker
   {
     date: "2026-04-25",
-    dayType: "solo-talk",
+    dayType: "guest",
     time: { hour: 9, minute: 0, durationMinutes: 120 },
-    topic: "Know Yourself & Build Your Arsenal"
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Know Yourself & Build Your Arsenal"
+      }
+    ]
   },
   {
     date: "2026-05-02",
-    dayType: "solo-talk",
+    dayType: "guest",
     time: { hour: 9, minute: 0, durationMinutes: 120 },
-    topic: "Labs, Learning & LinkedIn"
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Labs, Learning & LinkedIn"
+      }
+    ]
   },
   {
     date: "2026-05-09",
-    dayType: "solo-talk",
+    dayType: "guest",
     time: { hour: 9, minute: 0, durationMinutes: 120 },
-    topic: "Network Like a Pro & Own the Hunt"
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Network Like a Pro & Own the Hunt"
+      }
+    ]
   },
   {
     date: "2026-05-16",
-    dayType: "solo-talk",
+    dayType: "guest",
     time: { hour: 9, minute: 0, durationMinutes: 120 },
-    topic: "AI, Tomorrow's Tools & Your Edge"
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "AI, Tomorrow's Tools & Your Edge"
+      }
+    ]
   },
   // May 2026 starts here - all open floor with Nate
   // Schedule starts May 1st
