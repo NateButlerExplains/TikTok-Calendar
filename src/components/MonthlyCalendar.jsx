@@ -60,6 +60,14 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     return 0
   }
 
+  const getGuestPreview = (dateString) => {
+    const event = events.find(e => e.date === dateString)
+    if (event && event.dayType === 'guest' && event.guests && event.guests.length > 0) {
+      return { primary: event.guests[0], extraCount: event.guests.length - 1 }
+    }
+    return null
+  }
+
   const handlePrevMonth = () => {
     const newMonth = subMonths(displayMonth, 1)
     if (isWithinBounds(newMonth)) {
@@ -148,6 +156,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const isCurrentMonth = isSameMonth(date, displayMonth)
           const guestCount = getGuestCount(dateString)
           const hasGuests = guestCount > 0
+          const guestPreview = hasGuests ? getGuestPreview(dateString) : null
 
           return (
             <button
@@ -160,7 +169,25 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
               aria-pressed={isSelected}
             >
               <span className={styles.dayNumber}>{format(date, 'd')}</span>
+
+              {/* Mobile: bullet dots — hidden on desktop via CSS */}
               {hasGuests && <span className={styles.eventIndicator}>{'•'.repeat(guestCount)}</span>}
+
+              {/* Desktop: headshot + name — hidden on mobile via CSS */}
+              {guestPreview && (
+                <span className={styles.guestPreview}>
+                  <img
+                    className={styles.guestThumb}
+                    src={guestPreview.primary.headshot}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <span className={styles.guestName}>{guestPreview.primary.name}</span>
+                  {guestPreview.extraCount > 0 && (
+                    <span className={styles.extraCount}>+{guestPreview.extraCount}</span>
+                  )}
+                </span>
+              )}
             </button>
           )
         })}

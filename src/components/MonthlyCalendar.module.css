@@ -278,3 +278,56 @@
     font-size: 9px;
   }
 }
+
+/* ===== DESKTOP GUEST PREVIEW ===== */
+@media (min-width: 769px) {
+  .day {
+    aspect-ratio: unset;
+    min-height: 60px;
+    padding: 0.4rem 0.3rem;
+    justify-content: flex-start;
+    gap: 0.2rem;
+  }
+
+  .eventIndicator {
+    display: none;
+  }
+
+  .guestPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .guestThumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-subtle);
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .guestName {
+    font-size: 9px;
+    font-family: var(--font-primary);
+    color: var(--text-secondary);
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .extraCount {
+    font-size: 8px;
+    font-family: var(--font-mono);
+    color: var(--live);
+    font-weight: 500;
+    line-height: 1;
+  }
+}
