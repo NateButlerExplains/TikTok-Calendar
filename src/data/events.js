@@ -317,6 +317,54 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-03",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-05-10",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-05-17",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-05-24",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
     date: "2026-05-30",
     dayType: "guest",
     guests: [
@@ -325,6 +373,66 @@ export const events = [
         headshot: "/Speakers/May30th - Brandy2.png",
         tiktokUrl: "@boldlybrandy",
         topic: "Transition to Cyber"
+      }
+    ]
+  },
+  {
+    date: "2026-05-31",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-06-07",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-06-14",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-06-21",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-06-28",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
       }
     ]
   },
