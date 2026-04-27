@@ -197,6 +197,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-14",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Matt Stephens",
+        headshot: "/Speakers/May14-MattStephens.png",
+        tiktokUrl: "@mattsstephens",
+        topic: "Engineering in the Tech Space"
+      }
+    ]
+  },
+  {
     date: "2026-05-15",
     dayType: "guest",
     guests: [
@@ -446,6 +458,18 @@ export const events = [
         headshot: "/Speakers/June13 Stan.png",
         tiktokUrl: "@stanntalks",
         topic: "Navigating the IT space"
+      }
+    ]
+  },
+  {
+    date: "2026-06-05",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Cyber Secrets",
+        headshot: "/Speakers/June5 - CyberSecrts.png",
+        tiktokUrl: "@arescyberdefense",
+        topic: "The Art of Content Creation in the Tech/Cyber Space"
       }
     ]
   },
