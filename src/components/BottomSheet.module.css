@@ -14,8 +14,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #1a1a2e;
-  border-top: 2px solid #00f5ff;
+  background-color: var(--card);
+  border-top: 2px solid var(--live);
   max-height: 80vh;
   overflow-y: auto;
   z-index: 1000;
@@ -30,7 +30,7 @@
   right: 1rem;
   background: none;
   border: none;
-  color: #00f5ff;
+  color: var(--live);
   font-size: 1.5rem;
   cursor: pointer;
   width: 40px;
@@ -44,13 +44,13 @@
 }
 
 .closeButton:hover {
-  background-color: rgba(0, 245, 255, 0.1);
+  background-color: var(--live-glow);
   transform: scale(1.1);
 }
 
 .content {
   padding: 3rem 1.5rem 2rem 1.5rem;
-  color: #e0e0e0;
+  color: var(--text);
   font-family: 'Inter', sans-serif;
 }
 

@@ -114,7 +114,7 @@
 }
 
 .overlayNavButton:hover {
-  background: rgba(62, 207, 142, 0.1);
+  background: var(--live-glow);
 }
 
 .overlayNavDate {
