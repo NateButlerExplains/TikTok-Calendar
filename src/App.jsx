@@ -81,7 +81,7 @@ function App() {
               <>
                 <header className={styles.appHeader}>
                   <div className={styles.titleBlock}>
-                    <span className={styles.titleKicker}>Live Broadcast &middot; <em>CYBER</em></span>
+                    <span className={styles.titleKicker}>Live Broadcast &middot; <em>SEASON 2</em></span>
                     <h1>
                       Cyber <span className={styles.titleAccent}>Talks</span>
                       <span className={styles.titleMark}>LIVE</span>
