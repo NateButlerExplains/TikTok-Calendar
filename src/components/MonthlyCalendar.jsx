@@ -65,6 +65,9 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     if (event && event.dayType === 'guest' && event.guests && event.guests.length > 0) {
       return { primary: event.guests[0], extraCount: event.guests.length - 1 }
     }
+    if (event && event.dayType === 'solo-talk') {
+      return { primary: { name: 'Workshop', headshot: '/Speakers/Nate Default.jpg' }, extraCount: 0 }
+    }
     return null
   }
 
@@ -156,7 +159,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const isCurrentMonth = isSameMonth(date, displayMonth)
           const guestCount = getGuestCount(dateString)
           const hasGuests = guestCount > 0
-          const guestPreview = hasGuests ? getGuestPreview(dateString) : null
+          const guestPreview = getGuestPreview(dateString)
 
           return (
             <button
