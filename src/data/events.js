@@ -122,7 +122,7 @@ export const events = [
         time: { hour: 10, minute: 0, durationMinutes: 60 }
       },
       {
-        name: "Baba",
+        name: "Daniel",
         headshot: "/Speakers/May12 - Baba.png",
         tiktokUrl: "@baba_dano",
         topic: "The Power of People Networking in Cybersecurity/Technology",
