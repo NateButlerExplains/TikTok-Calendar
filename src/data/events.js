@@ -281,6 +281,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-26",
+    dayType: "guest",
+    guests: [
+      {
+        name: "LaMont",
+        headshot: "/Speakers/May26-Lamont.png",
+        tiktokUrl: "@lamontwheat",
+        topic: "Why Ai Feels Inconsistent and How Human Alignment (or lack of it) shapes the output"
+      }
+    ]
+  },
+  {
     date: "2026-05-27",
     dayType: "guest",
     guests: [
