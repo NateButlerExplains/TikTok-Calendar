@@ -54,13 +54,20 @@ export const events = [
   {
     date: "2026-05-09",
     dayType: "guest",
-    time: { hour: 9, minute: 0, durationMinutes: 120 },
     guests: [
       {
         name: "Workshop",
         headshot: "/Speakers/Nate Default.jpg",
         tiktokUrl: "@natebutlerexplains",
-        topic: "Network Like a Pro & Own the Hunt"
+        topic: "Network Like a Pro & Own the Hunt",
+        time: { hour: 9, minute: 0, durationMinutes: 120 }
+      },
+      {
+        name: "Henry",
+        headshot: "/Speakers/May9 - Henry.png",
+        tiktokUrl: "@henryekeocha",
+        topic: "DevOps Part II",
+        time: { hour: 21, minute: 0, durationMinutes: 60 }
       }
     ]
   },
