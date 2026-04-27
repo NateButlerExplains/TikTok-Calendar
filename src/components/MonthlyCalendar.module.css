@@ -208,6 +208,11 @@
   font-weight: 700;
 }
 
+/* Guest Preview (desktop-only, hidden by default) */
+.guestPreview {
+  display: none;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   .container {
