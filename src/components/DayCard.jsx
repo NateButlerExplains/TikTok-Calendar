@@ -61,6 +61,9 @@ export function DayCard({ date }) {
 
   // Render single guest card
   const renderGuestCard = (guest) => {
+    if (!guest || !guest.tiktokUrl) {
+      return null
+    }
     const handle = extractHandle(guest.tiktokUrl)
     const isLinkedIn = isLinkedInUrl(guest.tiktokUrl)
     const displayUrl = isLinkedIn ? guest.tiktokUrl : `https://www.tiktok.com/@${handle}`
