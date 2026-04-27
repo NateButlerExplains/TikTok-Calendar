@@ -125,7 +125,7 @@ export const events = [
         name: "Baba",
         headshot: "/Speakers/May12 - Baba.png",
         tiktokUrl: "@baba_dano",
-        topic: "Hacker Proof",
+        topic: "The Power of People Networking in Cybersecurity/Technology",
         time: { hour: 21, minute: 0, durationMinutes: 60 }
       }
     ]
