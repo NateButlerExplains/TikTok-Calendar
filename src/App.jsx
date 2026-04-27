@@ -4,18 +4,20 @@ import { Footer } from './components/Footer'
 import { MonthlyCalendar } from './components/MonthlyCalendar'
 import { DateNavigator } from './components/DateNavigator'
 import { DayCard } from './components/DayCard'
+import { BottomSheet } from './components/BottomSheet'
 import { ShareButton } from './components/ShareButton'
 import { DownloadIcsButton } from './components/DownloadIcsButton'
 import { PrivacyPolicy } from './pages/PrivacyPolicy'
 import { TermsOfService } from './pages/TermsOfService'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
-import { getTodayString } from './utils/timeUtils'
+import { getTodayString, addDays } from './utils/timeUtils'
 import { logCustomEvent } from './firebase'
 import styles from './App.module.css'
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(getTodayString())
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false)
 
   // Parse query params on mount
   useEffect(() => {
@@ -45,6 +47,30 @@ function App() {
     logCustomEvent('date_selected', { date })
   }
 
+  const handleDayClick = (date) => {
+    handleDateChange(date)
+    if (window.innerWidth >= 769) {
+      setIsOverlayOpen(true)
+    }
+  }
+
+  const handleOverlayClose = () => setIsOverlayOpen(false)
+
+  const handleOverlayPrev = () => handleDateChange(addDays(selectedDate, -1))
+  const handleOverlayNext = () => handleDateChange(addDays(selectedDate, 1))
+
+  // Keyboard navigation for overlay
+  useEffect(() => {
+    if (!isOverlayOpen) return
+    const handleKey = (e) => {
+      if (e.key === 'ArrowLeft') handleOverlayPrev()
+      if (e.key === 'ArrowRight') handleOverlayNext()
+      if (e.key === 'Escape') handleOverlayClose()
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [isOverlayOpen, selectedDate])
+
   return (
     <BrowserRouter>
       <div className={styles.appContainer}>
@@ -68,13 +94,22 @@ function App() {
                     <DateNavigator selectedDate={selectedDate} onDateChange={handleDateChange} />
                     <MonthlyCalendar
                       selectedDate={selectedDate}
-                      onDayClick={handleDateChange}
+                      onDayClick={handleDayClick}
                     />
                   </section>
 
                   <section className={styles.cardSection}>
                     <DayCard date={selectedDate} />
                   </section>
+
+                  <BottomSheet isOpen={isOverlayOpen} onClose={handleOverlayClose}>
+                    <div className={styles.overlayNav}>
+                      <button onClick={handleOverlayPrev} className={styles.overlayNavButton} aria-label="Previous day">← Prev</button>
+                      <span className={styles.overlayNavDate}>{selectedDate}</span>
+                      <button onClick={handleOverlayNext} className={styles.overlayNavButton} aria-label="Next day">Next →</button>
+                    </div>
+                    <DayCard date={selectedDate} />
+                  </BottomSheet>
                 </main>
               </>
             }

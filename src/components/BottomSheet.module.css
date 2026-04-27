@@ -86,10 +86,10 @@
 
 @media (min-width: 769px) {
   .sheet {
-    max-height: 50vh;
+    max-height: 80vh;
     left: 50%;
     right: auto;
-    width: 90%;
+    width: min(760px, 92%);
     transform: translateX(-50%);
     border-radius: 16px;
     bottom: auto;

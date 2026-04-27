@@ -90,6 +90,41 @@
   width: 100%;
 }
 
+/* ===== OVERLAY NAV (Desktop only) ===== */
+.overlayNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.overlayNavButton {
+  padding: 8px 16px;
+  background: var(--button-deep);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.overlayNavButton:hover {
+  background: rgba(62, 207, 142, 0.1);
+}
+
+.overlayNavDate {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ===== ACTIONS (BUTTONS) ===== */
 .actionsSection {
   width: 100%;
@@ -101,6 +136,12 @@
 }
 
 /* ===== RESPONSIVE DESIGN (Primary breakpoint: 600px) ===== */
+@media (min-width: 769px) {
+  .cardSection {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .appHeader {
     padding: 1.5rem 1rem;
