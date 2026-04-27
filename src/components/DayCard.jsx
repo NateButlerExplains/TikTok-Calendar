@@ -13,7 +13,18 @@ export function DayCard({ date }) {
   const scheduleStart = new Date(2026, 4, 1) // May 1, 2026
   const isBeforeSchedule = dateObj < scheduleStart
 
-  if (!dayData || (isBeforeSchedule && dayData.dayType === 'open-floor')) {
+  if (!dayData) {
+    return (
+      <div className={styles.container}>
+        <div className={styles.noEvent}>
+          <p className={styles.noEventTitle}>No Event</p>
+          <p className={styles.noEventText}>Check for pop-ups!</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (isBeforeSchedule && dayData.dayType === 'open-floor') {
     return (
       <div className={styles.container}>
         <div className={styles.noEvent}>
