@@ -57,6 +57,9 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     if (event && event.dayType === 'guest' && event.guests && event.guests.length > 0) {
       return event.guests.length
     }
+    if (event && event.dayType === 'solo-talk') {
+      return 1
+    }
     return 0
   }
 
