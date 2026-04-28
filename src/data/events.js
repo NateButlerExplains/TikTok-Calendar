@@ -432,6 +432,19 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-06",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Cyberend",
+        headshot: "/Speakers/June6 - Cyberend.png",
+        tiktokUrl: "@cyberenduk",
+        topic: "Thriving and Surviving your Cyber Career",
+        time: "TBD"
+      }
+    ]
+  },
+  {
     date: "2026-06-07",
     dayType: "guest",
     guests: [
