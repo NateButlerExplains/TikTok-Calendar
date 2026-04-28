@@ -506,6 +506,19 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-01",
+    dayType: "guest",
+    guests: [
+      {
+        name: "BarCode Security",
+        headshot: "/Speakers/June1 - Barcode.png",
+        tiktokUrl: "@barcodesecurity",
+        topic: "Zero Trust in 2026",
+        time: "TBD"
+      }
+    ]
+  },
+  {
     date: "2026-06-05",
     dayType: "guest",
     guests: [
