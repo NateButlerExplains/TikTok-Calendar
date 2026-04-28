@@ -312,6 +312,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-28",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Cybershortieee",
+        headshot: "/Speakers/May28-CyberShorti.png",
+        tiktokUrl: "@cybershortieee",
+        topic: "Reasons Why Cloud Security Roles are the hottest in 2026"
+      }
+    ]
+  },
+  {
     date: "2026-05-29",
     dayType: "guest",
     guests: [
