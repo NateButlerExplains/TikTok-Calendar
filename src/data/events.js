@@ -519,6 +519,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-03",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Mech",
+        headshot: "/Speakers/June3 - Mech.png",
+        tiktokUrl: "@wreckitmech",
+        topic: "What is Infrastructure Engineering?"
+      }
+    ]
+  },
+  {
     date: "2026-06-05",
     dayType: "guest",
     guests: [
