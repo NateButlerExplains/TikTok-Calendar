@@ -312,9 +312,9 @@ export const events = [
     guests: [
       {
         name: "Cybershortieee",
-        headshot: "/Speakers/May28-CyberShorti.png",
+        headshot: "/Speakers/May28-CyberShorti2.png",
         tiktokUrl: "@cybershortieee",
-        topic: "Reasons Why Cloud Security Roles are the hottest in 2026"
+        topic: "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026"
       }
     ]
   },
