@@ -76,7 +76,12 @@ export function DayCard({ date }) {
             {guestDisplayTime && <span>{guestDisplayTime}</span>}
           </div>
           <h2 className={styles.name}>{guest.name}</h2>
-          {guest.topic && <p className={styles.topic}>{guest.topic}</p>}
+          {guest.topic && (
+            <div className={styles.topicSection}>
+              <h3 className={styles.topicTitle}>Topic</h3>
+              <p className={styles.topicText}>{guest.topic}</p>
+            </div>
+          )}
           {guest.bio && (
             <div className={styles.bioSection}>
               <h3 className={styles.bioTitle}>Bio</h3>
@@ -85,7 +90,7 @@ export function DayCard({ date }) {
           )}
           {guest.links && guest.links.length > 0 && (
             <div className={styles.linksSection}>
-              <h3 className={styles.linksTitle}>Links</h3>
+              <h3 className={styles.linksTitle}>Resources</h3>
               <div className={styles.linksList}>
                 {guest.links.map((link, idx) => {
                   const isEmail = link.url.startsWith('mailto:')

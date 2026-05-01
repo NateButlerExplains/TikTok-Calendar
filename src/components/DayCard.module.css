@@ -295,6 +295,31 @@
   opacity: 0.72;
 }
 
+.topicSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topicTitle {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.topicText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.43;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
 .bioSection {
   display: flex;
   flex-direction: column;
