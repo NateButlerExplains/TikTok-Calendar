@@ -77,6 +77,39 @@ export function DayCard({ date }) {
           </div>
           <h2 className={styles.name}>{guest.name}</h2>
           {guest.topic && <p className={styles.topic}>{guest.topic}</p>}
+          {guest.bio && (
+            <div className={styles.bioSection}>
+              <h3 className={styles.bioTitle}>Bio</h3>
+              <p className={styles.bioText}>{guest.bio}</p>
+            </div>
+          )}
+          {guest.links && guest.links.length > 0 && (
+            <div className={styles.linksSection}>
+              <h3 className={styles.linksTitle}>Links</h3>
+              <div className={styles.linksList}>
+                {guest.links.map((link, idx) => (
+                  <a
+                    key={idx}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.guestLink}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+          {guest.resource && (
+            <div className={styles.resourceSection}>
+              <img
+                src={guest.resource}
+                alt={`${guest.name} resource`}
+                className={styles.resourceImage}
+              />
+            </div>
+          )}
           {guest.tiktokUrl && (
             <div className={styles.footerRow}>
               <a

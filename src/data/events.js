@@ -288,9 +288,16 @@ export const events = [
     guests: [
       {
         name: "LaMont",
-        headshot: "/Speakers/May26-Lamont.png",
+        headshot: "/Speakers/May26-Lamont2.png",
         tiktokUrl: "@lamontwheat",
-        topic: "Why Ai Feels Inconsistent and How Human Alignment (or lack of it) shapes the output"
+        topic: "Why Ai Feels Inconsistent and How Human Alignment (or lack of it) shapes the output",
+        bio: "LaMont Wheat is an Executive AI Integration Architect and Founder of UHMUM Learning, where he works with leaders navigating the shift into the agentic era. His work focuses on stabilizing decision-making, strengthening governance, and ensuring human clarity remains at the center of AI-driven environments.\n\nThrough his PhaseLock™ framework, LaMont helps executives and organizations move from fragmented AI usage to coherent deployment—aligning leadership, communication, and execution.\n\nRather than teaching tools, he reorients how leaders think, decide, and operate alongside intelligent systems. His work has supported teams across technology, telecom, and enterprise environments seeking clarity in a rapidly accelerating landscape.",
+        links: [
+          { label: "Email", url: "mailto:Lamont@uhmum.com" },
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/lamontwheat" },
+          { label: "Executive AI Orientation Reset", url: "https://stan.store/lamontwheat/p/ai-orientation-reset" }
+        ],
+        resource: "/Speakers/May26-LamontResource.png"
       }
     ]
   },
