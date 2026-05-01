@@ -87,17 +87,21 @@ export function DayCard({ date }) {
             <div className={styles.linksSection}>
               <h3 className={styles.linksTitle}>Links</h3>
               <div className={styles.linksList}>
-                {guest.links.map((link, idx) => (
-                  <a
-                    key={idx}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.guestLink}
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {guest.links.map((link, idx) => {
+                  const isEmail = link.url.startsWith('mailto:')
+                  const displayText = isEmail ? link.url.replace('mailto:', '') : link.label
+                  return (
+                    <a
+                      key={idx}
+                      href={link.url}
+                      target={isEmail ? undefined : "_blank"}
+                      rel={isEmail ? undefined : "noopener noreferrer"}
+                      className={styles.guestLink}
+                    >
+                      {displayText}
+                    </a>
+                  )
+                })}
               </div>
             </div>
           )}
@@ -107,6 +111,9 @@ export function DayCard({ date }) {
                 src={guest.resource}
                 alt={`${guest.name} resource`}
                 className={styles.resourceImage}
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
               />
             </div>
           )}
