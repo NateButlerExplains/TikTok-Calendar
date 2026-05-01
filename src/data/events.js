@@ -123,21 +123,16 @@ export const events = [
     ]
   },
   {
-    date: "2026-05-06",
+    date: "2026-05-07",
     dayType: "guest",
     guests: [
       {
         name: "Peezy",
         headshot: "/Speakers/May6-peezy2.JPG",
         tiktokUrl: "@whooispeezy_",
-        topic: "Cybersecurity Engineer Life"
-      }
-    ]
-  },
-  {
-    date: "2026-05-07",
-    dayType: "guest",
-    guests: [
+        topic: "Cybersecurity Engineer Life",
+        time: { hour: 19, minute: 0, durationMinutes: 60 }
+      },
       {
         name: "Rodney",
         headshot: "/Speakers/May7-Rodney.jpg",
