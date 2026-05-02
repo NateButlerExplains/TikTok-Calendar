@@ -13,9 +13,9 @@ export function DayCard({ date }) {
   const scheduleStart = new Date(2026, 4, 1) // May 1, 2026
   const isBeforeSchedule = dateObj < scheduleStart
 
-  async function shareEventWithImage(shareData, headshotPath) {
+  async function shareEventWithImage(shareData, fallbackUrl, headshotPath) {
     if (typeof navigator.share !== 'function') {
-      await navigator.clipboard.writeText(shareData.url)
+      await navigator.clipboard.writeText(fallbackUrl)
       return 'clipboard'
     }
     if (headshotPath) {
@@ -219,10 +219,10 @@ export function DayCard({ date }) {
     if (displayTime) {
       text += `\nTime: ${displayTime}`
     }
-    text += `\n\n${url}`
+    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
 
     try {
-      const method = await shareEventWithImage({ title, text, url }, guest?.headshot || '/Speakers/Nate Default.jpg')
+      const method = await shareEventWithImage({ title, text }, url, guest?.headshot || '/Speakers/Nate Default.jpg')
       logCustomEvent('share_link', {
         date,
         guest_name: guestName,
@@ -337,10 +337,10 @@ export function DayCard({ date }) {
     if (displayTime) {
       text += `\nTime: ${displayTime}`
     }
-    text += `\n\n${url}`
+    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
 
     try {
-      const method = await shareEventWithImage({ title, text, url }, headshotPath)
+      const method = await shareEventWithImage({ title, text }, url, headshotPath)
       logCustomEvent('share_link', {
         date,
         event_type: 'solo-talk',
@@ -425,10 +425,10 @@ export function DayCard({ date }) {
       day: 'numeric'
     })
 
-    let text = `Join me for Cyber Talks on ${dateStr}\nOpen floor discussion\n\n${url}`
+    let text = `Join me for Cyber Talks on ${dateStr}\nOpen floor discussion\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
 
     try {
-      const method = await shareEventWithImage({ title, text, url }, headshotPath)
+      const method = await shareEventWithImage({ title, text }, url, headshotPath)
       logCustomEvent('share_link', {
         date,
         event_type: 'open-floor',

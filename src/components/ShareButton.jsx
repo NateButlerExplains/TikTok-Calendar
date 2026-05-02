@@ -48,15 +48,14 @@ export function ShareButton({ date }) {
       text += `\nTime: ${timeStr}`
     }
 
-    text += `\n\n${url}`
+    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
 
     try {
       if (navigator.share) {
         // Use native Web Share API if available
         await navigator.share({
           title,
-          text,
-          url
+          text
         })
         logCustomEvent('share_link', {
           date,
