@@ -9,7 +9,7 @@ export function ShareButton({ date }) {
   const dayData = useCalendarData(date)
 
   const handleShare = async () => {
-    const url = `${window.location.origin}/?date=${date}`
+    const url = `${window.location.origin}/og?date=${date}`
     const title = `Cyber Talks Calendar`
 
     // Parse date correctly in local timezone (not UTC)

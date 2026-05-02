@@ -1,12 +1,25 @@
 #!/usr/bin/env node
 
-/**
- * syncEvents.js
- *
- * Reads src/data/events.js and syncs to Firestore at deploy time.
- * This ensures one source of truth: the events.js config file.
- *
- * TODO: Implement Firestore sync when events.js data model is finalized.
- */
+import { events } from '../src/data/events.js'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-console.log('✓ syncEvents script placeholder (Firestore sync coming in Phase 2)')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const minimal = events.map(event => ({
+  date: event.date,
+  dayType: event.dayType,
+  guests: event.guests
+    ? event.guests.map(g => ({
+        name: g.name,
+        topic: g.topic || null,
+        headshot: g.headshot || null
+      }))
+    : [],
+  topic: event.topic || null
+}))
+
+const output = path.join(__dirname, '../functions/events-meta.json')
+fs.writeFileSync(output, JSON.stringify(minimal, null, 2) + '\n')
+console.log(`✓ Synced ${events.length} events to ${output}`)

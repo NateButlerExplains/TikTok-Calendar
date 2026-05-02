@@ -1,0 +1,509 @@
+[
+  {
+    "date": "2026-04-25",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Know Yourself & Build Your Arsenal",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-02",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Labs, Learning & LinkedIn",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-09",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Network Like a Pro & Own the Hunt",
+        "headshot": "/Speakers/Nate Default.jpg"
+      },
+      {
+        "name": "Henry",
+        "topic": "DevOps Part II",
+        "headshot": "/Speakers/May9 - Henry.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-16",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "AI, Tomorrow's Tools & Your Edge",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-01",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "CyberMB",
+        "topic": "GovTech + Clearance",
+        "headshot": "/Speakers/May1 - CyberMB.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-04",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "IAM Techbro",
+        "topic": "Identity Access & Management",
+        "headshot": "/Speakers/May4 - IAM TechBro.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-05",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Faith",
+        "topic": "Cybersecurity Life",
+        "headshot": "/Speakers/May5 - Faith.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-07",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Peezy",
+        "topic": "Cybersecurity Engineer Life",
+        "headshot": "/Speakers/May6-peezy2.JPG"
+      },
+      {
+        "name": "Rodney",
+        "topic": "Cybersecurity Mentorship",
+        "headshot": "/Speakers/May7-Rodney.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-08",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Shreem",
+        "topic": "Neurodivergents in Cyber",
+        "headshot": "/Speakers/May8-Shreem.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-11",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Samir",
+        "topic": "Claude Ai in the Cyber Space",
+        "headshot": "/Speakers/May11 - Samir.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-12",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Clayton",
+        "topic": "Cybersecurity Major & The Journey",
+        "headshot": "/Speakers/May12 - Clayton.png"
+      },
+      {
+        "name": "Daniel",
+        "topic": "The Power of People Networking in Cybersecurity/Technology",
+        "headshot": "/Speakers/May12 - Baba.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-13",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Alan",
+        "topic": "Leveraging Ai within the SDLC Process",
+        "headshot": "/Speakers/May13 - AlanAI 3pm.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-14",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Matt Stephens",
+        "topic": "Engineering in the Tech Space",
+        "headshot": "/Speakers/May14-MattStephens.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-15",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Marshall",
+        "topic": "Why Cybersecurity?!?!",
+        "headshot": "/Speakers/May15 - MarshallProf.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-18",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Get Pwn3d!",
+        "topic": "GRC/Third Party Risk Management (TPRM)",
+        "headshot": "/Speakers/May18 - GetPawnd.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-19",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "David",
+        "topic": "Surving and Thriving in Cyber",
+        "headshot": "/Speakers/May19 - DavidWest.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-20",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Francis",
+        "topic": "What is Cloud Security?",
+        "headshot": "/Speakers/MAY20 - FRANCIS.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-21",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Dara",
+        "topic": "Cyber Pivot Playbook",
+        "headshot": "/Speakers/May21-Dara.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-25",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Betapersin",
+        "topic": "IAM is the backbone of cybersecurity. Why GRC, Zero Trust, and Cloud Security all collapse without it.",
+        "headshot": "/Speakers/May25 - BetaPersin.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-26",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "LaMont",
+        "topic": "Why Ai Feels Inconsistent and How Human Alignment (or lack of it) shapes the output",
+        "headshot": "/Speakers/May26-Lamont2.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-27",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Ash",
+        "topic": "What is AI Security, and Why is it Important?",
+        "headshot": "/Speakers/May27 - Ash.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-28",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Cybershortieee",
+        "topic": "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026",
+        "headshot": "/Speakers/May28-CyberShorti2.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-29",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Christian",
+        "topic": "Break into a Six-Figure Career in Cybersecurity",
+        "headshot": "/Speakers/May29 - Christian.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-22",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Christopher",
+        "topic": "RMF Based Roles and Today's Market",
+        "headshot": "/Speakers/May22nd - Techwoke.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-23",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Carter Perez",
+        "topic": "The Power of Certs and Gamified Learning",
+        "headshot": "/Speakers/May23 - CertifiedGames.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-03",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-10",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-17",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-24",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-30",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Brandy",
+        "topic": "Transition to Cyber",
+        "headshot": "/Speakers/May30th - Brandy2.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-05-31",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-06",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Cyberend",
+        "topic": "Thriving and Surviving your Cyber Career",
+        "headshot": "/Speakers/June6 - Cyberend.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-07",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-14",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-21",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-28",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-13",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Stan",
+        "topic": "Navigating the IT space",
+        "headshot": "/Speakers/June13 Stan.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-01",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "BarCode Security",
+        "topic": "Zero Trust in 2026",
+        "headshot": "/Speakers/June1 - Barcode.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-03",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Mech",
+        "topic": "What is Infrastructure Engineering?",
+        "headshot": "/Speakers/June3 - Mech.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-05",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Cyber Secrets",
+        "topic": "The Art of Content Creation in the Tech/Cyber Space",
+        "headshot": "/Speakers/June5 - CyberSecrts.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-19",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Chris",
+        "topic": "Importance of Tech Projects/Portfolio",
+        "headshot": "/Speakers/June19 - Christ Tech.jpg"
+      }
+    ],
+    "topic": null
+  }
+]

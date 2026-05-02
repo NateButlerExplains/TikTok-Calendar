@@ -13,6 +13,34 @@ export function DayCard({ date }) {
   const scheduleStart = new Date(2026, 4, 1) // May 1, 2026
   const isBeforeSchedule = dateObj < scheduleStart
 
+  async function shareEventWithImage(shareData, headshotPath) {
+    if (typeof navigator.share !== 'function') {
+      await navigator.clipboard.writeText(shareData.url)
+      return 'clipboard'
+    }
+    if (headshotPath) {
+      try {
+        const absoluteUrl = encodeURI(window.location.origin + headshotPath)
+        const response = await fetch(absoluteUrl)
+        if (response.ok) {
+          const blob = await response.blob()
+          const ext = headshotPath.split('.').pop().toLowerCase()
+          const mimeType = ext === 'png' ? 'image/png' : 'image/jpeg'
+          const fileName = headshotPath.split('/').pop()
+          const file = new File([blob], fileName, { type: mimeType })
+          let canShare = false
+          try { canShare = navigator.canShare({ files: [file] }) } catch (_) {}
+          if (canShare) {
+            await navigator.share({ ...shareData, files: [file] })
+            return 'native-with-image'
+          }
+        }
+      } catch (_) {}
+    }
+    await navigator.share(shareData)
+    return 'native'
+  }
+
   if (!dayData || isBeforeSchedule) {
     return (
       <div className={styles.container}>
@@ -160,7 +188,7 @@ export function DayCard({ date }) {
   }
 
   const handleShareGuest = async (guestName) => {
-    const url = `${window.location.origin}/?date=${date}`
+    const url = `${window.location.origin}/og?date=${date}`
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
     const dateObj = new Date(year, month - 1, day)
@@ -194,21 +222,12 @@ export function DayCard({ date }) {
     text += `\n\n${url}`
 
     try {
-      if (navigator.share) {
-        await navigator.share({ title, text, url })
-        logCustomEvent('share_link', {
-          date,
-          guest_name: guestName,
-          method: 'native'
-        })
-      } else {
-        await navigator.clipboard.writeText(url)
-        logCustomEvent('share_link', {
-          date,
-          guest_name: guestName,
-          method: 'clipboard'
-        })
-      }
+      const method = await shareEventWithImage({ title, text, url }, guest?.headshot || '/Speakers/Nate Default.jpg')
+      logCustomEvent('share_link', {
+        date,
+        guest_name: guestName,
+        method
+      })
     } catch (error) {
       if (error.name !== 'AbortError') {
         try {
@@ -302,7 +321,8 @@ export function DayCard({ date }) {
   }
 
   const handleShareSolo = async () => {
-    const url = `${window.location.origin}/?date=${date}`
+    const url = `${window.location.origin}/og?date=${date}`
+    const headshotPath = '/Speakers/Nate Default.jpg'
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
     const dateObj = new Date(year, month - 1, day)
@@ -320,21 +340,12 @@ export function DayCard({ date }) {
     text += `\n\n${url}`
 
     try {
-      if (navigator.share) {
-        await navigator.share({ title, text, url })
-        logCustomEvent('share_link', {
-          date,
-          event_type: 'solo-talk',
-          method: 'native'
-        })
-      } else {
-        await navigator.clipboard.writeText(url)
-        logCustomEvent('share_link', {
-          date,
-          event_type: 'solo-talk',
-          method: 'clipboard'
-        })
-      }
+      const method = await shareEventWithImage({ title, text, url }, headshotPath)
+      logCustomEvent('share_link', {
+        date,
+        event_type: 'solo-talk',
+        method
+      })
     } catch (error) {
       if (error.name !== 'AbortError') {
         try {
@@ -403,7 +414,8 @@ export function DayCard({ date }) {
   )
 
   async function handleShareOpen() {
-    const url = `${window.location.origin}/?date=${date}`
+    const url = `${window.location.origin}/og?date=${date}`
+    const headshotPath = '/Speakers/Nate Default.jpg'
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
     const dateObj = new Date(year, month - 1, day)
@@ -416,21 +428,12 @@ export function DayCard({ date }) {
     let text = `Join me for Cyber Talks on ${dateStr}\nOpen floor discussion\n\n${url}`
 
     try {
-      if (navigator.share) {
-        await navigator.share({ title, text, url })
-        logCustomEvent('share_link', {
-          date,
-          event_type: 'open-floor',
-          method: 'native'
-        })
-      } else {
-        await navigator.clipboard.writeText(url)
-        logCustomEvent('share_link', {
-          date,
-          event_type: 'open-floor',
-          method: 'clipboard'
-        })
-      }
+      const method = await shareEventWithImage({ title, text, url }, headshotPath)
+      logCustomEvent('share_link', {
+        date,
+        event_type: 'open-floor',
+        method
+      })
     } catch (error) {
       if (error.name !== 'AbortError') {
         try {
