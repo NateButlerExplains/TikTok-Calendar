@@ -9,7 +9,7 @@ export function ShareButton({ date }) {
   const dayData = useCalendarData(date)
 
   const handleShare = async () => {
-    const url = `${window.location.origin}/og?date=${date}`
+    const url = `${window.location.origin}/?date=${date}`
     const title = `Cyber Talks Calendar`
 
     // Parse date correctly in local timezone (not UTC)
@@ -48,7 +48,7 @@ export function ShareButton({ date }) {
       text += `\nTime: ${timeStr}`
     }
 
-    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
+    text += `\n\nCalendar: ${url}\nFollow on TikTok: https://www.tiktok.com/@natebutlerexplains`
 
     try {
       if (navigator.share) {

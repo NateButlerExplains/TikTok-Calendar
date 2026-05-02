@@ -188,7 +188,7 @@ export function DayCard({ date }) {
   }
 
   const handleShareGuest = async (guestName) => {
-    const url = `${window.location.origin}/og?date=${date}`
+    const url = `${window.location.origin}/?date=${date}`
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
     const dateObj = new Date(year, month - 1, day)
@@ -219,7 +219,7 @@ export function DayCard({ date }) {
     if (displayTime) {
       text += `\nTime: ${displayTime}`
     }
-    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
+    text += `\n\nCalendar: ${url}\nFollow on TikTok: https://www.tiktok.com/@natebutlerexplains`
 
     try {
       const method = await shareEventWithImage({ title, text }, url, guest?.headshot || '/Speakers/Nate Default.jpg')
@@ -321,7 +321,7 @@ export function DayCard({ date }) {
   }
 
   const handleShareSolo = async () => {
-    const url = `${window.location.origin}/og?date=${date}`
+    const url = `${window.location.origin}/?date=${date}`
     const headshotPath = '/Speakers/Nate Default.jpg'
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
@@ -337,7 +337,7 @@ export function DayCard({ date }) {
     if (displayTime) {
       text += `\nTime: ${displayTime}`
     }
-    text += `\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
+    text += `\n\nCalendar: ${url}\nFollow on TikTok: https://www.tiktok.com/@natebutlerexplains`
 
     try {
       const method = await shareEventWithImage({ title, text }, url, headshotPath)
@@ -414,7 +414,7 @@ export function DayCard({ date }) {
   )
 
   async function handleShareOpen() {
-    const url = `${window.location.origin}/og?date=${date}`
+    const url = `${window.location.origin}/?date=${date}`
     const headshotPath = '/Speakers/Nate Default.jpg'
     const title = `Cyber Talks Calendar`
     const [year, month, day] = date.split('-').map(Number)
@@ -425,7 +425,7 @@ export function DayCard({ date }) {
       day: 'numeric'
     })
 
-    let text = `Join me for Cyber Talks on ${dateStr}\nOpen floor discussion\n\n${url}\nhttps://www.tiktok.com/@natebutlerexplains`
+    let text = `Join me for Cyber Talks on ${dateStr}\nOpen floor discussion\n\nCalendar: ${url}\nFollow on TikTok: https://www.tiktok.com/@natebutlerexplains`
 
     try {
       const method = await shareEventWithImage({ title, text }, url, headshotPath)
