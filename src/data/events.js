@@ -123,6 +123,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-06",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Michelle Morris",
+        headshot: "/Speakers/May6 - Coach.png",
+        tiktokUrl: "@modernmichelle",
+        topic: "Jumpstart your Cyber Career"
+      }
+    ]
+  },
+  {
     date: "2026-05-07",
     dayType: "guest",
     guests: [
