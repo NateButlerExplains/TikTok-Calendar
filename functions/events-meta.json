@@ -89,6 +89,18 @@
     "topic": null
   },
   {
+    "date": "2026-05-06",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Michelle Morris",
+        "topic": "Jumpstart your Cyber Career",
+        "headshot": "/Speakers/May6 - Coach.png"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-05-07",
     "dayType": "guest",
     "guests": [
