@@ -130,7 +130,12 @@ export const events = [
         name: "Michelle Morris",
         headshot: "/Speakers/May6 - Coach.png",
         tiktokUrl: "@modernmichelle",
-        topic: "Jumpstart your Cyber Career"
+        topic: "Jumpstart your Cyber Career",
+        bio: "Michelle Morris is an Assistant Vice President of Technology Resilience in the financial sector, specializing in business continuity planning, cyber resilience, and disaster recovery. She is also the founder of Firewall Founders Club, a community-driven platform dedicated to increasing representation of women and minorities in technology. Through her work, Michelle provides practical insights and actionable guidance to help aspiring professionals gain hands-on experience and successfully transition into tech careers.",
+        links: [
+          { label: "LinkedIn", url: "https://www.linkedin.com/in/mmorris64" },
+          { label: "Email", url: "mailto:michelle@firewallfoundersclub.com" }
+        ]
       }
     ]
   },
