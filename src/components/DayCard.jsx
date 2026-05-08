@@ -83,8 +83,8 @@ export function DayCard({ date }) {
     const displayUrl = isLinkedIn ? guest.tiktokUrl : `https://www.tiktok.com/@${handle}`
     const linkLabel = isLinkedIn ? 'LinkedIn' : `@${handle}`
     const platform = isLinkedIn ? 'LINKEDIN' : 'TIKTOK'
-    const guestTime = guest.time || dayData.time
-    const guestDisplayTime = guestTime ? formatTimeWithGMT(date, guestTime) : ''
+    const guestTime = Object.prototype.hasOwnProperty.call(guest, 'time') ? guest.time : dayData.time
+    const guestDisplayTime = guestTime !== undefined ? formatTimeWithGMT(date, guestTime) : ''
 
     return (
       <div key={guest.name} className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
