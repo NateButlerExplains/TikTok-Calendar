@@ -90,7 +90,7 @@ export function DayCard({ date }) {
       <div key={guest.name} className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
         <div className={styles.headshotWrap}>
           <img
-            src={guest.headshot}
+            src={`${guest.headshot}?v=2`}
             alt={guest.name}
             className={styles.headshot}
             onError={handleImageError}
