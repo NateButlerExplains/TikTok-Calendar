@@ -86,8 +86,8 @@ export function formatTimeWithGMT(dateStringOrObj, timeObj) {
     return `${estTime} EST / ${gmtTime} GMT`
   }
 
-  if (!dateString || !timeToUse) {
-    return ''
+  if (!dateString || !timeToUse || typeof timeToUse !== 'object') {
+    return 'TBD'
   }
 
   // Manually format time (simpler approach)

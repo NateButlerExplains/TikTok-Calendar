@@ -239,8 +239,7 @@ export const events = [
         name: "J0sh_T3ch",
         headshot: "/Speakers/May15th - JoshTech.jpg",
         tiktokUrl: "@J0sh_T3ch",
-        topic: "Networking Engineer - Navigating the Space",
-        time: "TBD"
+        topic: "Networking Engineer - Navigating the Space"
       }
     ]
   },
