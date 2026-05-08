@@ -144,13 +144,6 @@ export const events = [
     dayType: "guest",
     guests: [
       {
-        name: "Peezy",
-        headshot: "/Speakers/May6-peezy2.JPG",
-        tiktokUrl: "@whooispeezy_",
-        topic: "Cybersecurity Engineer Life",
-        time: { hour: 19, minute: 0, durationMinutes: 60 }
-      },
-      {
         name: "Rodney",
         headshot: "/Speakers/May7-Rodney.jpg",
         tiktokUrl: "@rodney_arceneaux",
@@ -199,6 +192,11 @@ export const events = [
         tiktokUrl: "@baba_dano",
         topic: "The Power of People Networking in Cybersecurity/Technology",
         time: { hour: 21, minute: 0, durationMinutes: 60 }
+      },
+      {
+        name: "Ely (Reyrey) Reyes",
+        headshot: "/Speakers/Nate Default.jpg",
+        topic: "DevSecOps"
       }
     ]
   },
@@ -236,6 +234,12 @@ export const events = [
         headshot: "/Speakers/May15 - MarshallProf.jpg",
         tiktokUrl: "@cybersecprofessor",
         topic: "Why Cybersecurity?!?!"
+      },
+      {
+        name: "J0sh_T3ch",
+        headshot: "/Speakers/May15th - JoshTech.jpg",
+        tiktokUrl: "@J0sh_T3ch",
+        topic: "Networking Engineer - Navigating the Space"
       }
     ]
   },
@@ -570,6 +574,18 @@ export const events = [
         headshot: "/Speakers/June19 - Christ Tech.jpg",
         tiktokUrl: "@christhetechninja",
         topic: "Importance of Tech Projects/Portfolio"
+      }
+    ]
+  },
+  {
+    date: "2026-06-27",
+    dayType: "guest",
+    guests: [
+      {
+        name: "S",
+        headshot: "/Speakers/June27 - S.jpeg",
+        tiktokUrl: "@pateltedmjo",
+        topic: "Breaking in Cyber (The Journey)"
       }
     ]
   }
