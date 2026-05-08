@@ -181,7 +181,7 @@ export const events = [
     guests: [
       {
         name: "Clayton",
-        headshot: "/Speakers/May12 - Clayton.png",
+        headshot: "/Speakers/May12-Clayton2.jpeg",
         tiktokUrl: "https://www.linkedin.com/in/clayton-williams-1a7b61349/",
         topic: "Cybersecurity Major & The Journey",
         time: { hour: 10, minute: 0, durationMinutes: 60 }
