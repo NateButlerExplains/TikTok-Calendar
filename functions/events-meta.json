@@ -105,11 +105,6 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Peezy",
-        "topic": "Cybersecurity Engineer Life",
-        "headshot": "/Speakers/May6-peezy2.JPG"
-      },
-      {
         "name": "Rodney",
         "topic": "Cybersecurity Mentorship",
         "headshot": "/Speakers/May7-Rodney.jpg"
@@ -154,6 +149,11 @@
         "name": "Daniel",
         "topic": "The Power of People Networking in Cybersecurity/Technology",
         "headshot": "/Speakers/May12 - Baba.png"
+      },
+      {
+        "name": "Ely (Reyrey) Reyes",
+        "topic": "DevSecOps",
+        "headshot": "/Speakers/Nate Default.jpg"
       }
     ],
     "topic": null
@@ -514,6 +514,19 @@
         "name": "Chris",
         "topic": "Importance of Tech Projects/Portfolio",
         "headshot": "/Speakers/June19 - Christ Tech.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-27",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "S",
+        "topic": "Breaking in Cyber (The Journey)",
+        "headshot": "/Speakers/June27 - S.jpeg",
+        "tiktok": "@pateltedmjo"
       }
     ],
     "topic": null
