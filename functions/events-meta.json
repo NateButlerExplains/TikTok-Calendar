@@ -190,6 +190,12 @@
         "name": "Marshall",
         "topic": "Why Cybersecurity?!?!",
         "headshot": "/Speakers/May15 - MarshallProf.jpg"
+      },
+      {
+        "name": "J0sh_T3ch",
+        "topic": "Networking Engineer - Navigating the Space",
+        "headshot": "/Speakers/May15th - JoshTech.jpg",
+        "tiktok": "@J0sh_T3ch"
       }
     ],
     "topic": null
