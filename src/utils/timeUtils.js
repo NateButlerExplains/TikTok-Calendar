@@ -8,8 +8,8 @@ const TIMEZONE = 'America/New_York'
  * Returns default time if event.time not provided.
  */
 export function resolveTime(dateString, event) {
-  // If event has explicit time, use it
-  if (event?.time) {
+  // If event has explicit time property (including null), return it
+  if (event?.hasOwnProperty('time')) {
     return event.time
   }
 
