@@ -192,11 +192,6 @@ export const events = [
         tiktokUrl: "@baba_dano",
         topic: "The Power of People Networking in Cybersecurity/Technology",
         time: { hour: 21, minute: 0, durationMinutes: 60 }
-      },
-      {
-        name: "Ely (Reyrey) Reyes",
-        headshot: "/Speakers/Nate Default.jpg",
-        topic: "DevSecOps"
       }
     ]
   },
@@ -525,6 +520,17 @@ export const events = [
         headshot: "/Speakers/June11 - djbsec.png",
         tiktokUrl: "@djbsec",
         topic: "The CISSP - Value+Pros/Cons"
+      }
+    ]
+  },
+  {
+    date: "2026-06-12",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Ely (Reyrey) Reyes",
+        headshot: "/Speakers/June12-ely.jpeg",
+        topic: "DevSecOps"
       }
     ]
   },
