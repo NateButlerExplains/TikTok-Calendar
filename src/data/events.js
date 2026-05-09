@@ -60,7 +60,7 @@ export const events = [
         headshot: "/Speakers/Nate Default.jpg",
         tiktokUrl: "@natebutlerexplains",
         topic: "Network Like a Pro & Own the Hunt",
-        time: { hour: 9, minute: 0, durationMinutes: 120 }
+        time: { hour: 20, minute: 0, durationMinutes: 120 }
       },
       {
         name: "Henry",
