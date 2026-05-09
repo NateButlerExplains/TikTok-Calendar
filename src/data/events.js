@@ -607,5 +607,101 @@ export const events = [
         topic: "Breaking in Cyber (The Journey)"
       }
     ]
+  },
+  {
+    date: "2026-07-04",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
+      }
+    ]
+  },
+  {
+    date: "2026-07-05",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-07-11",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
+      }
+    ]
+  },
+  {
+    date: "2026-07-12",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-07-18",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
+      }
+    ]
+  },
+  {
+    date: "2026-07-19",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
+  },
+  {
+    date: "2026-07-25",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
+      }
+    ]
+  },
+  {
+    date: "2026-07-26",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Lounge",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "Chat, Hangout and Decompress and Network"
+      }
+    ]
   }
 ]
