@@ -370,6 +370,17 @@ export function DayCard({ date }) {
     })
   }
 
+  if (dayData.dayType === 'blackout') {
+    return (
+      <div className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
+        <div className={styles.body}>
+          <h2 className={styles.title}>{dayData.guests?.[0]?.name || 'Blackout Day'}</h2>
+          <p className={styles.topic}>{dayData.guests?.[0]?.topic || 'No event'}</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
       <div className={styles.headshotWrap}>
