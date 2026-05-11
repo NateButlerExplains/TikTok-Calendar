@@ -392,13 +392,12 @@ export const events = [
   },
   {
     date: "2026-05-10",
-    dayType: "guest",
+    dayType: "blackout",
     guests: [
       {
-        name: "Lounge",
-        headshot: "/Speakers/Nate Default.jpg",
-        tiktokUrl: "@natebutlerexplains",
-        topic: "Chat, Hangout and Decompress and Network"
+        name: "Happy Mother's Day",
+        headshot: null,
+        topic: "No live stream. Celebrate the amazing mothers in your life."
       }
     ]
   },
