@@ -165,13 +165,12 @@ export const events = [
   },
   {
     date: "2026-05-11",
-    dayType: "guest",
+    dayType: "blackout",
     guests: [
       {
-        name: "Samir",
-        headshot: "/Speakers/May11 - Samir.jpg",
-        tiktokUrl: "@Samir_elabed",
-        topic: "Claude Ai in the Cyber Space"
+        name: "Samir — Rescheduled",
+        headshot: null,
+        topic: "Samir couldn't make it today. Will be rescheduled soon. Stay tuned!"
       }
     ]
   },
