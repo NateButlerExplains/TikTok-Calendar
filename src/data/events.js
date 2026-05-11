@@ -239,18 +239,6 @@ export const events = [
     ]
   },
   {
-    date: "2026-05-18",
-    dayType: "guest",
-    guests: [
-      {
-        name: "Get Pwn3d!",
-        headshot: "/Speakers/May18 - GetPawnd.jpg",
-        tiktokUrl: "@ie_ty97",
-        topic: "GRC/Third Party Risk Management (TPRM)"
-      }
-    ]
-  },
-  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
