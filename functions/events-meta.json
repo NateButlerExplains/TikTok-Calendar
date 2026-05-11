@@ -143,17 +143,12 @@
       {
         "name": "Clayton",
         "topic": "Cybersecurity Major & The Journey",
-        "headshot": "/Speakers/May12 - Clayton.png"
+        "headshot": "/Speakers/May12-Clayton2.jpeg"
       },
       {
         "name": "Daniel",
         "topic": "The Power of People Networking in Cybersecurity/Technology",
         "headshot": "/Speakers/May12 - Baba.png"
-      },
-      {
-        "name": "Ely (Reyrey) Reyes",
-        "topic": "DevSecOps",
-        "headshot": "/Speakers/Nate Default.jpg"
       }
     ],
     "topic": null
@@ -194,8 +189,7 @@
       {
         "name": "J0sh_T3ch",
         "topic": "Networking Engineer - Navigating the Space",
-        "headshot": "/Speakers/May15th - JoshTech.jpg",
-        "tiktok": "@J0sh_T3ch"
+        "headshot": "/Speakers/May15th - JoshTech.jpg"
       }
     ],
     "topic": null
@@ -346,12 +340,12 @@
   },
   {
     "date": "2026-05-10",
-    "dayType": "guest",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Lounge",
-        "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "name": "Happy Mother's Day",
+        "topic": "No live stream. Celebrate the amazing mothers in your life.",
+        "headshot": null
       }
     ],
     "topic": null
@@ -465,6 +459,30 @@
     "topic": null
   },
   {
+    "date": "2026-06-11",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "DJBsec",
+        "topic": "The CISSP - Value+Pros/Cons",
+        "headshot": "/Speakers/June11 - djbsec.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-12",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Ely (Reyrey) Reyes",
+        "topic": "DevSecOps",
+        "headshot": "/Speakers/June12-ely.jpeg"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-06-13",
     "dayType": "guest",
     "guests": [
@@ -531,8 +549,103 @@
       {
         "name": "S",
         "topic": "Breaking in Cyber (The Journey)",
-        "headshot": "/Speakers/June27 - S.jpeg",
-        "tiktok": "@pateltedmjo"
+        "headshot": "/Speakers/June27 - S.jpeg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-04",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "TBD",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-05",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-11",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "TBD",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-12",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-18",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "TBD",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-19",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-25",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "TBD",
+        "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-26",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg"
       }
     ],
     "topic": null
