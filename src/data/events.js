@@ -555,6 +555,17 @@ export const events = [
     dayType: "guest",
     guests: [
       {
+        name: "Cloud Scholars",
+        headshot: "/Speakers/June2 - Cloud Scholars.png",
+        tiktokUrl: "@cloud.scholars",
+        topic: "Microsoft Security CoPilot, Identities, Purview, Azure",
+        time: {
+          hour: 18,
+          minute: 0,
+          durationMinutes: 60
+        }
+      },
+      {
         name: "Dylan",
         headshot: "/Speakers/June2 - Dylon.png",
         tiktokUrl: "@cybersecdyl",
