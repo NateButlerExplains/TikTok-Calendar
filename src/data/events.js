@@ -546,7 +546,11 @@ export const events = [
         headshot: "/Speakers/June1 - Barcode.png",
         tiktokUrl: "@barcodesecurity",
         topic: "Zero Trust in 2026",
-        time: "TBD"
+        time: {
+          hour: 12,
+          minute: 0,
+          durationMinutes: 60
+        }
       }
     ]
   },
