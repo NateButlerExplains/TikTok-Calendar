@@ -551,6 +551,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-02",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Dylan",
+        headshot: "/Speakers/June2 - Dylon.png",
+        tiktokUrl: "@cybersecdyl",
+        topic: "How to Catch Hackers"
+      }
+    ]
+  },
+  {
     date: "2026-06-03",
     dayType: "guest",
     guests: [
