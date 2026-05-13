@@ -141,13 +141,12 @@ export const events = [
   },
   {
     date: "2026-05-07",
-    dayType: "guest",
+    dayType: "blackout",
     guests: [
       {
-        name: "Rodney",
-        headshot: "/Speakers/May7-Rodney.jpg",
-        tiktokUrl: "@rodney_arceneaux",
-        topic: "Cybersecurity Mentorship"
+        name: "Rodney — Rescheduled",
+        headshot: null,
+        topic: "Rodney couldn't make it today. Will be rescheduled soon. Stay tuned!"
       }
     ]
   },
