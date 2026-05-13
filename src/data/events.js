@@ -243,6 +243,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-05-18",
+    dayType: "guest",
+    guests: [
+      {
+        name: "KernalKhaos",
+        headshot: "/Speakers/May18. - kernel.png",
+        tiktokUrl: "@fennixis",
+        topic: "Cyber! Every Journey is Unique"
+      }
+    ]
+  },
+  {
     date: "2026-05-19",
     dayType: "guest",
     guests: [
