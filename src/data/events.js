@@ -246,8 +246,8 @@ export const events = [
     dayType: "guest",
     guests: [
       {
-        name: "KernalKhaos",
-        headshot: "/Speakers/May18. - kernel.png",
+        name: "KernelKhaos",
+        headshot: "/Speakers/May18 - KernelKhaos.png",
         tiktokUrl: "@fennixis",
         topic: "Cyber! Every Journey is Unique"
       }
