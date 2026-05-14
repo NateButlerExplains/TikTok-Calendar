@@ -565,6 +565,18 @@
     "topic": null
   },
   {
+    "date": "2026-06-20",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Get Pwn3d!",
+        "topic": "GRC/Third Party Risk Management (TPRM)",
+        "headshot": "/Speakers/May18 - GetPawnd.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-06-27",
     "dayType": "guest",
     "guests": [
