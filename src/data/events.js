@@ -258,7 +258,9 @@ export const events = [
         name: "KernelKhaos",
         headshot: "/Speakers/May18 - KernelKhaos.png",
         tiktokUrl: "@fennixis",
-        topic: "Cyber! Every Journey is Unique"
+        topic: "Cyber! Every Journey is Unique",
+        time: { hour: 21, minute: 0, durationMinutes: 60 },
+        sydneyTime: true
       }
     ]
   },
