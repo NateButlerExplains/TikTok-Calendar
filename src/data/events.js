@@ -87,7 +87,7 @@ export const events = [
         headshot: "/Speakers/May16 - Shabz.png",
         tiktokUrl: "@iamitgeek",
         topic: "Life as a Microsoft MVP",
-        time: { hour: 21, minute: 0, durationMinutes: 60 },
+        time: { hour: 19, minute: 0, durationMinutes: 60 },
         sydneyTime: true,
         resource: "https://www.youtube.com/iamitgeek"
       }
