@@ -102,12 +102,12 @@
   },
   {
     "date": "2026-05-07",
-    "dayType": "guest",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Rodney",
-        "topic": "Cybersecurity Mentorship",
-        "headshot": "/Speakers/May7-Rodney.jpg"
+        "name": "Rodney — Rescheduled",
+        "topic": "Rodney couldn't make it today. Will be rescheduled soon. Stay tuned!",
+        "headshot": null
       }
     ],
     "topic": null
@@ -126,12 +126,12 @@
   },
   {
     "date": "2026-05-11",
-    "dayType": "guest",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Samir",
-        "topic": "Claude Ai in the Cyber Space",
-        "headshot": "/Speakers/May11 - Samir.jpg"
+        "name": "Samir — Rescheduled",
+        "topic": "Samir couldn't make it today. Will be rescheduled soon. Stay tuned!",
+        "headshot": null
       }
     ],
     "topic": null
@@ -199,9 +199,9 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Get Pwn3d!",
-        "topic": "GRC/Third Party Risk Management (TPRM)",
-        "headshot": "/Speakers/May18 - GetPawnd.jpg"
+        "name": "KernelKhaos",
+        "topic": "Cyber! Every Journey is Unique",
+        "headshot": "/Speakers/May18 - KernelKhaos.png"
       }
     ],
     "topic": null
@@ -502,6 +502,23 @@
         "name": "BarCode Security",
         "topic": "Zero Trust in 2026",
         "headshot": "/Speakers/June1 - Barcode.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-02",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Cloud Scholars",
+        "topic": "Microsoft Security CoPilot, Identities, Purview, Azure",
+        "headshot": "/Speakers/June2 - Cloud Scholars.png"
+      },
+      {
+        "name": "Dylan",
+        "topic": "How to Catch Hackers",
+        "headshot": "/Speakers/June2 - Dylon.png"
       }
     ],
     "topic": null
