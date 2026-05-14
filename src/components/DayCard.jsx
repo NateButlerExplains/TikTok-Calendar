@@ -1,5 +1,5 @@
 import { useCalendarData } from '../hooks/useCalendarData'
-import { formatTimeWithGMT } from '../utils/timeUtils'
+import { formatTimeWithGMT, formatTimeWithSydney } from '../utils/timeUtils'
 import { logCustomEvent } from '../firebase'
 import { downloadIcs } from '../utils/icsGenerator'
 import styles from './DayCard.module.css'
@@ -84,7 +84,9 @@ export function DayCard({ date }) {
     const linkLabel = isLinkedIn ? 'LinkedIn' : `@${handle}`
     const platform = isLinkedIn ? 'LINKEDIN' : 'TIKTOK'
     const guestTime = Object.prototype.hasOwnProperty.call(guest, 'time') ? guest.time : dayData.time
-    const guestDisplayTime = guestTime !== undefined ? formatTimeWithGMT(date, guestTime) : ''
+    const guestDisplayTime = guest.sydneyTime
+      ? formatTimeWithSydney(date, guestTime)
+      : (guestTime !== undefined ? formatTimeWithGMT(date, guestTime) : '')
 
     return (
       <div key={guest.name} className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
@@ -140,14 +142,25 @@ export function DayCard({ date }) {
           )}
           {guest.resource && (
             <div className={styles.resourceSection}>
-              <img
-                src={guest.resource}
-                alt={`${guest.name} resource`}
-                className={styles.resourceImage}
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
-              />
+              {guest.resource.startsWith('http') ? (
+                <a
+                  href={guest.resource}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.resourceLink}
+                >
+                  {guest.resource.includes('youtube') ? '▶ Watch on YouTube' : 'View Resource'}
+                </a>
+              ) : (
+                <img
+                  src={guest.resource}
+                  alt={`${guest.name} resource`}
+                  className={styles.resourceImage}
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                  }}
+                />
+              )}
             </div>
           )}
           {guest.tiktokUrl && (

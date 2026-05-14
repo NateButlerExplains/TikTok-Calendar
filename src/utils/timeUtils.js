@@ -156,3 +156,45 @@ export function formatDateHeader(dateString) {
   const date = parse(dateString, 'yyyy-MM-dd', new Date())
   return format(date, 'EEEE, MMMM d')
 }
+
+/**
+ * Format time for Sydney timezone (AEDT/AEST) with day shown.
+ * May 2026 is AEDT (UTC+11).
+ * 9pm EST (UTC-5) + 16 hours = 1pm next day AEDT.
+ */
+export function formatTimeWithSydney(dateString, timeObj) {
+  if (!dateString || !timeObj || typeof timeObj !== 'object') {
+    return ''
+  }
+
+  const hour = timeObj.hour
+  const minute = timeObj.minute
+
+  // EST time
+  const ampm = hour >= 12 ? 'PM' : 'AM'
+  const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour)
+  const minuteStr = String(minute).padStart(2, '0')
+  const estTime = `${displayHour}:${minuteStr} ${ampm}`
+
+  // Sydney time: EST (UTC-5) to AEDT (UTC+11) is +16 hours
+  let sydneyHour = hour + 16
+  let sydneyDay = 0
+  if (sydneyHour >= 24) {
+    sydneyHour -= 24
+    sydneyDay = 1
+  }
+
+  const sydneyAmpm = sydneyHour >= 12 ? 'PM' : 'AM'
+  const sydneyDisplayHour = sydneyHour > 12 ? sydneyHour - 12 : (sydneyHour === 0 ? 12 : sydneyHour)
+  const sydneyTime = `${sydneyDisplayHour}:${minuteStr} ${sydneyAmpm}`
+
+  // Get day names
+  const [year, month, day] = dateString.split('-').map(Number)
+  const dateObj = new Date(year, month - 1, day)
+  const estDay = format(dateObj, 'EEEE')
+
+  const sydneyDateObj = new Date(dateObj.getTime() + (sydneyDay * 24 * 60 * 60 * 1000))
+  const sydneyDayName = format(sydneyDateObj, 'EEEE')
+
+  return `${estTime} EST (${estDay}) / ${sydneyTime} AEDT (${sydneyDayName})`
+}

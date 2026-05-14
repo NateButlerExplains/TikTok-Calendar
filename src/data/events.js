@@ -74,13 +74,22 @@ export const events = [
   {
     date: "2026-05-16",
     dayType: "guest",
-    time: { hour: 9, minute: 0, durationMinutes: 120 },
     guests: [
       {
         name: "Workshop",
         headshot: "/Speakers/Nate Default.jpg",
         tiktokUrl: "@natebutlerexplains",
-        topic: "AI, Tomorrow's Tools & Your Edge"
+        topic: "AI, Tomorrow's Tools & Your Edge",
+        time: { hour: 9, minute: 0, durationMinutes: 120 }
+      },
+      {
+        name: "Shabz",
+        headshot: "/Speakers/May16 - Shabz.png",
+        tiktokUrl: "@iamitgeek",
+        topic: "Life as a Microsoft MVP",
+        time: { hour: 21, minute: 0, durationMinutes: 60 },
+        sydneyTime: true,
+        resource: "https://www.youtube.com/iamitgeek"
       }
     ]
   },

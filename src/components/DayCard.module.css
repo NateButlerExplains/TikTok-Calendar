@@ -398,6 +398,22 @@
   object-fit: contain;
 }
 
+.resourceLink {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--live);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.resourceLink:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 640px) {
   .guestRow {
     flex-direction: column;

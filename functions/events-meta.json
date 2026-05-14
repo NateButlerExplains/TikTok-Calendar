@@ -48,6 +48,11 @@
         "name": "Workshop",
         "topic": "AI, Tomorrow's Tools & Your Edge",
         "headshot": "/Speakers/Nate Default.jpg"
+      },
+      {
+        "name": "Shabz",
+        "topic": "Life as a Microsoft MVP",
+        "headshot": "/Speakers/May16 - Shabz.png"
       }
     ],
     "topic": null
