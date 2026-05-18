@@ -159,8 +159,9 @@ export function formatDateHeader(dateString) {
 
 /**
  * Format time for Sydney timezone (AEDT/AEST) with day shown.
- * May 2026 is AEDT (UTC+11).
- * 9pm EST (UTC-5) + 16 hours = 1pm next day AEDT.
+ * May 2026 is AEST (UTC+10), not AEDT.
+ * 9pm EST (UTC-5) + 15 hours = 12pm same day AEST.
+ * AEST: April 1 - September 30; AEDT: October 1 - March 31
  */
 export function formatTimeWithSydney(dateString, timeObj) {
   if (!dateString || !timeObj || typeof timeObj !== 'object') {
@@ -176,8 +177,14 @@ export function formatTimeWithSydney(dateString, timeObj) {
   const minuteStr = String(minute).padStart(2, '0')
   const estTime = `${displayHour}:${minuteStr} ${ampm}`
 
-  // Sydney time: EST (UTC-5) to AEDT (UTC+11) is +16 hours
-  let sydneyHour = hour + 16
+  // Determine if date is in AEST (April-Sept) or AEDT (Oct-March)
+  const [year, month] = dateString.split('-').map(Number)
+  const isAEST = month >= 4 && month <= 9
+  const offset = isAEST ? 15 : 16
+  const tzLabel = isAEST ? 'AEST' : 'AEDT'
+
+  // Sydney time
+  let sydneyHour = hour + offset
   let sydneyDay = 0
   if (sydneyHour >= 24) {
     sydneyHour -= 24
@@ -189,12 +196,12 @@ export function formatTimeWithSydney(dateString, timeObj) {
   const sydneyTime = `${sydneyDisplayHour}:${minuteStr} ${sydneyAmpm}`
 
   // Get day names
-  const [year, month, day] = dateString.split('-').map(Number)
+  const day = dateString.split('-')[2]
   const dateObj = new Date(year, month - 1, day)
   const estDay = format(dateObj, 'EEEE')
 
   const sydneyDateObj = new Date(dateObj.getTime() + (sydneyDay * 24 * 60 * 60 * 1000))
   const sydneyDayName = format(sydneyDateObj, 'EEEE')
 
-  return `${estTime} EST (${estDay}) / ${sydneyTime} AEDT (${sydneyDayName})`
+  return `${estTime} EST (${estDay}) / ${sydneyTime} ${tzLabel} (${sydneyDayName})`
 }

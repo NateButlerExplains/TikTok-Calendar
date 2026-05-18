@@ -259,7 +259,7 @@ export const events = [
         headshot: "/Speakers/May18 - KernelKhaos.png",
         tiktokUrl: "@fennixis",
         topic: "Cyber! Every Journey is Unique",
-        time: { hour: 21, minute: 0, durationMinutes: 60 },
+        time: { hour: 20, minute: 0, durationMinutes: 60 },
         sydneyTime: true
       }
     ]
@@ -268,6 +268,13 @@ export const events = [
     date: "2026-05-19",
     dayType: "guest",
     guests: [
+      {
+        name: "Eric",
+        headshot: "/Speakers/May19 - Cyber leadership.jpg",
+        tiktokUrl: "@ericharrisjr75",
+        topic: "Cyber Leadership",
+        time: { hour: 12, minute: 0, durationMinutes: 60 }
+      },
       {
         name: "David",
         headshot: "/Speakers/May19 - DavidWest.png",
