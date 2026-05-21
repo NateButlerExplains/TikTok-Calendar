@@ -216,6 +216,11 @@
     "dayType": "guest",
     "guests": [
       {
+        "name": "Eric",
+        "topic": "Cyber Leadership",
+        "headshot": "/Speakers/May19 - Cyber leadership.jpg"
+      },
+      {
         "name": "David",
         "topic": "Surving and Thriving in Cyber",
         "headshot": "/Speakers/May19 - DavidWest.png"
@@ -464,6 +469,18 @@
     "topic": null
   },
   {
+    "date": "2026-06-04",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-06-11",
     "dayType": "guest",
     "guests": [
@@ -471,6 +488,11 @@
         "name": "DJBsec",
         "topic": "The CISSP - Value+Pros/Cons",
         "headshot": "/Speakers/June11 - djbsec.png"
+      },
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
       }
     ],
     "topic": null
@@ -577,6 +599,30 @@
     "topic": null
   },
   {
+    "date": "2026-06-18",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-25",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-06-27",
     "dayType": "guest",
     "guests": [
@@ -668,6 +714,18 @@
         "name": "Workshop",
         "topic": "TBD",
         "headshot": "/Speakers/Nate Default.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-02",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
       }
     ],
     "topic": null
