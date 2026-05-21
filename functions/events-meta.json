@@ -575,6 +575,18 @@
     "topic": null
   },
   {
+    "date": "2026-06-18",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
+      }
+    ],
+    "topic": null
+  },
+  {
     "date": "2026-06-19",
     "dayType": "guest",
     "guests": [
@@ -599,18 +611,6 @@
     "topic": null
   },
   {
-    "date": "2026-06-18",
-    "dayType": "guest",
-    "guests": [
-      {
-        "name": "Workshop",
-        "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
-      }
-    ],
-    "topic": null
-  },
-  {
     "date": "2026-06-25",
     "dayType": "guest",
     "guests": [
@@ -630,6 +630,18 @@
         "name": "S",
         "topic": "Breaking in Cyber (The Journey)",
         "headshot": "/Speakers/June27 - S.jpeg"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-02",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Workshop",
+        "topic": "Build Your Career Switch Playbook",
+        "headshot": "/Speakers/Flyer-v2.jpg"
       }
     ],
     "topic": null
@@ -714,18 +726,6 @@
         "name": "Workshop",
         "topic": "TBD",
         "headshot": "/Speakers/Nate Default.jpg"
-      }
-    ],
-    "topic": null
-  },
-  {
-    "date": "2026-07-02",
-    "dayType": "guest",
-    "guests": [
-      {
-        "name": "Workshop",
-        "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
       }
     ],
     "topic": null

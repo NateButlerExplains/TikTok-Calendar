@@ -531,6 +531,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-04",
+    dayType: "guest",
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook"
+      }
+    ]
+  },
+  {
     date: "2026-06-11",
     dayType: "guest",
     guests: [
@@ -539,6 +551,12 @@ export const events = [
         headshot: "/Speakers/June11 - djbsec.png",
         tiktokUrl: "@djbsec",
         topic: "The CISSP - Value+Pros/Cons"
+      },
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook",
+        time: { hour: 20, minute: 0, durationMinutes: 60 }
       }
     ]
   },
@@ -631,6 +649,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-18",
+    dayType: "guest",
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook"
+      }
+    ]
+  },
+  {
     date: "2026-06-19",
     dayType: "guest",
     guests: [
@@ -655,6 +685,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-25",
+    dayType: "guest",
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook"
+      }
+    ]
+  },
+  {
     date: "2026-06-27",
     dayType: "guest",
     guests: [
@@ -663,6 +705,18 @@ export const events = [
         headshot: "/Speakers/June27 - S.jpeg",
         tiktokUrl: "@pateltedmjo",
         topic: "Breaking in Cyber (The Journey)"
+      }
+    ]
+  },
+  {
+    date: "2026-07-02",
+    dayType: "guest",
+    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook"
       }
     ]
   },
