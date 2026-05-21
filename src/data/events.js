@@ -536,7 +536,7 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: "Workshop",
+        name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook"
       }
@@ -553,7 +553,7 @@ export const events = [
         topic: "The CISSP - Value+Pros/Cons"
       },
       {
-        name: "Workshop",
+        name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook",
         time: { hour: 20, minute: 0, durationMinutes: 60 }
@@ -654,7 +654,7 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: "Workshop",
+        name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook"
       }
@@ -690,7 +690,7 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: "Workshop",
+        name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook"
       }
@@ -714,7 +714,7 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: "Workshop",
+        name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook"
       }
