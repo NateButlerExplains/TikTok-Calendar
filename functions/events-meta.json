@@ -6,7 +6,10 @@
       {
         "name": "Workshop",
         "topic": "Know Yourself & Build Your Arsenal",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -18,7 +21,10 @@
       {
         "name": "Workshop",
         "topic": "Labs, Learning & LinkedIn",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -30,12 +36,18 @@
       {
         "name": "Workshop",
         "topic": "Network Like a Pro & Own the Hunt",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       },
       {
         "name": "Henry",
         "topic": "DevOps Part II",
-        "headshot": "/Speakers/May9 - Henry.png"
+        "headshot": "/Speakers/May9 - Henry.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@henryekeocha"
       }
     ],
     "topic": null
@@ -47,12 +59,18 @@
       {
         "name": "Workshop",
         "topic": "AI, Tomorrow's Tools & Your Edge",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       },
       {
         "name": "Shabz",
         "topic": "Life as a Microsoft MVP",
-        "headshot": "/Speakers/May16 - Shabz.png"
+        "headshot": "/Speakers/May16 - Shabz.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@iamitgeek"
       }
     ],
     "topic": null
@@ -64,7 +82,10 @@
       {
         "name": "CyberMB",
         "topic": "GovTech + Clearance",
-        "headshot": "/Speakers/May1 - CyberMB.png"
+        "headshot": "/Speakers/May1 - CyberMB.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cyberwithmb"
       }
     ],
     "topic": null
@@ -76,7 +97,10 @@
       {
         "name": "IAM Techbro",
         "topic": "Identity Access & Management",
-        "headshot": "/Speakers/May4 - IAM TechBro.png"
+        "headshot": "/Speakers/May4 - IAM TechBro.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@victorasanmi"
       }
     ],
     "topic": null
@@ -88,7 +112,10 @@
       {
         "name": "Faith",
         "topic": "Cybersecurity Life",
-        "headshot": "/Speakers/May5 - Faith.png"
+        "headshot": "/Speakers/May5 - Faith.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@faithyywaithyy"
       }
     ],
     "topic": null
@@ -100,7 +127,19 @@
       {
         "name": "Michelle Morris",
         "topic": "Jumpstart your Cyber Career",
-        "headshot": "/Speakers/May6 - Coach.png"
+        "headshot": "/Speakers/May6 - Coach.png",
+        "bio": "Michelle Morris is an Assistant Vice President of Technology Resilience in the financial sector, specializing in business continuity planning, cyber resilience, and disaster recovery. She is also the founder of Firewall Founders Club, a community-driven platform dedicated to increasing representation of women and minorities in technology. Through her work, Michelle provides practical insights and actionable guidance to help aspiring professionals gain hands-on experience and successfully transition into tech careers.",
+        "links": [
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/mmorris64"
+          },
+          {
+            "label": "Email",
+            "url": "mailto:michelle@firewallfoundersclub.com"
+          }
+        ],
+        "tiktokUrl": "@modernmichelle"
       }
     ],
     "topic": null
@@ -112,7 +151,10 @@
       {
         "name": "Rodney — Rescheduled",
         "topic": "Rodney couldn't make it today. Will be rescheduled soon. Stay tuned!",
-        "headshot": null
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -124,7 +166,10 @@
       {
         "name": "Shreem",
         "topic": "Neurodivergents in Cyber",
-        "headshot": "/Speakers/May8-Shreem.png"
+        "headshot": "/Speakers/May8-Shreem.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@queenshreemindigo"
       }
     ],
     "topic": null
@@ -136,7 +181,10 @@
       {
         "name": "Samir — Rescheduled",
         "topic": "Samir couldn't make it today. Will be rescheduled soon. Stay tuned!",
-        "headshot": null
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -148,12 +196,18 @@
       {
         "name": "Clayton",
         "topic": "Cybersecurity Major & The Journey",
-        "headshot": "/Speakers/May12-Clayton2.jpeg"
+        "headshot": "/Speakers/May12-Clayton2.jpeg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "https://www.linkedin.com/in/clayton-williams-1a7b61349/"
       },
       {
         "name": "Daniel",
         "topic": "The Power of People Networking in Cybersecurity/Technology",
-        "headshot": "/Speakers/May12 - Baba.png"
+        "headshot": "/Speakers/May12 - Baba.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@baba_dano"
       }
     ],
     "topic": null
@@ -165,7 +219,10 @@
       {
         "name": "Alan",
         "topic": "Leveraging Ai within the SDLC Process",
-        "headshot": "/Speakers/May13 - AlanAI 3pm.png"
+        "headshot": "/Speakers/May13 - AlanAI 3pm.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@alanonai"
       }
     ],
     "topic": null
@@ -177,7 +234,10 @@
       {
         "name": "Matt Stephens",
         "topic": "Engineering in the Tech Space",
-        "headshot": "/Speakers/May14-MattStephens.png"
+        "headshot": "/Speakers/May14-MattStephens.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@mattsstephens"
       }
     ],
     "topic": null
@@ -189,12 +249,18 @@
       {
         "name": "Marshall",
         "topic": "Why Cybersecurity?!?!",
-        "headshot": "/Speakers/May15 - MarshallProf.jpg"
+        "headshot": "/Speakers/May15 - MarshallProf.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cybersecprofessor"
       },
       {
         "name": "J0sh_T3ch",
         "topic": "Networking Engineer - Navigating the Space",
-        "headshot": "/Speakers/May15th - JoshTech.jpg"
+        "headshot": "/Speakers/May15th - JoshTech.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@J0sh_T3ch"
       }
     ],
     "topic": null
@@ -206,7 +272,10 @@
       {
         "name": "KernelKhaos",
         "topic": "Cyber! Every Journey is Unique",
-        "headshot": "/Speakers/May18 - KernelKhaos.png"
+        "headshot": "/Speakers/May18 - KernelKhaos.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@fennixis"
       }
     ],
     "topic": null
@@ -218,12 +287,18 @@
       {
         "name": "Eric",
         "topic": "Cyber Leadership",
-        "headshot": "/Speakers/May19 - Cyber leadership.jpg"
+        "headshot": "/Speakers/May19 - Cyber leadership.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@ericharrisjr75"
       },
       {
         "name": "David",
         "topic": "Surving and Thriving in Cyber",
-        "headshot": "/Speakers/May19 - DavidWest.png"
+        "headshot": "/Speakers/May19 - DavidWest.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@davidwesttech"
       }
     ],
     "topic": null
@@ -235,7 +310,10 @@
       {
         "name": "Francis",
         "topic": "What is Cloud Security?",
-        "headshot": "/Speakers/MAY20 - FRANCIS.png"
+        "headshot": "/Speakers/MAY20 - FRANCIS.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@thesubtletechie"
       }
     ],
     "topic": null
@@ -247,7 +325,10 @@
       {
         "name": "Dara",
         "topic": "Cyber Pivot Playbook",
-        "headshot": "/Speakers/May21-Dara.png"
+        "headshot": "/Speakers/May21-Dara.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@dara.stays.curious"
       }
     ],
     "topic": null
@@ -259,7 +340,10 @@
       {
         "name": "Betapersin",
         "topic": "IAM is the backbone of cybersecurity. Why GRC, Zero Trust, and Cloud Security all collapse without it.",
-        "headshot": "/Speakers/May25 - BetaPersin.png"
+        "headshot": "/Speakers/May25 - BetaPersin.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@betapersiniam"
       }
     ],
     "topic": null
@@ -271,7 +355,23 @@
       {
         "name": "LaMont",
         "topic": "Why Ai Feels Inconsistent and How Human Alignment (or lack of it) shapes the output",
-        "headshot": "/Speakers/May26-Lamont2.png"
+        "headshot": "/Speakers/May26-Lamont2.png",
+        "bio": "LaMont Wheat is an Executive AI Integration Architect and Founder of UHMUM Learning, where he works with leaders navigating the shift into the agentic era. His work focuses on stabilizing decision-making, strengthening governance, and ensuring human clarity remains at the center of AI-driven environments.\n\nThrough his PhaseLock™ framework, LaMont helps executives and organizations move from fragmented AI usage to coherent deployment—aligning leadership, communication, and execution.\n\nRather than teaching tools, he reorients how leaders think, decide, and operate alongside intelligent systems. His work has supported teams across technology, telecom, and enterprise environments seeking clarity in a rapidly accelerating landscape.",
+        "links": [
+          {
+            "label": "Email",
+            "url": "mailto:Lamont@uhmum.com"
+          },
+          {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/lamontwheat"
+          },
+          {
+            "label": "Executive AI Orientation Reset",
+            "url": "https://stan.store/lamontwheat/p/ai-orientation-reset"
+          }
+        ],
+        "tiktokUrl": "@lamontwheat"
       }
     ],
     "topic": null
@@ -283,7 +383,10 @@
       {
         "name": "Ash",
         "topic": "What is AI Security, and Why is it Important?",
-        "headshot": "/Speakers/May27 - Ash.png"
+        "headshot": "/Speakers/May27 - Ash.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@ashoncyber"
       }
     ],
     "topic": null
@@ -295,7 +398,10 @@
       {
         "name": "Cybershortieee",
         "topic": "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026",
-        "headshot": "/Speakers/May28-CyberShorti2.png"
+        "headshot": "/Speakers/May28-CyberShorti2.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cybershortieee"
       }
     ],
     "topic": null
@@ -307,7 +413,10 @@
       {
         "name": "Christian",
         "topic": "Break into a Six-Figure Career in Cybersecurity",
-        "headshot": "/Speakers/May29 - Christian.png"
+        "headshot": "/Speakers/May29 - Christian.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@_santooz07"
       }
     ],
     "topic": null
@@ -319,7 +428,10 @@
       {
         "name": "Christopher",
         "topic": "RMF Based Roles and Today's Market",
-        "headshot": "/Speakers/May22nd - Techwoke.png"
+        "headshot": "/Speakers/May22nd - Techwoke.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@techwoke"
       }
     ],
     "topic": null
@@ -331,7 +443,10 @@
       {
         "name": "Carter Perez",
         "topic": "The Power of Certs and Gamified Learning",
-        "headshot": "/Speakers/May23 - CertifiedGames.png"
+        "headshot": "/Speakers/May23 - CertifiedGames.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@certgames.com"
       }
     ],
     "topic": null
@@ -343,7 +458,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -355,7 +473,10 @@
       {
         "name": "Happy Mother's Day",
         "topic": "No live stream. Celebrate the amazing mothers in your life.",
-        "headshot": null
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -367,7 +488,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -379,7 +503,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -391,7 +518,10 @@
       {
         "name": "Brandy",
         "topic": "Transition to Cyber",
-        "headshot": "/Speakers/May30th - Brandy2.png"
+        "headshot": "/Speakers/May30th - Brandy2.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@boldlybrandy"
       }
     ],
     "topic": null
@@ -403,7 +533,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -415,7 +548,10 @@
       {
         "name": "Cyberend",
         "topic": "Thriving and Surviving your Cyber Career",
-        "headshot": "/Speakers/June6 - Cyberend.png"
+        "headshot": "/Speakers/June6 - Cyberend.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cyberenduk"
       }
     ],
     "topic": null
@@ -427,7 +563,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -439,7 +578,34 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-15",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Andrew Ramirez",
+        "topic": "AI-Powered Risk Ops: How Intelligent Automation Is Reshaping Cybersecurity Operations",
+        "headshot": "/Speakers/June15 - Andrew.png",
+        "bio": "Andrew Ramirez is a respected GRC management thought leader and technology visionary. With over 16 years of experience as an information management leader at a large mid-market nutraceutical manufacturer and retailer, he founded 3HUE in 2015, quickly establishing it as a leading provider of strategic managed services. His ability to blend visionary thinking, technical expertise, and business acumen has positioned 3HUE at the forefront of outsourced information management innovation, solidifying his reputation as a trusted industry thought leader.",
+        "links": [
+          {
+            "label": "3HUE",
+            "url": "https://3hue.net/"
+          },
+          {
+            "label": "AIVRIC",
+            "url": "https://aivric.com/"
+          }
+        ],
+        "tiktokUrl": "https://www.linkedin.com/in/aramirez-it/"
       }
     ],
     "topic": null
@@ -451,7 +617,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -463,7 +632,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -473,9 +645,12 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Workshop",
+        "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
+        "headshot": "/Speakers/Flyer-v2.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -487,12 +662,18 @@
       {
         "name": "DJBsec",
         "topic": "The CISSP - Value+Pros/Cons",
-        "headshot": "/Speakers/June11 - djbsec.png"
+        "headshot": "/Speakers/June11 - djbsec.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@djbsec"
       },
       {
-        "name": "Workshop",
+        "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
+        "headshot": "/Speakers/Flyer-v2.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -504,7 +685,10 @@
       {
         "name": "Ely (Reyrey) Reyes",
         "topic": "DevSecOps",
-        "headshot": "/Speakers/June12-ely.jpeg"
+        "headshot": "/Speakers/June12-ely.jpeg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -516,7 +700,10 @@
       {
         "name": "Stan",
         "topic": "Navigating the IT space",
-        "headshot": "/Speakers/June13 Stan.png"
+        "headshot": "/Speakers/June13 Stan.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@stanntalks"
       }
     ],
     "topic": null
@@ -528,7 +715,10 @@
       {
         "name": "BarCode Security",
         "topic": "Zero Trust in 2026",
-        "headshot": "/Speakers/June1 - Barcode.png"
+        "headshot": "/Speakers/June1 - Barcode.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@barcodesecurity"
       }
     ],
     "topic": null
@@ -540,12 +730,18 @@
       {
         "name": "Cloud Scholars",
         "topic": "Microsoft Security CoPilot, Identities, Purview, Azure",
-        "headshot": "/Speakers/June2 - Cloud Scholars.png"
+        "headshot": "/Speakers/June2 - Cloud Scholars.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cloud.scholars"
       },
       {
         "name": "Dylan",
         "topic": "How to Catch Hackers",
-        "headshot": "/Speakers/June2 - Dylon.png"
+        "headshot": "/Speakers/June2 - Dylon.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@cybersecdyl"
       }
     ],
     "topic": null
@@ -557,7 +753,10 @@
       {
         "name": "Mech",
         "topic": "What is Infrastructure Engineering?",
-        "headshot": "/Speakers/June3 - Mech.png"
+        "headshot": "/Speakers/June3 - Mech.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@wreckitmech"
       }
     ],
     "topic": null
@@ -569,7 +768,10 @@
       {
         "name": "Cyber Secrets",
         "topic": "The Art of Content Creation in the Tech/Cyber Space",
-        "headshot": "/Speakers/June5 - CyberSecrts.png"
+        "headshot": "/Speakers/June5 - CyberSecrts.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@arescyberdefense"
       }
     ],
     "topic": null
@@ -579,9 +781,12 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Workshop",
+        "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
+        "headshot": "/Speakers/Flyer-v2.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -593,7 +798,10 @@
       {
         "name": "Chris",
         "topic": "Importance of Tech Projects/Portfolio",
-        "headshot": "/Speakers/June19 - Christ Tech.jpg"
+        "headshot": "/Speakers/June19 - Christ Tech.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@christhetechninja"
       }
     ],
     "topic": null
@@ -605,7 +813,10 @@
       {
         "name": "Get Pwn3d!",
         "topic": "GRC/Third Party Risk Management (TPRM)",
-        "headshot": "/Speakers/May18 - GetPawnd.jpg"
+        "headshot": "/Speakers/May18 - GetPawnd.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@ie_ty97"
       }
     ],
     "topic": null
@@ -615,9 +826,12 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Workshop",
+        "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
+        "headshot": "/Speakers/Flyer-v2.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -629,7 +843,10 @@
       {
         "name": "S",
         "topic": "Breaking in Cyber (The Journey)",
-        "headshot": "/Speakers/June27 - S.jpeg"
+        "headshot": "/Speakers/June27 - S.jpeg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@pateltedmjo"
       }
     ],
     "topic": null
@@ -639,9 +856,12 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "Workshop",
+        "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg"
+        "headshot": "/Speakers/Flyer-v2.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null
       }
     ],
     "topic": null
@@ -653,7 +873,10 @@
       {
         "name": "Workshop",
         "topic": "TBD",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -665,7 +888,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -677,7 +903,10 @@
       {
         "name": "Workshop",
         "topic": "TBD",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -689,7 +918,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -701,7 +933,10 @@
       {
         "name": "Workshop",
         "topic": "TBD",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -713,7 +948,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -725,7 +963,10 @@
       {
         "name": "Workshop",
         "topic": "TBD",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null
@@ -737,7 +978,10 @@
       {
         "name": "Lounge",
         "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg"
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains"
       }
     ],
     "topic": null

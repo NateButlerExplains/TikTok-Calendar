@@ -14,7 +14,10 @@ const minimal = events.map(event => ({
     ? event.guests.map(g => ({
         name: g.name,
         topic: g.topic || null,
-        headshot: g.headshot || null
+        headshot: g.headshot || null,
+        bio: g.bio || null,
+        links: g.links || null,
+        tiktokUrl: g.tiktokUrl || null
       }))
     : [],
   topic: event.topic || null
