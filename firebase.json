@@ -12,7 +12,7 @@
         "function": "ogMeta"
       },
       {
-        "source": "**",
+        "source": "!/Speakers/**",
         "destination": "/index.html"
       }
     ],
