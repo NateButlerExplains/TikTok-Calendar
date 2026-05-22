@@ -513,11 +513,11 @@ export const events = [
       {
         name: "Andrew Ramirez",
         headshot: "/Speakers/June15 - Andrew.png",
-        linkedinUrl: "https://www.linkedin.com/in/aramirez-it/",
+        tiktokUrl: "https://www.linkedin.com/in/aramirez-it/",
         topic: "AI-Powered Risk Ops: How Intelligent Automation Is Reshaping Cybersecurity Operations",
-        resources: [
-          { name: "3HUE", url: "https://3hue.net/" },
-          { name: "AIVRIC", url: "https://aivric.com/" }
+        links: [
+          { label: "3HUE", url: "https://3hue.net/" },
+          { label: "AIVRIC", url: "https://aivric.com/" }
         ],
         bio: "Andrew Ramirez is a respected GRC management thought leader and technology visionary. With over 16 years of experience as an information management leader at a large mid-market nutraceutical manufacturer and retailer, he founded 3HUE in 2015, quickly establishing it as a leading provider of strategic managed services. His ability to blend visionary thinking, technical expertise, and business acumen has positioned 3HUE at the forefront of outsourced information management innovation, solidifying his reputation as a trusted industry thought leader."
       }
