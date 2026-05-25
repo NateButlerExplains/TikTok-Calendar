@@ -552,6 +552,22 @@ export const events = [
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
+        name: "Victoria",
+        headshot: "/Speakers/June9-Victoria.png",
+        tiktokUrl: "@cybersecurity_vixy",
+        topic: "Cyber Clarity System",
+        links: [
+          {
+            label: "LinkTree",
+            url: "https://linktr.ee/cybervix?utm_source=linktree_profile_share&ltsid=f089cd0d-28dd-4624-bd83-8c5cc31102ba"
+          },
+          {
+            label: "Beginner Roadmap",
+            url: "/Speakers/The catalyst beginner cybersecurity road map by Victoria.pdf"
+          }
+        ]
+      },
+      {
         name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
         topic: "Build Your Career Switch Playbook"
