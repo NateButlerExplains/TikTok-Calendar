@@ -549,7 +549,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-04",
+    date: "2026-06-09",
     dayType: "guest",
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
@@ -561,7 +561,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-11",
+    date: "2026-06-16",
     dayType: "guest",
     guests: [
       {
@@ -667,7 +667,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-18",
+    date: "2026-06-23",
     dayType: "guest",
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
@@ -703,7 +703,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-25",
+    date: "2026-06-30",
     dayType: "guest",
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
@@ -727,7 +727,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-07-02",
+    date: "2026-07-07",
     dayType: "guest",
     time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
