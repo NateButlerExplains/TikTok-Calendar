@@ -561,7 +561,7 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-16",
+    date: "2026-06-11",
     dayType: "guest",
     guests: [
       {
@@ -570,6 +570,18 @@ export const events = [
         tiktokUrl: "@djbsec",
         topic: "The CISSP - Value+Pros/Cons"
       },
+      {
+        name: "Cohort",
+        headshot: "/Speakers/Flyer-v2.jpg",
+        topic: "Build Your Career Switch Playbook",
+        time: { hour: 20, minute: 0, durationMinutes: 60 }
+      }
+    ]
+  },
+  {
+    date: "2026-06-16",
+    dayType: "guest",
+    guests: [
       {
         name: "Cohort",
         headshot: "/Speakers/Flyer-v2.jpg",
