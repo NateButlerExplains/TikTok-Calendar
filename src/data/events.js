@@ -566,11 +566,6 @@ export const events = [
             url: "/Speakers/The catalyst beginner cybersecurity road map by Victoria.pdf"
           }
         ]
-      },
-      {
-        name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
-        topic: "Build Your Career Switch Playbook"
       }
     ]
   },
@@ -583,12 +578,6 @@ export const events = [
         headshot: "/Speakers/June11 - djbsec.png",
         tiktokUrl: "@djbsec",
         topic: "The CISSP - Value+Pros/Cons"
-      },
-      {
-        name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
-        topic: "Build Your Career Switch Playbook",
-        time: { hour: 20, minute: 0, durationMinutes: 60 }
       }
     ]
   },
