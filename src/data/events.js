@@ -547,23 +547,29 @@ export const events = [
     ]
   },
   {
-    date: "2026-06-09",
+    date: "2026-06-08",
     dayType: "guest",
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Victoria",
         headshot: "/Speakers/June9-Victoria.png",
         tiktokUrl: "@cybersecurity_vixy",
         topic: "Cyber Clarity System",
+        bio: null,
         links: [
           {
             label: "LinkTree",
             url: "https://linktr.ee/cybervix?utm_source=linktree_profile_share&ltsid=f089cd0d-28dd-4624-bd83-8c5cc31102ba"
           },
           {
-            label: "Beginner Roadmap",
-            url: "/Speakers/The catalyst beginner cybersecurity road map by Victoria.pdf"
+            label: "The catalyst beginner cybersecurity road map by Victoria.pdf",
+            url: "https://drive.google.com/file/d/1AVCa3cNmvkrlZDL25xB-_rihPkZB_pCJ/view?usp=drivesdk"
+          }
+        ],
+        resources: [
+          {
+            image: "/Speakers/June9-resource.png",
+            alt: "The Catalyst Beginner Cybersecurity Road Map"
           }
         ]
       }
