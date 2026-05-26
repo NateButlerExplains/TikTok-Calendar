@@ -549,6 +549,7 @@ export const events = [
   {
     date: "2026-06-08",
     dayType: "guest",
+    time: { hour: 12, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Victoria",
