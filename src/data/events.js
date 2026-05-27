@@ -359,11 +359,7 @@ export const events = [
         headshot: "/Speakers/May28-CyberShorti2.png",
         tiktokUrl: "@cybershortieee",
         topic: "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026",
-        resources: [
-          {
-            image: "/Speakers/May28-CyberResource.png"
-          }
-        ]
+        resource: "/Speakers/May28-CyberResource.png"
       }
     ]
   },
@@ -550,7 +546,6 @@ export const events = [
         tiktokUrl: "@cybersecurity_vixy",
         topic: "Cyber Clarity System",
         bio: null,
-        bio: null,
         links: [
           {
             label: "LinkTree",
@@ -561,12 +556,7 @@ export const events = [
             url: "https://drive.google.com/file/d/1AVCa3cNmvkrlZDL25xB-_rihPkZB_pCJ/view?usp=drivesdk"
           }
         ],
-        resources: [
-          {
-            image: "/Speakers/June9-resource.png",
-            alt: "The Catalyst Beginner Cybersecurity Road Map"
-          }
-        ]
+        resource: "/Speakers/June9-resource.png"
       }
     ]
   },
@@ -691,11 +681,7 @@ export const events = [
         headshot: "/Speakers/June4 - Dom.png",
         tiktokUrl: "@domthecybegenius",
         topic: "The Youngest In Charge Playbook",
-        resources: [
-          {
-            image: "/Speakers/June4th - The Youngest In Charge Playbook.png"
-          }
-        ]
+        resource: "/Speakers/June4th - The Youngest In Charge Playbook.png"
       }
     ]
   },
