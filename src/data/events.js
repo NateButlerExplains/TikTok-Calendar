@@ -358,7 +358,12 @@ export const events = [
         name: "Cybershortieee",
         headshot: "/Speakers/May28-CyberShorti2.png",
         tiktokUrl: "@cybershortieee",
-        topic: "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026"
+        topic: "She Wrote a Tech Thriller...Now She's Breaking Down Why Cloud Security is Taking Over in 2026",
+        resources: [
+          {
+            image: "/Speakers/May28-CyberResource.png"
+          }
+        ]
       }
     ]
   },
