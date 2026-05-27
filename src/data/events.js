@@ -801,11 +801,13 @@ export const events = [
   },
   {
     date: "2026-07-04",
-    dayType: "blackout",
+    dayType: "guest",
     guests: [
       {
-        name: "Community Open Floor — Season 3 Prep",
-        topic: "Open floor for community topics. No guest speakers this month."
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
       }
     ]
   },
@@ -851,11 +853,13 @@ export const events = [
   },
   {
     date: "2026-07-11",
-    dayType: "blackout",
+    dayType: "guest",
     guests: [
       {
-        name: "Community Open Floor — Season 3 Prep",
-        topic: "Open floor for community topics. No guest speakers this month."
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
       }
     ]
   },
@@ -910,6 +914,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-07-18",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
+      }
+    ]
+  },
+  {
     date: "2026-07-20",
     dayType: "blackout",
     guests: [
@@ -956,6 +972,18 @@ export const events = [
       {
         name: "Community Open Floor — Season 3 Prep",
         topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-25",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Workshop",
+        headshot: "/Speakers/Nate Default.jpg",
+        tiktokUrl: "@natebutlerexplains",
+        topic: "TBD"
       }
     ]
   },

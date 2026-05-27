@@ -9,7 +9,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -24,7 +25,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -39,7 +41,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       },
       {
         "name": "Henry",
@@ -47,7 +50,8 @@
         "headshot": "/Speakers/May9 - Henry.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@henryekeocha"
+        "tiktokUrl": "@henryekeocha",
+        "resource": null
       }
     ],
     "topic": null
@@ -62,7 +66,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       },
       {
         "name": "Shabz",
@@ -70,7 +75,8 @@
         "headshot": "/Speakers/May16 - Shabz.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@iamitgeek"
+        "tiktokUrl": "@iamitgeek",
+        "resource": "https://www.youtube.com/iamitgeek"
       }
     ],
     "topic": null
@@ -85,7 +91,8 @@
         "headshot": "/Speakers/May1 - CyberMB.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cyberwithmb"
+        "tiktokUrl": "@cyberwithmb",
+        "resource": null
       }
     ],
     "topic": null
@@ -100,7 +107,8 @@
         "headshot": "/Speakers/May4 - IAM TechBro.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@victorasanmi"
+        "tiktokUrl": "@victorasanmi",
+        "resource": null
       }
     ],
     "topic": null
@@ -115,7 +123,8 @@
         "headshot": "/Speakers/May5 - Faith.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@faithyywaithyy"
+        "tiktokUrl": "@faithyywaithyy",
+        "resource": null
       }
     ],
     "topic": null
@@ -139,7 +148,8 @@
             "url": "mailto:michelle@firewallfoundersclub.com"
           }
         ],
-        "tiktokUrl": "@modernmichelle"
+        "tiktokUrl": "@modernmichelle",
+        "resource": null
       }
     ],
     "topic": null
@@ -154,7 +164,8 @@
         "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -169,7 +180,8 @@
         "headshot": "/Speakers/May8-Shreem.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@queenshreemindigo"
+        "tiktokUrl": "@queenshreemindigo",
+        "resource": null
       }
     ],
     "topic": null
@@ -184,7 +196,8 @@
         "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -199,7 +212,8 @@
         "headshot": "/Speakers/May12-Clayton2.jpeg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "https://www.linkedin.com/in/clayton-williams-1a7b61349/"
+        "tiktokUrl": "https://www.linkedin.com/in/clayton-williams-1a7b61349/",
+        "resource": null
       },
       {
         "name": "Daniel",
@@ -207,7 +221,8 @@
         "headshot": "/Speakers/May12 - Baba.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@baba_dano"
+        "tiktokUrl": "@baba_dano",
+        "resource": null
       }
     ],
     "topic": null
@@ -222,7 +237,8 @@
         "headshot": "/Speakers/May13 - AlanAI 3pm.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@alanonai"
+        "tiktokUrl": "@alanonai",
+        "resource": null
       }
     ],
     "topic": null
@@ -237,7 +253,8 @@
         "headshot": "/Speakers/May14-MattStephens.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@mattsstephens"
+        "tiktokUrl": "@mattsstephens",
+        "resource": null
       }
     ],
     "topic": null
@@ -252,7 +269,8 @@
         "headshot": "/Speakers/May15 - MarshallProf.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cybersecprofessor"
+        "tiktokUrl": "@cybersecprofessor",
+        "resource": null
       },
       {
         "name": "J0sh_T3ch",
@@ -260,7 +278,8 @@
         "headshot": "/Speakers/May15th - JoshTech.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@J0sh_T3ch"
+        "tiktokUrl": "@J0sh_T3ch",
+        "resource": null
       }
     ],
     "topic": null
@@ -275,7 +294,8 @@
         "headshot": "/Speakers/May18 - KernelKhaos.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@fennixis"
+        "tiktokUrl": "@fennixis",
+        "resource": null
       }
     ],
     "topic": null
@@ -290,7 +310,8 @@
         "headshot": "/Speakers/May19 - Cyber leadership.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@ericharrisjr75"
+        "tiktokUrl": "@ericharrisjr75",
+        "resource": null
       },
       {
         "name": "David",
@@ -298,7 +319,8 @@
         "headshot": "/Speakers/May19 - DavidWest.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@davidwesttech"
+        "tiktokUrl": "@davidwesttech",
+        "resource": null
       }
     ],
     "topic": null
@@ -313,7 +335,8 @@
         "headshot": "/Speakers/MAY20 - FRANCIS.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@thesubtletechie"
+        "tiktokUrl": "@thesubtletechie",
+        "resource": null
       }
     ],
     "topic": null
@@ -328,7 +351,8 @@
         "headshot": "/Speakers/May21-Dara.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@dara.stays.curious"
+        "tiktokUrl": "@dara.stays.curious",
+        "resource": null
       }
     ],
     "topic": null
@@ -343,7 +367,8 @@
         "headshot": "/Speakers/May25 - BetaPersin.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@betapersiniam"
+        "tiktokUrl": "@betapersiniam",
+        "resource": null
       }
     ],
     "topic": null
@@ -371,7 +396,8 @@
             "url": "https://stan.store/lamontwheat/p/ai-orientation-reset"
           }
         ],
-        "tiktokUrl": "@lamontwheat"
+        "tiktokUrl": "@lamontwheat",
+        "resource": "/Speakers/May26-LamontResource.png"
       }
     ],
     "topic": null
@@ -386,7 +412,8 @@
         "headshot": "/Speakers/May27 - Ash.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@ashoncyber"
+        "tiktokUrl": "@ashoncyber",
+        "resource": null
       }
     ],
     "topic": null
@@ -401,22 +428,8 @@
         "headshot": "/Speakers/May28-CyberShorti2.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cybershortieee"
-      }
-    ],
-    "topic": null
-  },
-  {
-    "date": "2026-05-29",
-    "dayType": "guest",
-    "guests": [
-      {
-        "name": "Christian",
-        "topic": "Break into a Six-Figure Career in Cybersecurity",
-        "headshot": "/Speakers/May29 - Christian.png",
-        "bio": null,
-        "links": null,
-        "tiktokUrl": "@_santooz07"
+        "tiktokUrl": "@cybershortieee",
+        "resource": "/Speakers/May28-CyberResource.png"
       }
     ],
     "topic": null
@@ -431,7 +444,8 @@
         "headshot": "/Speakers/May22nd - Techwoke.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@techwoke"
+        "tiktokUrl": "@techwoke",
+        "resource": null
       }
     ],
     "topic": null
@@ -446,7 +460,8 @@
         "headshot": "/Speakers/May23 - CertifiedGames.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@certgames.com"
+        "tiktokUrl": "@certgames.com",
+        "resource": null
       }
     ],
     "topic": null
@@ -461,7 +476,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -476,7 +492,8 @@
         "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -491,22 +508,24 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
   },
   {
     "date": "2026-05-24",
-    "dayType": "guest",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Lounge",
-        "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg",
+        "name": "Memorial Day",
+        "topic": "No live stream. Celebrating with family.",
+        "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -521,7 +540,8 @@
         "headshot": "/Speakers/May30th - Brandy2.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@boldlybrandy"
+        "tiktokUrl": "@boldlybrandy",
+        "resource": null
       }
     ],
     "topic": null
@@ -536,7 +556,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -551,7 +572,8 @@
         "headshot": "/Speakers/June6 - Cyberend.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cyberenduk"
+        "tiktokUrl": "@cyberenduk",
+        "resource": null
       }
     ],
     "topic": null
@@ -566,7 +588,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -581,7 +604,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -605,7 +629,8 @@
             "url": "https://aivric.com/"
           }
         ],
-        "tiktokUrl": "https://www.linkedin.com/in/aramirez-it/"
+        "tiktokUrl": "https://www.linkedin.com/in/aramirez-it/",
+        "resource": null
       }
     ],
     "topic": null
@@ -620,7 +645,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -635,22 +661,65 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
   },
   {
-    "date": "2026-06-09",
+    "date": "2026-06-08",
     "dayType": "guest",
     "guests": [
       {
-        "name": "Cohort",
-        "topic": "Build Your Career Switch Playbook",
-        "headshot": "/Speakers/Flyer-v2.jpg",
+        "name": "Victoria",
+        "topic": "Cyber Clarity System",
+        "headshot": "/Speakers/June9-Victoria.png",
+        "bio": null,
+        "links": [
+          {
+            "label": "LinkTree",
+            "url": "https://linktr.ee/cybervix?utm_source=linktree_profile_share&ltsid=f089cd0d-28dd-4624-bd83-8c5cc31102ba"
+          },
+          {
+            "label": "The catalyst beginner cybersecurity road map by Victoria.pdf",
+            "url": "https://drive.google.com/file/d/1AVCa3cNmvkrlZDL25xB-_rihPkZB_pCJ/view?usp=drivesdk"
+          }
+        ],
+        "tiktokUrl": "@cybersecurity_vixy",
+        "resource": "/Speakers/June9-resource.png"
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-10",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Harrison",
+        "topic": "AI Bug Bounty",
+        "headshot": "/Speakers/June10 - harrison .png",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": "@theharrisonmccall",
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-11",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "DJBsec",
+        "topic": "The CISSP - Value+Pros/Cons",
+        "headshot": "/Speakers/June11 - djbsec.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@djbsec",
+        "resource": null
       }
     ],
     "topic": null
@@ -660,20 +729,13 @@
     "dayType": "guest",
     "guests": [
       {
-        "name": "DJBsec",
-        "topic": "The CISSP - Value+Pros/Cons",
-        "headshot": "/Speakers/June11 - djbsec.png",
-        "bio": null,
-        "links": null,
-        "tiktokUrl": "@djbsec"
-      },
-      {
         "name": "Cohort",
         "topic": "Build Your Career Switch Playbook",
         "headshot": "/Speakers/Flyer-v2.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -688,7 +750,8 @@
         "headshot": "/Speakers/June12-ely.jpeg",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -700,10 +763,11 @@
       {
         "name": "Stan",
         "topic": "Navigating the IT space",
-        "headshot": "/Speakers/June13 Stan.png",
+        "headshot": "/Speakers/June13-Stan2.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@stanntalks"
+        "tiktokUrl": "@stanntalks",
+        "resource": null
       }
     ],
     "topic": null
@@ -718,7 +782,8 @@
         "headshot": "/Speakers/June1 - Barcode.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@barcodesecurity"
+        "tiktokUrl": "@barcodesecurity",
+        "resource": null
       }
     ],
     "topic": null
@@ -733,7 +798,8 @@
         "headshot": "/Speakers/June2 - Cloud Scholars.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cloud.scholars"
+        "tiktokUrl": "@cloud.scholars",
+        "resource": null
       },
       {
         "name": "Dylan",
@@ -741,7 +807,8 @@
         "headshot": "/Speakers/June2 - Dylon.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@cybersecdyl"
+        "tiktokUrl": "@cybersecdyl",
+        "resource": null
       }
     ],
     "topic": null
@@ -756,7 +823,24 @@
         "headshot": "/Speakers/June3 - Mech.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@wreckitmech"
+        "tiktokUrl": "@wreckitmech",
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-06-04",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Dom",
+        "topic": "The Youngest In Charge Playbook",
+        "headshot": "/Speakers/June4 - Dom.png",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@domthecybegenius",
+        "resource": "/Speakers/June4th - The Youngest In Charge Playbook.png"
       }
     ],
     "topic": null
@@ -771,7 +855,8 @@
         "headshot": "/Speakers/June5 - CyberSecrts.png",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@arescyberdefense"
+        "tiktokUrl": "@arescyberdefense",
+        "resource": null
       }
     ],
     "topic": null
@@ -786,7 +871,8 @@
         "headshot": "/Speakers/Flyer-v2.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -801,7 +887,8 @@
         "headshot": "/Speakers/June19 - Christ Tech.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@christhetechninja"
+        "tiktokUrl": "@christhetechninja",
+        "resource": null
       }
     ],
     "topic": null
@@ -816,7 +903,8 @@
         "headshot": "/Speakers/May18 - GetPawnd.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@ie_ty97"
+        "tiktokUrl": "@ie_ty97",
+        "resource": null
       }
     ],
     "topic": null
@@ -831,7 +919,8 @@
         "headshot": "/Speakers/Flyer-v2.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -846,7 +935,8 @@
         "headshot": "/Speakers/June27 - S.jpeg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@pateltedmjo"
+        "tiktokUrl": "@pateltedmjo",
+        "resource": null
       }
     ],
     "topic": null
@@ -861,7 +951,56 @@
         "headshot": "/Speakers/Flyer-v2.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": null
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-01",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-02",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-03",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -876,22 +1015,72 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
   },
   {
-    "date": "2026-07-05",
-    "dayType": "guest",
+    "date": "2026-07-06",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Lounge",
-        "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg",
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-08",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-09",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-10",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -906,22 +1095,88 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
   },
   {
-    "date": "2026-07-12",
-    "dayType": "guest",
+    "date": "2026-07-13",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Lounge",
-        "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg",
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-14",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-15",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-16",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-17",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -936,22 +1191,88 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
   },
   {
-    "date": "2026-07-19",
-    "dayType": "guest",
+    "date": "2026-07-20",
+    "dayType": "blackout",
     "guests": [
       {
-        "name": "Lounge",
-        "topic": "Chat, Hangout and Decompress and Network",
-        "headshot": "/Speakers/Nate Default.jpg",
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-21",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-22",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-23",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-24",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
       }
     ],
     "topic": null
@@ -966,7 +1287,136 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-27",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-28",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-29",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-30",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-31",
+    "dayType": "blackout",
+    "guests": [
+      {
+        "name": "Community Open Floor — Season 3 Prep",
+        "topic": "Open floor for community topics. No guest speakers this month.",
+        "headshot": null,
+        "bio": null,
+        "links": null,
+        "tiktokUrl": null,
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-05",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-12",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
+      }
+    ],
+    "topic": null
+  },
+  {
+    "date": "2026-07-19",
+    "dayType": "guest",
+    "guests": [
+      {
+        "name": "Lounge",
+        "topic": "Chat, Hangout and Decompress and Network",
+        "headshot": "/Speakers/Nate Default.jpg",
+        "bio": null,
+        "links": null,
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null
@@ -981,7 +1431,8 @@
         "headshot": "/Speakers/Nate Default.jpg",
         "bio": null,
         "links": null,
-        "tiktokUrl": "@natebutlerexplains"
+        "tiktokUrl": "@natebutlerexplains",
+        "resource": null
       }
     ],
     "topic": null

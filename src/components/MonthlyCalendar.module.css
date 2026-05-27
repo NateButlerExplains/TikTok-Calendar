@@ -208,6 +208,14 @@
   font-weight: 700;
 }
 
+/* Blackout / Date Taken Indicator (green dot) */
+.blackoutIndicator {
+  font-size: 14px;
+  color: #22c55e;
+  line-height: 1;
+  font-weight: 700;
+}
+
 /* Guest Preview (desktop-only, hidden by default) */
 .guestPreview {
   display: none;

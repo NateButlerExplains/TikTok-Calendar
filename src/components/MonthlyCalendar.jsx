@@ -63,6 +63,12 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
     return 0
   }
 
+  // Check if date is a blackout (date is taken — no guest bookings allowed)
+  const isBlackout = (dateString) => {
+    const event = events.find(e => e.date === dateString)
+    return event && event.dayType === 'blackout'
+  }
+
   const getGuestPreview = (dateString) => {
     const event = events.find(e => e.date === dateString)
     if (event && event.dayType === 'guest' && event.guests && event.guests.length > 0) {
@@ -163,6 +169,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
           const guestCount = getGuestCount(dateString)
           const hasGuests = guestCount > 0
           const guestPreview = getGuestPreview(dateString)
+          const blackout = isBlackout(dateString)
 
           return (
             <button
@@ -178,6 +185,7 @@ export function MonthlyCalendar({ selectedDate, onDayClick }) {
 
               {/* Mobile: bullet dots — hidden on desktop via CSS */}
               {hasGuests && <span className={styles.eventIndicator}>{'•'.repeat(guestCount)}</span>}
+              {!hasGuests && blackout && <span className={styles.blackoutIndicator}>•</span>}
 
               {/* Desktop: headshot + name — hidden on mobile via CSS */}
               {guestPreview && (

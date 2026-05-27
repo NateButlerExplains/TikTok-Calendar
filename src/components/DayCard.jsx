@@ -384,11 +384,40 @@ export function DayCard({ date }) {
   }
 
   if (dayData.dayType === 'blackout') {
+    const guestName = dayData.guests?.[0]?.name || 'Blackout Day'
+    const guestTopic = dayData.guests?.[0]?.topic || 'No event'
+    const isOpenFloorBlackout = guestName.includes('Open Floor')
+
+    if (isOpenFloorBlackout) {
+      return (
+        <div className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
+          <div className={styles.headshotWrap}>
+            <img
+              src="/Speakers/Nate Default.jpg"
+              alt="Nate Butler"
+              className={styles.headshot}
+              onError={handleImageError}
+            />
+            <span className={styles.headshotCorners} aria-hidden="true" />
+            <span className={styles.headshotBadge}>OPEN FLOOR</span>
+          </div>
+          <div className={styles.body}>
+            <div className={styles.kickerRow}>
+              <span>HOST &middot; <b>NATE BUTLER</b></span>
+              {displayTime && <span>{displayTime}</span>}
+            </div>
+            <h2 className={styles.title}>Open <em>Floor</em></h2>
+            <p className={styles.topic}>{guestTopic}</p>
+          </div>
+        </div>
+      )
+    }
+
     return (
       <div className={`${styles.card} ${dayData.isPastDate ? styles.past : ''}`}>
         <div className={styles.body}>
-          <h2 className={styles.title}>{dayData.guests?.[0]?.name || 'Blackout Day'}</h2>
-          <p className={styles.topic}>{dayData.guests?.[0]?.topic || 'No event'}</p>
+          <h2 className={styles.title}>{guestName}</h2>
+          <p className={styles.topic}>{guestTopic}</p>
         </div>
       </div>
     )
