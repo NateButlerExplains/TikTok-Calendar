@@ -683,6 +683,23 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-04",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Dom",
+        headshot: "/Speakers/June4 - Dom.png",
+        tiktokUrl: "@domthecybegenius",
+        topic: "The Youngest In Charge Playbook",
+        resources: [
+          {
+            image: "/Speakers/June4th - The Youngest In Charge Playbook.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-06-05",
     dayType: "guest",
     guests: [
