@@ -571,6 +571,18 @@ export const events = [
     ]
   },
   {
+    date: "2026-06-10",
+    dayType: "guest",
+    guests: [
+      {
+        name: "Harrison",
+        headshot: "/Speakers/June10 - harrison .png",
+        tiktokUrl: "@theharrisonmccall",
+        topic: "AI Bug Bounty"
+      }
+    ]
+  },
+  {
     date: "2026-06-11",
     dayType: "guest",
     guests: [
