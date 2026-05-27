@@ -607,7 +607,7 @@ export const events = [
     guests: [
       {
         name: "Stan",
-        headshot: "/Speakers/June13 Stan.png",
+        headshot: "/Speakers/June13-Stan2.png",
         tiktokUrl: "@stanntalks",
         topic: "Navigating the IT space"
       }
