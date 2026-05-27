@@ -383,13 +383,12 @@ export const events = [
   },
   {
     date: "2026-05-23",
-    dayType: "guest",
+    dayType: "blackout",
     guests: [
       {
-        name: "Carter Perez",
-        headshot: "/Speakers/May23 - CertifiedGames.png",
-        tiktokUrl: "@certgames.com",
-        topic: "The Power of Certs and Gamified Learning"
+        name: "Carter — Rescheduled",
+        headshot: null,
+        topic: "Carter couldn't make it today. Will be rescheduled soon. Stay tuned!"
       }
     ]
   },
