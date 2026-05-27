@@ -17,7 +17,8 @@ const minimal = events.map(event => ({
         headshot: g.headshot || null,
         bio: g.bio || null,
         links: g.links || null,
-        tiktokUrl: g.tiktokUrl || null
+        tiktokUrl: g.tiktokUrl || null,
+        resource: g.resource || null
       }))
     : [],
   topic: event.topic || null
