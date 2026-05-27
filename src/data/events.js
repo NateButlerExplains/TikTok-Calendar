@@ -767,6 +767,246 @@ export const events = [
     ]
   },
   {
+    date: "2026-07-01",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-02",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-03",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-04",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-06",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-08",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-09",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-10",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-11",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-13",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-14",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-15",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-16",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-17",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-20",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-21",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-22",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-23",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-24",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-27",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-28",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-29",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-30",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
+    date: "2026-07-31",
+    dayType: "blackout",
+    guests: [
+      {
+        name: "Community Open Floor — Season 3 Prep",
+        topic: "Open floor for community topics. No guest speakers this month."
+      }
+    ]
+  },
+  {
     date: "2026-07-05",
     dayType: "guest",
     guests: [
