@@ -363,18 +363,6 @@ export const events = [
     ]
   },
   {
-    date: "2026-05-29",
-    dayType: "guest",
-    guests: [
-      {
-        name: "Christian",
-        headshot: "/Speakers/May29 - Christian.png",
-        tiktokUrl: "@_santooz07",
-        topic: "Break into a Six-Figure Career in Cybersecurity"
-      }
-    ]
-  },
-  {
     date: "2026-05-22",
     dayType: "guest",
     guests: [
@@ -556,6 +544,7 @@ export const events = [
         headshot: "/Speakers/June9-Victoria.png",
         tiktokUrl: "@cybersecurity_vixy",
         topic: "Cyber Clarity System",
+        bio: null,
         bio: null,
         links: [
           {
