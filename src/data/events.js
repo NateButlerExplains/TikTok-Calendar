@@ -592,12 +592,12 @@ export const events = [
   {
     date: "2026-06-16",
     dayType: "guest",
+    time: { hour: 21, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
-        topic: "Build Your Career Switch Playbook",
-        time: { hour: 20, minute: 0, durationMinutes: 60 }
+        headshot: "/Speakers/Career-Switcher - Cohort.png",
+        topic: "Build Your Career Switch Playbook"
       }
     ]
   },
@@ -705,11 +705,11 @@ export const events = [
   {
     date: "2026-06-23",
     dayType: "guest",
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    time: { hour: 21, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
+        headshot: "/Speakers/Career-Switcher - Cohort.png",
         topic: "Build Your Career Switch Playbook"
       }
     ]
@@ -741,11 +741,11 @@ export const events = [
   {
     date: "2026-06-30",
     dayType: "guest",
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    time: { hour: 21, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
+        headshot: "/Speakers/Career-Switcher - Cohort.png",
         topic: "Build Your Career Switch Playbook"
       }
     ]
@@ -765,11 +765,11 @@ export const events = [
   {
     date: "2026-07-07",
     dayType: "guest",
-    time: { hour: 20, minute: 0, durationMinutes: 60 },
+    time: { hour: 21, minute: 0, durationMinutes: 60 },
     guests: [
       {
         name: "Cohort",
-        headshot: "/Speakers/Flyer-v2.jpg",
+        headshot: "/Speakers/Career-Switcher - Cohort.png",
         topic: "Build Your Career Switch Playbook"
       }
     ]
@@ -880,11 +880,13 @@ export const events = [
   },
   {
     date: "2026-07-14",
-    dayType: "blackout",
+    dayType: "guest",
+    time: { hour: 21, minute: 0, durationMinutes: 60 },
     guests: [
       {
-        name: "Community Open Floor — Season 3 Prep",
-        topic: "Open floor for community topics. No guest speakers this month."
+        name: "Cohort",
+        headshot: "/Speakers/Career-Switcher - Cohort.png",
+        topic: "Build Your Career Switch Playbook"
       }
     ]
   },
